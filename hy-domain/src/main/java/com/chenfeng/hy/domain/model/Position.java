@@ -2,10 +2,23 @@ package com.chenfeng.hy.domain.model;
 
 import java.util.Date;
 
+/**
+ * 职位类
+ * 
+ * @author wyh
+ * @version 1.00 
+ * @see 
+* @Date 2016年7月8日 下午1:52:23
+ */
 public class Position {
    
     private Long id;
 
+    /**
+     * 部门ID
+     */
+    private Long departmentId;
+    
     /**
      * 职位名称
      */
@@ -91,4 +104,12 @@ public class Position {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+	public Long getDepartmentId() {
+		return departmentId;
+	}
+
+	public void setDepartmentId(Long departmentId) {
+		this.departmentId = departmentId;
+	}
 }
