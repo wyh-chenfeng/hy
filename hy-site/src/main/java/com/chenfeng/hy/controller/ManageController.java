@@ -18,4 +18,10 @@ public class ManageController {
         return "login";
     }
     
+    @RequestMapping(value = "index", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forIndex() {
+    	return "index";
+    }
+    
 }
