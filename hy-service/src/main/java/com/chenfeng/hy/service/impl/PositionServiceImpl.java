@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.chenfeng.hy.domain.model.Position;
 import com.chenfeng.hy.domain.repository.PositionMapper;
 import com.chenfeng.hy.service.PositionService;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 
 @Service
 @Transactional(readOnly = true)
@@ -27,6 +29,12 @@ public class PositionServiceImpl extends
 	public void add(Position position) {
 		position.setCreateTime(new Date());
 		create(position);
+	}
+
+	@Override
+	public Page<Position> query(Integer curPage, Integer pageSize) {
+		PageHelper.startPage(curPage, pageSize, true);
+		return repository.query();
 	}
 	
 }

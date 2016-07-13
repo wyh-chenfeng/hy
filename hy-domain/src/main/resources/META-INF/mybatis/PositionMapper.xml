@@ -157,4 +157,10 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  
+  <select id="query" resultMap="BaseResultMap">
+  	 select 
+    <include refid="Base_Column_List" />
+    from t_position
+  </select>
 </mapper>

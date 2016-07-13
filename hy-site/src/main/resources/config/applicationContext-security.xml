@@ -7,7 +7,7 @@
 
 	<http pattern="/resources/**" security="none"/>
 	<http auto-config="true" >
-		<form-login login-page="/manage/login" default-target-url="/manage/index"
+		<form-login login-page="/manage/login" default-target-url="/position/forIndex"
 			authentication-failure-url="/manage/login?error=true" />
 		<logout logout-success-url="/manage/login" />
 		<csrf disabled="true"/>

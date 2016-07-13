@@ -2,7 +2,7 @@
 <div class="col-md-2">
 	<ul class="nav nav-stacked nav-pills">
 		<li class="active">
-			<a href="${HY_CONTEXT}/position/forAdd">职位管理</a>
+			<a href="${HY_CONTEXT}/position/forIndex">职位管理</a>
 		</li>
 		<li>
 			<a href="#">新闻管理</a>
