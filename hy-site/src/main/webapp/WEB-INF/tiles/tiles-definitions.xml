@@ -13,6 +13,15 @@
         <put-attribute name="content" value="" />
     </definition>
     
+    <definition name="manage-layouts" template="/WEB-INF/views/manage/layout/template.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="resource" value="/WEB-INF/views/manage/layout/resource.jsp" />
+        <put-attribute name="header" value="/WEB-INF/views/manage/layout/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/manage/layout/menu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/manage/layout/footer.jsp" />
+        <put-attribute name="content" value="" />
+    </definition>
+    
     <!-- <definition name="user/login" extends="layouts-user">
         <put-attribute name="content" value="/WEB-INF/views/user/login.jsp" />
     </definition> -->
@@ -20,5 +29,8 @@
     
     <definition name="*/*" extends="layouts">
         <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+    <definition name="*/*/*" extends="manage-layouts">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
     </definition>
 </tiles-definitions>

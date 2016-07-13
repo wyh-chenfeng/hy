@@ -23,7 +23,7 @@ public class ManageController {
     @ResponseStatus(HttpStatus.OK)
     @Secured("ROLE_ADMIN")
     public String forIndex() {
-    	return "index";
+    	return "manage/index/index";
     }
     
 }
