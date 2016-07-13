@@ -13,7 +13,7 @@
 	<nav class="navbar navbar-inverse" id="top_nav">
             <div class="container-fluid">
                 <p class="navbar-text navbar-right">
-                <a href="logout" class="navbar-link"><i class="icon-logout"></i>安全退出</a>
+                <a href="${HY_CONTEXT}/logout" class="navbar-link"><i class="icon-logout"></i>安全退出</a>
                 </p>
             </div>
         </nav>

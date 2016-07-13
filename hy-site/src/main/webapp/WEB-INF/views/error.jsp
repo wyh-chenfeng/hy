@@ -5,12 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>错误</title>
-<%@include file="../common/resource.jsp"%>
+<%@include file="./layout/resource.jsp"%>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="alert alert-warning" role="alert">
-			<p>您没有权限访问该资源！</p>
+			<p>服务器忙</p>
 		</div>
 	</div>
 </body>
