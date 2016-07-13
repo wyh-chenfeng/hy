@@ -2,6 +2,8 @@ package com.chenfeng.hy.domain.model;
 
 import java.util.Date;
 
+import org.apache.commons.lang.time.DateFormatUtils;
+
 /**
  * 职位类
  * 
@@ -48,6 +50,12 @@ public class Position {
      * 更新时间
      */
     private Date updateTime;
+    
+    /** 扩展属性*/
+    /**
+     * 部门名称
+     */
+    private String departmentName;
 
     public Long getId() {
         return id;
@@ -92,6 +100,10 @@ public class Position {
     public Date getCreateTime() {
         return createTime;
     }
+    
+    public String getCreateTimeStr() {
+    	return DateFormatUtils.format(createTime, "yyyy-MM-dd HH:mm:ss");
+    }
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
@@ -111,5 +123,13 @@ public class Position {
 
 	public void setDepartmentId(Long departmentId) {
 		this.departmentId = departmentId;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 }

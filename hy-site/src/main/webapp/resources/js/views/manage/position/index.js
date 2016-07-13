@@ -7,7 +7,7 @@
 
 	var positionTable;
 	
-	var bindEvent = {
+	$.bindEvent = {
 		initTable : function() {
 			/* 初始化表格 */
 			positionTable = $.fn.bsgrid.init(constant.POSITION_TABLE,{
@@ -20,10 +20,9 @@
 						} 
 					});
 		},
-		
-//		function operate(record, rowIndex, colIndex, options) {
-//            return '<a href="#" onclick="alert(\'ID=' + gridObj.getRecordIndexValue(record, 'ID') + '\');">Operate</a>';
-//        }
+		operate : function (record, rowIndex, colIndex, options) {
+            return '<a href="#">Operate</a>';
+        },
 		bindMenuCss : function() {
 			$(".list-group-item-success")
 					.removeClass("list-group-item-success");
@@ -33,7 +32,7 @@
 
 	var create = {
 		init : function() {
-			bindEvent.initTable();
+			$.bindEvent.initTable();
 //			bindEvent.bindMenuCss();
 		}
 	};
@@ -42,3 +41,4 @@
 		create.init();
 	});                                                                                                                                               
 })(jQuery);
+

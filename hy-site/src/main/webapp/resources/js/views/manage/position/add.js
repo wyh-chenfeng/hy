@@ -58,7 +58,7 @@
 						url : $.HY.context + '/position/add',
 						data: $(constant.CREATE_FROM).serialize(),
 						success : function() {
-							window.location.href = $.HY.context + '/position/list';
+							window.location.href = $.HY.context + '/position/forIndex';
 						}
 					});
 				}

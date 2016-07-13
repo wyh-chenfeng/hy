@@ -15,6 +15,9 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+  <resultMap id="PositionResultMap" extends="BaseResultMap" type="com.chenfeng.hy.domain.model.Position" >
+    <result column="department_name" property="departmentName" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
     <!--
       WARNING - @mbggenerated
@@ -158,9 +161,11 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   
-  <select id="query" resultMap="BaseResultMap">
-  	 select 
-    <include refid="Base_Column_List" />
-    from t_position
+  <select id="query" resultMap="PositionResultMap">
+    
+    SELECT 
+		t_position.*,
+    	m_department.name AS department_name 
+    FROM t_position LEFT JOIN m_department ON t_position.department_id = m_department.id
   </select>
 </mapper>
