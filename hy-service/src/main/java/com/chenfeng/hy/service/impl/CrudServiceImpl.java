@@ -44,7 +44,7 @@ public class CrudServiceImpl<T, ID extends Serializable, R extends CrudMapper<T,
     @Override
     @Transactional(readOnly = false)
     public T update(T resource) {
-        repository.updateByPrimaryKey(resource);
+        repository.updateByPrimaryKeySelective(resource);
         return resource;
     }
 

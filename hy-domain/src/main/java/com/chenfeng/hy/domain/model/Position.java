@@ -113,6 +113,10 @@ public class Position {
         return updateTime;
     }
 
+    public String getUpdateTimeStr() {
+    	return DateFormatUtils.format(updateTime, "yyyy-MM-dd HH:mm:ss");
+    }
+
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }

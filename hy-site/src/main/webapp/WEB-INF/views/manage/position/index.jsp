@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
- <table id="positionTable" class="table table-condensed table-bordered table-striped table-hover">
+<p class="text-left">
+	<a href="${HY_CONTEXT}/position/forAdd"><button type="button" class="btn btn-primary">创建</button></a>
+</p>
+
+<table id="positionTable" class="table-condensed table-bordered table-striped table-hover">
     <tr>
         <th w_index="id" width="10%;">ID</th>
         <th w_index="departmentName" width="15%;">部门</th>

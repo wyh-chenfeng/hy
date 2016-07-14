@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<form class="form-horizontal bind-create-from" role="form" action="${HY_CONTEXT}/position/add" method="post">
+<form class="form-horizontal bind-update-from" role="form" action="${HY_CONTEXT}/position/update" method="post">
 	<div class="form-group">
 		<label for="name" class="col-sm-2 control-label">
 			职位名称
 		</label>
 		<div class="col-sm-4">
-			<input type="text" class="form-control" name="name" id="name" />
+			<input type="text" class="form-control" value="${position.name }" name="name" id="name" />
+			<input type="hidden" value="${position.id }" name="id" />
 		</div>
 	</div>
 	<div class="form-group">
@@ -17,7 +18,7 @@
 		<div class="col-sm-4">
 			<select class="form-control" name="departmentId">
 				<c:forEach items="${departments }" var="department">
-					<option value="${department.id }">${department.name }</option>
+					<option <c:if test="${department.id == position.departmentId}">selected="selected"</c:if> value="${department.id }">${department.name }</option>
 				</c:forEach>
 			</select>
 		</div>
@@ -27,7 +28,7 @@
 			工作地点
 		</label>
 		<div class="col-sm-4">
-			<input type="text" class="form-control" name="address" id="address" />
+			<input type="text" class="form-control" name="address" value="${position.address }" id="address" />
 		</div>
 	</div>
 	<div class="form-group">
@@ -35,7 +36,9 @@
 			岗位职责
 		</label>
 		<div class="col-sm-4">
-			<textarea rows="5" name="duty" id="duty" class="form-control"></textarea>
+			<textarea rows="5" name="duty" id="duty" class="form-control">
+				${position.duty }
+			</textarea>
 		</div>
 	</div>
 	<div class="form-group">
@@ -43,16 +46,18 @@
 			招聘条件
 		</label>
 		<div class="col-sm-4">
-			<textarea rows="5" name="recruitment" id="recruitment" class="form-control"></textarea>
+			<textarea rows="5" name="recruitment" id="recruitment" class="form-control">
+				${position.recruitment }
+			</textarea>
 		</div>
 	</div>
 	
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-9">
-			<button class="btn btn-sm btn-primary bind-create-submit-button" type="button">保存</button>
+			<button class="btn btn-sm btn-primary bind-update-submit-button" type="button">保存</button>
 			<button class="btn btn-sm btn-default" type="reset">重置</button>
 		</div>
 	</div>
 </form>
 
-<script src="${HY_CONTEXT}/resources/js/views/manage/position/add.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/manage/position/update.js"></script>

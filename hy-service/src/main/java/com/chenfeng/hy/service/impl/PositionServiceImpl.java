@@ -28,6 +28,7 @@ public class PositionServiceImpl extends
 	@Transactional(rollbackFor = Exception.class)
 	public void add(Position position) {
 		position.setCreateTime(new Date());
+		position.setUpdateTime(new Date());
 		create(position);
 	}
 

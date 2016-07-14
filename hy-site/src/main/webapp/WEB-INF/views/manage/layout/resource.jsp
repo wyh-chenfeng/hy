@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/bootstrapv3.min.css" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/js/lib/bsgrid/builds/merged/bsgrid.all.min.css"/>
-    
+
 <script src="${HY_CONTEXT}/resources/js/lib/jquery/jquery.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap-paginator.min.js"></script>
@@ -17,6 +17,15 @@
 <script src="${HY_CONTEXT}/resources/js/lib/knockout/knockout.mapping.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bsgrid/builds/js/lang/grid.zh-CN.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bsgrid/builds/merged/bsgrid.all.min.js"></script>
+
+<!-- alert -->
+<link rel="stylesheet" href="${HY_CONTEXT}/resources/js/lib/artDialog/skins/blue.css"/>
+<link rel="stylesheet" href="${HY_CONTEXT}/resources/js/lib/artDialog/override/artDialog.skins.override.css"/>
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/jquery.artDialog.min.js"></script>
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/artDialog.plugins.min.js"></script>
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/override/artDialog.plugin.override.zh-CN.js"></script>
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/override/artDialog.plugin.override.js"></script>
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/override.pop.js"></script>
 
 <script type="text/javascript">
 	window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;  	
