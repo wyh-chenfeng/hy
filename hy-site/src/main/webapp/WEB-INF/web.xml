@@ -26,7 +26,7 @@
 	<!-- 编码统一最好放最上面，最先加载，防止乱码 -->
 
 	<!-- 然后接着是SpringSecurity必须的filter 优先配置，让SpringSecurity先加载，防止SpringSecurity拦截失效 -->
-	<filter>
+	<!-- <filter>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 	</filter>
@@ -34,7 +34,7 @@
 	<filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
 	<!-- Spring配置 -->
 	<!-- ====================================== -->
 	<listener>
@@ -46,7 +46,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:config/applicationContext.xml
-			classpath:config/applicationContext-security.xml 
+			<!-- classpath:config/applicationContext-security.xml  -->
 		</param-value>
 	</context-param>
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.chenfeng</groupId>
 	<artifactId>hy</artifactId>
@@ -11,7 +10,8 @@
 		<module>hy-domain</module>
 		<module>hy-service</module>
 		<module>hy-site</module>
-	</modules>
+    <module>hy-site-admin</module>
+  </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,6 +28,8 @@
 		<log4j.version>1.2.16</log4j.version>
 		<!-- tiles -->
 		<tiles.version>3.0.5</tiles.version>
+		<!-- commons -->
+		<commons_codec_version>1.4</commons_codec_version>
 	</properties>
 
 	<dependencyManagement>
@@ -232,11 +234,19 @@
 				<version>${tiles.version}</version>
 			</dependency>
 			<!-- tiles end -->
+			
+			<!-- commons start -->
+			<dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons_codec_version}</version>
+            </dependency>
+			<!-- commons end -->
 		</dependencies>
 	</dependencyManagement>
 
 	<profiles>
-		<!-- 开发环境 -->
+		<!-- �?发环�? -->
 		<profile>
 			<id>develop</id>
 			<properties>
@@ -245,7 +255,6 @@
 				<database_url>jdbc:mysql://localhost:3306/hydb?characterEncoding=utf8</database_url>
 				<database_username>root</database_username>
 				<database_password>root</database_password>
-
 				<!-- connection pool -->
 				<cp_maxActive>96</cp_maxActive>
 				<cp_maxIdle>16</cp_maxIdle>
@@ -253,6 +262,9 @@
 				<cp_maxWait>60000</cp_maxWait>
 				<!-- log level -->
 				<log_level>debug</log_level>
+				<!-- nginx -->
+				<image_url>http://localhost/</image_url>
+				<image_server>D:\Program Files\nginx-1.10.1\html</image_server>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
