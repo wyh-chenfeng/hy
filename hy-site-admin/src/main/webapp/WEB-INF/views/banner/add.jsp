@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<form class="form-horizontal bind-create-from" role="form" action="${HY_CONTEXT}/position/add" method="post">
+<form class="form-horizontal bind-create-from" role="form">
 	<div class="form-group">
-		<label for="image" class="col-sm-2 control-label">
+		<label for="imageFile" class="col-sm-2 control-label">
 			图片
 		</label>
 		<div class="col-sm-6">
-			<input type="file" class="form-control" name="image" id="image" />
+			<input type="file" class="file file-loading bind-file-up-loading" multiple name="imageFile" id="imageFile" />
 		</div>
 	</div>
 	<div class="form-group">

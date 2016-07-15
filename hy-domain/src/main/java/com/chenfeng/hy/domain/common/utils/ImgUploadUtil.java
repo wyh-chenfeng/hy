@@ -49,7 +49,6 @@ public class ImgUploadUtil {
 				file.transferTo(new File(dir, fileName));
 				return (folder + "/" + fileName);
 			} catch (Exception e) {
-				// TODO 异常处理
 				throw new IllegalArgumentException();
 			}
 		}
