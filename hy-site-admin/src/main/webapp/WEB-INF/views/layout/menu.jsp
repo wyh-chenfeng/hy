@@ -8,7 +8,7 @@
 			<a href="#">新闻管理</a>
 		</li>
 		<li>
-			<a href="#">BANNER管理</a>
+			<a href="${HY_CONTEXT}/banner/forAdd">BANNER管理</a>
 		</li>
 	</ul>
 </div>
