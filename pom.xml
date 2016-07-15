@@ -276,6 +276,29 @@
 				<image_server>D:/Program Files/nginx-1.10.1/html/</image_server>
 			</properties>
 			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>mac</id>
+			<properties>
+				<!-- MySql -->
+				<database_driverClassName>com.mysql.jdbc.Driver</database_driverClassName>
+				<database_url>jdbc:mysql://localhost:3306/hydb?characterEncoding=utf8</database_url>
+				<database_username>root</database_username>
+				<database_password>root</database_password>
+				<!-- connection pool -->
+				<cp_maxActive>96</cp_maxActive>
+				<cp_maxIdle>16</cp_maxIdle>
+				<cp_minIdle>0</cp_minIdle>
+				<cp_maxWait>60000</cp_maxWait>
+				<!-- log level -->
+				<log_level>debug</log_level>
+				<!-- nginx -->
+				<image_url>http://localhost/</image_url>
+				<image_server>/Users/monst/Documents/nginx/</image_server>
+			</properties>
+			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 		</profile>

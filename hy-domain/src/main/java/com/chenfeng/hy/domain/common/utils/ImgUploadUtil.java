@@ -10,13 +10,15 @@ import java.nio.file.Paths;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.chenfeng.hy.domain.common.config.SystemConfig;
 import com.chenfeng.hy.domain.enums.ImgTypeEnum;
 
 public class ImgUploadUtil {
-
+	private static Logger log = Logger.getLogger(ImgUploadUtil.class);
+	
 	public static String getFileName(InputStream in, String suffix) {
 		if (in != null && !StringUtils.isBlank(suffix)) {
 			try {
@@ -49,6 +51,8 @@ public class ImgUploadUtil {
 				file.transferTo(new File(dir, fileName));
 				return (folder + "/" + fileName);
 			} catch (Exception e) {
+				log.debug(e.getMessage());
+				e.printStackTrace();
 				throw new IllegalArgumentException();
 			}
 		}
