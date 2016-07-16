@@ -273,10 +273,10 @@
 				<log_level>debug</log_level>
 				<!-- nginx -->
 				<image_url>http://localhost/</image_url>
-				<image_server>D:/Program Files/nginx-1.10.1/html/</image_server>
+				<image_server>D:/nginx/</image_server>
 			</properties>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
 		</profile>
 		<profile>
@@ -299,7 +299,7 @@
 				<image_server>/Users/monst/Documents/nginx/</image_server>
 			</properties>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 		</profile>
 	</profiles>
@@ -321,6 +321,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>

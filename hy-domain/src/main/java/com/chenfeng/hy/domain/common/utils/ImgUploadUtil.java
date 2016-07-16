@@ -3,10 +3,6 @@ package com.chenfeng.hy.domain.common.utils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.StringUtils;
@@ -44,11 +40,18 @@ public class ImgUploadUtil {
 				if (id != null && id.length > 0) {
 					folder += ("/" + id[0]);
 				}
-				URI driURI = new URI(config.getImageServer() + folder);
-				Path uploadDir = Files.createDirectories(Paths.get(driURI));
-				File dir = uploadDir.toFile();
+//				URI driURI = new URI(config.getImageServer() + folder);
+//				Path uploadDir = Files.createDirectories(Paths.get(driURI));
+//				File dir = uploadDir.toFile();
+				
+				String path = config.getImageServer() + folder;
 				String fileName = DigestUtils.md5Hex(file.getBytes()) + suffix;
-				file.transferTo(new File(dir, fileName));
+				File targetFile = new File(path, fileName);  
+				if (!targetFile.exists()) {
+					targetFile.mkdirs();
+				} 
+			  
+				file.transferTo(targetFile);
 				return (folder + "/" + fileName);
 			} catch (Exception e) {
 				log.debug(e.getMessage());
