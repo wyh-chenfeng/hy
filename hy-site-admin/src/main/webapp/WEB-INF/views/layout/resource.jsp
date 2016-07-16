@@ -32,6 +32,8 @@
 <script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/override/artDialog.plugin.override.zh-CN.js"></script>
 <script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/override/artDialog.plugin.override.js"></script>
 <script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/artDialog/override.pop.js"></script>
+<!-- from转json -->
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/utils/from_to_json.js"></script>
 
 <script type="text/javascript">
 	window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;  	

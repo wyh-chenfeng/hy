@@ -36,7 +36,7 @@ public class BannerController {
     @ResponseBody
 	@RequestMapping(value = "add", method = RequestMethod.POST)
     @Secured("ROLE_ADMIN")
-	public ResultVo add(@RequestBody Banner banner, @RequestParam("imageFile") MultipartFile imageFile) {
+	public ResultVo add(Banner banner, @RequestParam("imageFile") MultipartFile imageFile) {
 		
 		ResultVo resultVo = new ResultVo();
 		try {
