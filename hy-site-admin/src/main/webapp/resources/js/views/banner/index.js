@@ -1,17 +1,17 @@
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-position',
-		POSITION_TABLE : 'positionTable'
+		MENU_CSS : '.bind-menu-banner',
+		BANNER_TABLE : 'bannerTable'
 	};
 
-	var positionTable;
+	var bannerTable;
 	
 	$.bindEvent = {
 		initTable : function() {
 			/* 初始化表格 */
-			positionTable = $.fn.bsgrid.init(constant.POSITION_TABLE,{
-						url : $.HY.context + '/position/query',
+			bannerTable = $.fn.bsgrid.init(constant.BANNER_TABLE,{
+						url : $.HY.context + '/banner/query',
 						stripeRows : true,
 						pageSize : 10,
 						//otherParames : $("#search_form").serializeArray(),
@@ -21,14 +21,14 @@
 					});
 		},
 		doSearch : function() {
-			//positionTable.options.otherParames = $("#search_form").serializeArray();
-			positionTable.gotoPage(1);
+			//bannerTable.options.otherParames = $("#search_form").serializeArray();
+			bannerTable.gotoPage(1);
 		},
 		forDetail : function(id){
-			location.href = $.HY.context + "/position/forDetail?id=" + id;
+			location.href = $.HY.context + "/banner/forDetail?id=" + id;
 		},
 		forUpdate : function(id){
-			location.href = $.HY.context + "/position/forUpdate?id=" + id;
+			location.href = $.HY.context + "/banner/forUpdate?id=" + id;
 		},
 		forDelete : function(id){
 			$.confirm('是否确认删除该招聘信息？', function () {
@@ -36,7 +36,7 @@
 					// ajax提交删除
 					$.ajax({
 						type : "POST",
-						url : $.HY.context + "/position/delete",
+						url : $.HY.context + "/banner/delete",
 						data : {"id": id},
 						dataType : "json",
 						success : function(data) {
@@ -60,6 +60,9 @@
 			html += "<button type='button' onclick='$.bindEvent.forUpdate(" + record.id + ")' class='btn btn-primary btn-xs'>修改</button> ";
 			html += "<button type='button' onclick='$.bindEvent.forDelete(" + record.id + ")'  class='btn btn-danger btn-xs'>删除</button>";
 			return html;
+        },
+        image : function (record, rowIndex, colIndex, options) {
+        	return "<img src='"+$.HY.imageUrl + record.image+"' style='width: 100px'/>";
         },
 		bindMenuCss : function() {
 			$(".list-group-item-success")

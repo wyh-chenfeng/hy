@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,8 +14,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.chenfeng.hy.domain.model.Banner;
+import com.chenfeng.hy.domain.model.vo.BsgridVo;
 import com.chenfeng.hy.domain.model.vo.ResultVo;
 import com.chenfeng.hy.service.BannerService;
+import com.github.pagehelper.Page;
 
 @Controller
 @RequestMapping("banner")
@@ -52,5 +53,33 @@ public class BannerController {
 		}
 		return resultVo;
 	}
+    
+    @RequestMapping(value = "forIndex", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    @Secured("ROLE_ADMIN")
+    public String forIndex() {
+    	return "banner/index";
+    }
+    
+    @RequestMapping(value = "query", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    @Secured("ROLE_ADMIN")
+    public BsgridVo<Banner> query(Integer curPage, Integer pageSize) {
+    	BsgridVo<Banner> bsgridVo = null;
+    	try {
+			// 调用service获取数据
+    		Page<Banner> page = bannerService.query(curPage, pageSize);
+			bsgridVo = new BsgridVo<Banner>();
+			bsgridVo.setCurPage(curPage.longValue());
+			bsgridVo.setData(page);
+			bsgridVo.setSuccess(true);
+			bsgridVo.setTotalRows(page.getTotal());
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("编码规则查询异常：" + e.getMessage());
+		}
+    	return bsgridVo;
+    }
     
 }

@@ -1,8 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <!-- Resources -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="org.springframework.web.context.support.*"%> 
+<%@page import="org.springframework.context.*" %>   
+<%@ page import="com.chenfeng.hy.domain.common.config.SystemConfig"%>
+<% 
+	ServletContext context = request.getSession().getServletContext();
+	ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(context);
+	SystemConfig systemConfig =(SystemConfig) ctx.getBean("systemConfig"); 
+%>
 
 <c:set var="HY_CONTEXT" value="${pageContext.request.contextPath}" scope="application" />
+<c:set var="IMAGE_URL" value="<%=systemConfig.getImageUrl()%>" scope="application" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/js/lib/bsgrid/builds/merged/bsgrid.all.min.css"/>
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap-fileinput/fileinput.min.css"/>
@@ -41,6 +50,7 @@
 	(function($) {
 		$.HY = {};
 		$.HY.pages = {};
+		$.HY.imageUrl = "${IMAGE_URL}";
 		$.HY.context = "${HY_CONTEXT}";
 	})(jQuery);
 </script>
