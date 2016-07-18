@@ -54,7 +54,7 @@
 						dataType : 'json', //服务器返回的格式,可以是json或xml等   
 						data: $(constant.CREATE_FROM).serializeJson(),
 						success : function(data, status) { //服务器响应成功时的处理函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-							window.location.href = $.HY.context + '/banner/forAdd';
+							window.location.href = $.HY.context + '/banner/forIndex';
 						},
 						error : function(data, status, e) { //服务器响应失败时的处理函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 						
@@ -75,7 +75,7 @@
                 enctype: 'multipart/form-data',
                 showUpload: false, //是否显示上传按钮
                 showCaption: true,//是否显示标题
-                browseClass: "btn btn-primary", //按钮样式             
+                browseClass: "btn btn-primary", //按钮样式        
             });
 		}
 	};

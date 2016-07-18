@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <!-- Resources -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page import="org.springframework.web.context.support.*"%> 
-<%@page import="org.springframework.context.*" %>   
+<%@ page import="org.springframework.context.ApplicationContext"%>
+<%@ page import="org.springframework.web.context.support.WebApplicationContextUtils"%> 
 <%@ page import="com.chenfeng.hy.domain.common.config.SystemConfig"%>
 <% 
 	ServletContext context = request.getSession().getServletContext();

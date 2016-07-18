@@ -27,4 +27,13 @@ public interface BannerService extends CrudService<Banner, Long> {
 	 */
 	Page<Banner> query(Integer curPage, Integer pageSize);
 
+	/**
+	 * 更新BANNER
+	 * 
+	 * @author wyh
+	 * @param banner
+	 * @param imageFile
+	 */
+	void update(Banner banner, MultipartFile imageFile);
+	
 }

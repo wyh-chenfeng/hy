@@ -31,7 +31,7 @@
 			location.href = $.HY.context + "/banner/forUpdate?id=" + id;
 		},
 		forDelete : function(id){
-			$.confirm('是否确认删除该招聘信息？', function () {
+			$.confirm('您确认要删除该条数据吗？', function () {
 				if(id != null && '' != id && id != 'undefined'){
 					// ajax提交删除
 					$.ajax({

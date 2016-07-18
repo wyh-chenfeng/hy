@@ -82,4 +82,61 @@ public class BannerController {
     	return bsgridVo;
     }
     
+    @RequestMapping(value = "forDetail", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    @Secured("ROLE_ADMIN")
+    public String forDetail(@RequestParam("id") Long id, Model model) {
+    	Banner banner = bannerService.findOne(id);
+    	model.addAttribute("banner", banner);
+    	return "banner/detail";
+    }
+
+    @RequestMapping(value = "forUpdate", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    @Secured("ROLE_ADMIN")
+    public String forUpdate(@RequestParam("id") Long id, Model model) {
+    	Banner banner = bannerService.findOne(id);
+    	model.addAttribute("banner", banner);
+    	return "banner/update";
+    }
+
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    @Secured("ROLE_ADMIN")
+    public ResultVo update(Banner banner, @RequestParam("imageFile") MultipartFile imageFile) {
+    	ResultVo resultVo = new ResultVo();
+		try {
+        	bannerService.update(banner, imageFile);
+        	
+			resultVo.setInfo("修改成功！");
+			resultVo.setStatus(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("修改失败，信息：" + e.getMessage());
+			resultVo.setInfo("删修改失败！");
+			resultVo.setStatus(0);
+		}
+		return resultVo;
+    }
+    
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = "delete", method = RequestMethod.POST)
+    @Secured("ROLE_ADMIN")
+	public ResultVo delete(@RequestParam("id") Long id) {
+		
+		ResultVo resultVo = new ResultVo();
+		try {
+			bannerService.delete(id);
+			resultVo.setInfo("删除成功！");
+			resultVo.setStatus(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("删除失败，信息：" + e.getMessage());
+			resultVo.setInfo("删除失败！");
+			resultVo.setStatus(0);
+		}
+		return resultVo;
+	}
 }

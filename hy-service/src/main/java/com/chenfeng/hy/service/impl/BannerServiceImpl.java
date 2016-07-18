@@ -42,5 +42,23 @@ public class BannerServiceImpl extends
 		PageHelper.startPage(curPage, pageSize, true);
 		return repository.query();
 	}
+
+	@Override
+	@Transactional(rollbackFor=Exception.class)
+	public void update(Banner banner, MultipartFile imageFile) {
+		
+		String imagePath = ImgUploadUtil.updateIMGFile(systemConfig, banner.getImage(), imageFile, ImgTypeEnum.BANNER);
+		banner.setImage(imagePath);
+		update(banner);
+	}
 	
+	@Override
+	@Transactional(rollbackFor=Exception.class)
+	public void delete(Long id) {
+		Banner banner = findOne(id);
+		if (banner != null) {
+			ImgUploadUtil.deleteIMGFile(systemConfig, banner.getImage(), ImgTypeEnum.BANNER);
+			super.delete(id);
+		}
+	}
 }

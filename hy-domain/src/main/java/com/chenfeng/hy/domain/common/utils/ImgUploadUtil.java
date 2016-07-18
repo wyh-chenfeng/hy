@@ -61,4 +61,56 @@ public class ImgUploadUtil {
 		}
 		return null;
 	}
+
+	/**
+	 * 更新图片
+	 * 
+	 * @author wyh
+	 * @param config 配置文件对象
+	 * @param lodImage 老图片地址
+	 * @param imageFile {@link MultipartFile} 
+	 * @param imgType {@link ImgTypeEnum}
+	 * @return
+	 */
+	public static String updateIMGFile(SystemConfig config, String lodImage,
+			MultipartFile imageFile, ImgTypeEnum imgType, Long... id) {
+		if (config != null && imageFile != null && !imageFile.isEmpty() && imgType != null) {
+			// 删除老图片
+			deleteIMGFile(config, lodImage, imgType, id);
+			// 保存新图片
+			return saveIMGFile(config, imageFile, imgType, id);
+		}
+		return null;
+	}
+	
+	/**
+	 * 删除图片
+	 * 
+	 * @author wyh
+	 * @param config 系统配置
+	 * @param lodImage 老图片地址
+	 * @param imgType {@link ImgTypeEnum}
+	 * @param id
+	 */
+	public static void deleteIMGFile(SystemConfig config, String lodImage, ImgTypeEnum imgType, Long... id) {
+		if (config != null && !StringUtils.isBlank(lodImage) && imgType != null) {
+			String suffix = "." + lodImage.split("\\.")[1];
+			String fileFormat = suffix.toUpperCase();
+			// 校验图片格式是否正确
+			if (".JPG.JPEG.TIFF.RAW.BMP.GIF.PNG".indexOf(fileFormat) < 0) {
+				return ;
+			}
+			try {
+				// 删除老图片
+				File lodFile = new File(config.getImageServer() +"/"+ lodImage);
+				if (lodFile.exists()) {
+					lodFile.delete();
+				}
+			} catch (Exception e) {
+				log.debug(e.getMessage());
+				e.printStackTrace();
+				throw new IllegalArgumentException();
+			}
+		}
+	}
 }
