@@ -11,14 +11,15 @@
 		initTable : function() {
 			/* 初始化表格 */
 			positionTable = $.fn.bsgrid.init(constant.POSITION_TABLE,{
-						url : $.HY.context + '/position/query',
-						stripeRows : true,
-						pageSize : 10,
-						//otherParames : $("#search_form").serializeArray(),
-						additionalAfterRenderGrid: function(){
-							
-						} 
-					});
+				url : $.HY.context + '/position/query',
+				stripeRows : true,
+				rowHoverColor : true, 
+				pageSize : 10,
+				//otherParames : $("#search_form").serializeArray(),
+				additionalAfterRenderGrid: function(){
+					
+				} 
+			});
 		},
 		doSearch : function() {
 			//positionTable.options.otherParames = $("#search_form").serializeArray();

@@ -11,14 +11,15 @@
 		initTable : function() {
 			/* 初始化表格 */
 			bannerTable = $.fn.bsgrid.init(constant.BANNER_TABLE,{
-						url : $.HY.context + '/banner/query',
-						stripeRows : true,
-						pageSize : 10,
-						//otherParames : $("#search_form").serializeArray(),
-						additionalAfterRenderGrid: function(){
-							
-						} 
-					});
+				url : $.HY.context + '/banner/query',
+				stripeRows : true,
+				rowHoverColor : true, 
+				pageSize : 10,
+				//otherParames : $("#search_form").serializeArray(),
+				additionalAfterRenderGrid: function(){
+					
+				} 
+			});
 		},
 		doSearch : function() {
 			//bannerTable.options.otherParames = $("#search_form").serializeArray();
