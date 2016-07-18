@@ -1,17 +1,17 @@
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-banner',
-		BANNER_TABLE : 'bannerTable'
+		MENU_CSS : '.bind-menu-news',
+		BANNER_TABLE : 'newsTable'
 	};
 
-	var bannerTable;
+	var newsTable;
 	
 	$.bindEvent = {
 		initTable : function() {
 			/* 初始化表格 */
-			bannerTable = $.fn.bsgrid.init(constant.BANNER_TABLE,{
-				url : $.HY.context + '/banner/query',
+			newsTable = $.fn.bsgrid.init(constant.BANNER_TABLE,{
+				url : $.HY.context + '/news/query',
 				stripeRows : true,
 				rowHoverColor : true, 
 				pageSize : 10,
@@ -22,14 +22,14 @@
 			});
 		},
 		doSearch : function() {
-			//bannerTable.options.otherParames = $("#search_form").serializeArray();
-			bannerTable.gotoPage(1);
+			//newsTable.options.otherParames = $("#search_form").serializeArray();
+			newsTable.gotoPage(1);
 		},
 		forDetail : function(id){
-			location.href = $.HY.context + "/banner/forDetail?id=" + id;
+			location.href = $.HY.context + "/news/forDetail?id=" + id;
 		},
 		forUpdate : function(id){
-			location.href = $.HY.context + "/banner/forUpdate?id=" + id;
+			location.href = $.HY.context + "/news/forUpdate?id=" + id;
 		},
 		forDelete : function(id){
 			$.confirm('您确认要删除该条数据吗？', function () {
@@ -37,7 +37,7 @@
 					// ajax提交删除
 					$.ajax({
 						type : "POST",
-						url : $.HY.context + "/banner/delete",
+						url : $.HY.context + "/news/delete",
 						data : {"id": id},
 						dataType : "json",
 						success : function(data) {

@@ -35,4 +35,4 @@
 	</div>
 </form>
 
-<script src="${HY_CONTEXT}/resources/js/views/banner/add.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/news/add.js"></script>

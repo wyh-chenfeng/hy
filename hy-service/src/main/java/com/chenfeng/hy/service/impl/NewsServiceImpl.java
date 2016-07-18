@@ -1,5 +1,7 @@
 package com.chenfeng.hy.service.impl;
 
+import java.util.Date;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -34,6 +36,8 @@ public class NewsServiceImpl extends
 	public void add(News news, MultipartFile imageFile) {
 		String imagePath = ImgUploadUtil.saveIMGFile(systemConfig, imageFile, ImgTypeEnum.NEWS);
 		news.setImage(imagePath);
+		news.setCreateTime(new Date());
+		news.setUpdateTime(new Date());
 		create(news);
 	}
 
@@ -49,6 +53,7 @@ public class NewsServiceImpl extends
 		
 		String imagePath = ImgUploadUtil.updateIMGFile(systemConfig, news.getImage(), imageFile, ImgTypeEnum.NEWS);
 		news.setImage(imagePath);
+		news.setCreateTime(new Date());
 		update(news);
 	}
 	

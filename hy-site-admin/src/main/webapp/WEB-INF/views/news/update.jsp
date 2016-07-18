@@ -5,8 +5,8 @@
 	<div class="form-group">
 		<label for="imageFile" class="col-sm-2 control-label">
 			图片
-			<input type="hidden" id="init_image_file" name="image" value="${banner.image }"/>
-			<input type="hidden" name="id" value="${banner.id }"/>
+			<input type="hidden" id="init_image_file" name="image" value="${news.image }"/>
+			<input type="hidden" name="id" value="${news.id }"/>
 		</label>
 		<div class="col-sm-6">
 			<input type="file" name="imageFile" id="imageFile"  class="file file-loading bind-file-up-loading" multiple />
@@ -17,7 +17,7 @@
 			标题
 		</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="title" value="${banner.title }" id="title" />
+			<input type="text" class="form-control" name="title" value="${news.title }" id="title" />
 		</div>
 	</div>
 	<div class="form-group">
@@ -25,7 +25,7 @@
 			内容
 		</label>
 		<div class="col-sm-6">
-			<textarea rows="8" name="content" id="content" class="form-control">${banner.content }</textarea>
+			<textarea rows="8" name="content" id="content" class="form-control">${news.content }</textarea>
 		</div>
 	</div>
 	
@@ -37,4 +37,4 @@
 	</div>
 </form>
 
-<script src="${HY_CONTEXT}/resources/js/views/banner/update.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/news/update.js"></script>

@@ -8,19 +8,19 @@
   <tbody>
     <tr>                    
       <td class="active text-center" style="width:15%">ID</td>
-      <td style="width:85%">${banner.id }</td>
+      <td style="width:85%">${news.id }</td>
     </tr>
     <tr>
      	<td class="active text-center">标题</td>
-      	<td>${banner.title }</td>
+      	<td>${news.title }</td>
     </tr>
     <tr>
     	<td class="active text-center">内容</td>
-      	<td>${banner.content }</td>
+      	<td>${news.content }</td>
     </tr>
     <tr>                    
       <td class="active text-center">图片</td>
-      <td><img alt="" src="${IMAGE_URL }${banner.image }" style="width:100%"></td>
+      <td><img alt="" src="${IMAGE_URL }${news.image }" style="width:100%"></td>
     </tr>
   </tbody>
 </table>
@@ -33,6 +33,6 @@
 </div>
 <script type="text/javascript">
 function submitClick() {
-	window.location.href = "${HY_CONTEXT}/banner/forIndex";
+	window.location.href = "${HY_CONTEXT}/news/forIndex";
 }
 </script>

@@ -2,10 +2,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <p class="text-left">
-	<a href="${HY_CONTEXT}/banner/forAdd"><button type="button" class="btn btn-primary">创建</button></a>
+	<a href="${HY_CONTEXT}/news/forAdd"><button type="button" class="btn btn-primary">创建</button></a>
 </p>
 
-<table id="bannerTable" class="table-condensed table-bordered table-striped table-hover">
+<table id="newsTable" class="table-condensed table-bordered table-striped table-hover">
     <tr>
         <th w_index="id" width="10%;">ID</th>
         <th w_index="title" width="15%;">标题</th>
@@ -16,4 +16,4 @@
 </table>
 
 
-<script src="${HY_CONTEXT}/resources/js/views/banner/index.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/news/index.js"></script>
