@@ -12,7 +12,7 @@ public interface BannerService extends CrudService<Banner, Long> {
 	 * 添加
 	 * 
 	 * @author wyh
-	 * @param position
+	 * @param banner {@link Banner}
 	 * @param imageFile 图片文件
 	 */
 	void add(Banner banner, MultipartFile imageFile);
@@ -31,7 +31,7 @@ public interface BannerService extends CrudService<Banner, Long> {
 	 * 更新BANNER
 	 * 
 	 * @author wyh
-	 * @param banner
+	 * @param banner {@link Banner}
 	 * @param imageFile
 	 */
 	void update(Banner banner, MultipartFile imageFile);

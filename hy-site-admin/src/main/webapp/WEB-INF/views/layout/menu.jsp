@@ -5,7 +5,7 @@
 			<a href="${HY_CONTEXT}/position/forIndex">职位管理</a>
 		</li>
 		<li>
-			<a href="#">新闻管理</a>
+			<a href="${HY_CONTEXT}/news/forAdd">新闻管理</a>
 		</li>
 		<li>
 			<a href="${HY_CONTEXT}/banner/forIndex">BANNER管理</a>
