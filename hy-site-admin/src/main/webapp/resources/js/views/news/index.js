@@ -65,17 +65,23 @@
         image : function (record, rowIndex, colIndex, options) {
         	return "<img src='"+$.HY.imageUrl + record.image+"' style='width: 100px'/>";
         },
+        type : function (record, rowIndex, colIndex, options) {
+        	if (record.type == 1) {
+        		return "公司新闻";
+        	} else if(record.type == 2) {
+        		return "行业新闻";
+        	}
+        },
 		bindMenuCss : function() {
-			$(".list-group-item-success")
-					.removeClass("list-group-item-success");
-			$(constant.MENU_CSS).addClass("list-group-item-success");
+			$(".active").removeClass("active");
+			$(constant.MENU_CSS).addClass("active");
 		}
 	};
 
 	var create = {
 		init : function() {
 			$.bindEvent.initTable();
-//			bindEvent.bindMenuCss();
+			$.bindEvent.bindMenuCss();
 		}
 	};
 

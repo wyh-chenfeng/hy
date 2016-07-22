@@ -66,9 +66,8 @@
 			
 		},
 		bindMenuCss : function() {
-			$(".list-group-item-success")
-					.removeClass("list-group-item-success");
-			$(constant.MENU_CSS).addClass("list-group-item-success");
+			$(".active").removeClass("active");
+			$(constant.MENU_CSS).addClass("active");
 		}
 	};
 
@@ -76,7 +75,7 @@
 		init : function() {
 			bindEvent.validateFrom();
 			bindEvent.doValidate();
-//			bindEvent.bindMenuCss();
+			bindEvent.bindMenuCss();
 		}
 	};
 

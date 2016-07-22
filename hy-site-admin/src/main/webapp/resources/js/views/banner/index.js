@@ -65,17 +65,16 @@
         image : function (record, rowIndex, colIndex, options) {
         	return "<img src='"+$.HY.imageUrl + record.image+"' style='width: 100px'/>";
         },
-		bindMenuCss : function() {
-			$(".list-group-item-success")
-					.removeClass("list-group-item-success");
-			$(constant.MENU_CSS).addClass("list-group-item-success");
-		}
+    	bindMenuCss : function() {
+			$(".active").removeClass("active");
+			$(constant.MENU_CSS).addClass("active");
+		},
 	};
 
 	var create = {
 		init : function() {
 			$.bindEvent.initTable();
-//			bindEvent.bindMenuCss();
+			$.bindEvent.bindMenuCss();
 		}
 	};
 
