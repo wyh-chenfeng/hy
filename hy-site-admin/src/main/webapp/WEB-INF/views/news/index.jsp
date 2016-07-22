@@ -7,11 +7,12 @@
 
 <table id="newsTable" class="table-condensed table-bordered table-striped table-hover">
     <tr>
-        <th w_index="id" width="10%;">ID</th>
+        <th w_index="id" width="5%;">ID</th>
         <th w_index="title" width="15%;">标题</th>
-        <th w_index="content" width="20%;">内容</th>
-        <th w_render="$.bindEvent.image" width="20%;">图片</th>
-        <th w_render="$.bindEvent.operate" width="20%;">操作</th>
+        <th w_index="content" width="17%;">内容</th>
+        <th w_render="$.bindEvent.type" width="18%;">类型</th>
+        <th w_render="$.bindEvent.image" width="15%;">图片</th>
+        <th w_render="$.bindEvent.operate" width="15%;">操作</th>
     </tr>
 </table>
 

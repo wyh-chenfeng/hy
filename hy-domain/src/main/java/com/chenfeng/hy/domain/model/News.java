@@ -5,15 +5,35 @@ import java.util.Date;
 public class News {
     private Long id;
 
+    /**
+     * 标题
+     */
     private String title;
     
+    /**
+     * 图片
+     */
     private String image;
 
+    /**
+     * 创建时间
+     */
     private Date createTime;
 
+    /**
+     * 更新时间
+     */
     private Date updateTime;
 
+    /**
+     * 内容
+     */
     private String content;
+    
+    /**
+     * 类型 1：公司，2：行业
+     */
+    private Integer type;
 
     public Long getId() {
         return id;
@@ -61,5 +81,13 @@ public class News {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
 	}
 }

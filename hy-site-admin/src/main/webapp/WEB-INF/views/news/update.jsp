@@ -28,7 +28,17 @@
 			<textarea rows="8" name="content" id="content" class="form-control">${news.content }</textarea>
 		</div>
 	</div>
-	
+	<div class="form-group">
+		<label for="type" class="col-sm-2 control-label">
+			类型
+		</label>
+		<div class="col-sm-6">
+			<select name="type" id="type" class="form-control">
+				<option value="1" <c:if test="${news.type == 1}">selected="selected"</c:if>>公司新闻</option>
+				<option value="2" <c:if test="${news.type == 2}">selected="selected"</c:if>>行业新闻</option>
+			</select>
+		</div>
+	</div>
 	<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-8">
 			<button class="btn btn-sm btn-primary bind-create-submit-button" type="button">保存</button>

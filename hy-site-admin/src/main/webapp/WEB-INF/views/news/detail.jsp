@@ -18,6 +18,10 @@
     	<td class="active text-center">内容</td>
       	<td>${news.content }</td>
     </tr>
+    <tr>
+    	<td class="active text-center">类型</td>
+      	<td><c:if test="${news.type == 1}">公司新闻</c:if><c:if test="${news.type == 2}">行业新闻</c:if></td>
+    </tr>
     <tr>                    
       <td class="active text-center">图片</td>
       <td><img alt="" src="${IMAGE_URL }${news.image }" style="width:100%"></td>
