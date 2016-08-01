@@ -9,15 +9,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
-@RequestMapping("solutions")
-public class SolutionsController {
-    Logger log = Logger.getLogger(SolutionsController.class);
+@RequestMapping("cases")
+public class CasesController {
+    Logger log = Logger.getLogger(CasesController.class);
     
     @RequestMapping(value = "forIndex", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forIndex(Model model) {
     	
-        return "solutions/index";
+        return "cases/index";
+    }
+
+    @RequestMapping(value = "forDetail", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forDetail(Model model) {
+    	
+    	return "cases/detail";
     }
     
 }
