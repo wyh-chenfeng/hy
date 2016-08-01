@@ -34,7 +34,7 @@ public class IndexController {
     	Page<News> news = newsService.query(1, 1);
     	model.addAttribute("banners", banners);
     	model.addAttribute("news", news.isEmpty() ? new News() : news.get(0));
-        return "index/index";
+        return "index";
     }
     
 }

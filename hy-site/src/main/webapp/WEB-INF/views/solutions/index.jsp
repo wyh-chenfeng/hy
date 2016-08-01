@@ -65,4 +65,3 @@
 	</div>
 </div>
 
-<script src="${HY_CONTEXT}/resources/js/views/index/index.js"></script>
