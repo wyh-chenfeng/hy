@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false"%>
 
 <div class="footer">
 	<div class="container">
@@ -10,15 +11,17 @@
 			</div>
 			<div class="col-md-4">
 				<p>合作伙伴</p>
-				<p><img src="${HY_CONTEXT}/resources/images/coparations.png"/></p>
+				<p>
+					<img src="${HY_CONTEXT}/resources/images/coparations.png" />
+				</p>
 			</div>
 			<div class="col-md-4 qrcode">
 				<div class="weibocode">
-					<img src="${HY_CONTEXT}/resources/images/wbcode.jpg"/>
+					<img src="${HY_CONTEXT}/resources/images/wbcode.jpg" />
 					<p>官方微博</p>
 				</div>
 				<div class="weixincode">
-					<img src="${HY_CONTEXT}/resources/images/wecode.jpg"/>
+					<img src="${HY_CONTEXT}/resources/images/wecode.jpg" />
 					<p>官方微信</p>
 				</div>
 			</div>

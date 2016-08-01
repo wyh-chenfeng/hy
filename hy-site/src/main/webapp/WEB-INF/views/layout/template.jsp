@@ -14,8 +14,10 @@
 	<tiles:insertAttribute name="resource" />
 </head>
 <body>
-	<tiles:insertAttribute name="header" />
-	<tiles:insertAttribute name="content" />
-	<tiles:insertAttribute name="footer" />
+	<div class="main_wrap" style="background-image: url(${HY_CONTEXT}/resources/images/1.png);">
+		<tiles:insertAttribute name="header" />
+		<tiles:insertAttribute name="content" />
+		<tiles:insertAttribute name="footer" />
+	</div>
 </body>
 </html>
