@@ -5,18 +5,17 @@
 
 <tiles-definitions>
     <definition name="layouts" template="/WEB-INF/views/layout/template.jsp">
-        <put-attribute name="title" value="EcoHuanyu" />
+        <put-attribute name="title" value="" />
         <put-attribute name="resource" value="/WEB-INF/views/layout/resource.jsp" />
         <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
         <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
         <put-attribute name="content" value="" />
     </definition>
     
-    <!-- <definition name="user/login" extends="layouts-user">
-        <put-attribute name="content" value="/WEB-INF/views/user/login.jsp" />
-    </definition> -->
-    
-    
+    <definition name="index/index" extends="layouts">
+    	<put-attribute name="title" value="EcoHuanyu" />
+        <put-attribute name="content" value="/WEB-INF/views/index/index.jsp" />
+    </definition>
     <definition name="*/*" extends="layouts">
         <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
     </definition>

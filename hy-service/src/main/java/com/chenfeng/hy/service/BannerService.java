@@ -1,6 +1,8 @@
 package com.chenfeng.hy.service;
 
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import com.chenfeng.hy.domain.model.Banner;
@@ -35,5 +37,13 @@ public interface BannerService extends CrudService<Banner, Long> {
 	 * @param imageFile
 	 */
 	void update(Banner banner, MultipartFile imageFile);
+
+	/**
+	 * 获取全部Banner
+	 * 
+	 * @author wyh
+	 * @return
+	 */
+	List<Banner> findAll();
 	
 }

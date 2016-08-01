@@ -111,7 +111,14 @@
       content = #{content,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  
   <select id="query" resultMap="BaseResultMap">
+  	 select 
+    <include refid="Base_Column_List" />
+    from t_banner
+  </select>
+  
+  <select id="findAll" resultMap="BaseResultMap">
   	 select 
     <include refid="Base_Column_List" />
     from t_banner

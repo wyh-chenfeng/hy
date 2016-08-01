@@ -1,30 +1,25 @@
 (function($) {
 
 	var constant = {
-		
+		CAROUSEL: "#myCarousel",
 	};
 
 	var bindEvent = {
-		validateFrom : function() {
-			
+		initCarousel : function() {
+			$(constant.CAROUSEL).carousel({
+			  interval: 2000
+			});
 		},
-		doValidate : function() {
-			
-		},
-		bindMenuCss : function() {
-
-		}
+		
 	};
 
 	var create = {
 		init : function() {
-			bindEvent.validateFrom();
-			bindEvent.doValidate();
-			bindEvent.bindMenuCss();
+			bindEvent.initCarousel();
 		}
 	};
 
 	$(function() {
-		// create.init();
+		create.init();
 	});
 })(jQuery);

@@ -1,5 +1,7 @@
 package com.chenfeng.hy.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -60,5 +62,10 @@ public class BannerServiceImpl extends
 			ImgUploadUtil.deleteIMGFile(systemConfig, banner.getImage(), ImgTypeEnum.BANNER);
 			super.delete(id);
 		}
+	}
+
+	@Override
+	public List<Banner> findAll() {
+		return repository.findAll();
 	}
 }
