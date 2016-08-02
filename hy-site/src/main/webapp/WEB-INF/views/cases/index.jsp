@@ -69,3 +69,5 @@
 		</div>
 	</div>
 </div>
+
+<script src="${HY_CONTEXT}/resources/js/views/cases/index.js"></script>

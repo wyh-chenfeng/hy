@@ -19,11 +19,11 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
-				<li><a href="${HY_CONTEXT }/index">首页</a></li>
-				<li class="active"><a href="${HY_CONTEXT }/solutions/forIndex">解决方案</a></li>
-				<li><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
-				<li><a href="${HY_CONTEXT }/activities/forIndex">动态</a></li>
-				<li><a href="${HY_CONTEXT }/aboutus/forSummary">关于我们</a></li>
+				<li><a href="${HY_CONTEXT }/forIndex">首页</a></li>
+				<li class="bind-menu-solutions"><a href="${HY_CONTEXT }/solutions/forIndex">解决方案</a></li>
+				<li class="bind-menu-cases"><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
+				<li class="bind-menu-activities"><a href="${HY_CONTEXT }/activities/forIndex">动态</a></li>
+				<li class="bind-menu-aboutus"><a href="${HY_CONTEXT }/aboutus/forSummary">关于我们</a></li>
 			</ul>
 		</div>
 		<div class="navbar-right-icon">

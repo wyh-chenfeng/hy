@@ -34,3 +34,6 @@
 		</ul>
 	</div>
 </div>
+
+<script src="${HY_CONTEXT}/resources/js/views/aboutus/index.js"></script>
+
