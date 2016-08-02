@@ -27,7 +27,7 @@ public class IndexController {
     @Autowired
     private NewsService newsService;
     
-    @RequestMapping(value = "index", method = RequestMethod.GET)
+    @RequestMapping(value = "forIndex", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forIndex(Model model) {
     	List<Banner> banners = bannerService.findAll();

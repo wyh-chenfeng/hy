@@ -54,3 +54,6 @@
 		</div>
 	</div>
 </div>
+
+<script src="${HY_CONTEXT}/resources/js/views/solutions/index.js"></script>
+
