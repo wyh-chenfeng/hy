@@ -17,6 +17,8 @@ public class BsgridVo<T> implements Serializable{
 	private Boolean success;
 	
 	private Long totalRows;
+
+	private Long totalPages;
 	
 	private Long curPage;
 	
@@ -52,6 +54,14 @@ public class BsgridVo<T> implements Serializable{
 
 	public void setData(List<T> data) {
 		this.data = data;
+	}
+
+	public Long getTotalPages() {
+		return totalPages;
+	}
+
+	public void setTotalPages(Long totalPages) {
+		this.totalPages = totalPages;
 	}
 
 	

@@ -35,5 +35,15 @@ public interface NewsService extends CrudService<News, Long> {
 	 * @param imageFile 上传的图片
 	 */
 	void update(News news, MultipartFile imageFile);
+
+	/**
+	 * 根据type分页查询新闻数据
+	 * 
+	 * @author wyh
+	 * @param curPage 
+	 * @param pageSize
+	 * @return Page<{@link News}>
+	 */
+	Page<News> queryByType(String type, int curPage, int pageSize);
 	
 }

@@ -34,20 +34,8 @@
 					nascetur ridiculus mus.</p>
 			</div>
 		</div>
-		<div class="media">
-			<a class="media-img pull-left" href="#"> <img
-				class="media-object" src="${HY_CONTEXT}/resources/images/solution1.png" alt="媒体对象">
-			</a>
-			<div class="media-body">
-				<h4 class="media-heading">News</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Aenean euismod bibendum laoreet Proin gravida dolor sit amet lacus
-					accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-					Cum sociis natoque penatibus et magnis dis parturient montes,
-					nascetur ridiculus mus.</p>
-			</div>
-		</div>
 		
+		<ul id="paginator"></ul>
 	</div>
 </div>
 

@@ -17,6 +17,7 @@
 
 <script src="${HY_CONTEXT}/resources/js/lib/jquery/jquery.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap.min.js"></script>
+<script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap-paginator.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/knockout/knockout-3.3.0.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/knockout/knockout.mapping.js"></script>
 

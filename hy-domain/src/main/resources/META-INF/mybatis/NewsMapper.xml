@@ -152,4 +152,11 @@
     <include refid="Base_Column_List" />
     from t_news
   </select>
+  <select id="queryByType" resultMap="BaseResultMap">
+  	 select 
+    <include refid="Base_Column_List" />
+    from t_news
+    where 
+    type = #{type,jdbcType=INTEGER}
+  </select>
 </mapper>

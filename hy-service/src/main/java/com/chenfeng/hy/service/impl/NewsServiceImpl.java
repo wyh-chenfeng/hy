@@ -66,4 +66,10 @@ public class NewsServiceImpl extends
 			super.delete(id);
 		}
 	}
+
+	@Override
+	public Page<News> queryByType(String type, int curPage, int pageSize) {
+		PageHelper.startPage(curPage, pageSize, true);
+		return repository.queryByType(type);
+	}
 }
