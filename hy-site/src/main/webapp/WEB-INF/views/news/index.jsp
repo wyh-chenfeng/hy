@@ -48,8 +48,7 @@
 			</div>
 		</div>
 		
-		
 	</div>
 </div>
 
-<script src="${HY_CONTEXT}/resources/js/views/activities/index.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/news/index.js"></script>
