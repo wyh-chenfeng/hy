@@ -82,4 +82,8 @@
 		</listener-class>
 	</listener>
 	<!-- 日志配置 end -->
+	<context-param>  
+	    <param-name>webAppRootKey</param-name>  
+	    <param-value>hy-site.root</param-value>  
+	</context-param>  
 </web-app>

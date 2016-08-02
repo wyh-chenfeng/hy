@@ -15,9 +15,9 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="${HY_CONTEXT }/aboutus/forSummary">公司简介</a></li>
+					<li><a href="${HY_CONTEXT }/aboutus/forSummary">公司简介</a></li>
 					<li><a href="#">核心团队</a></li>
-					<li><a href="${HY_CONTEXT }/aboutus/forAboutus">联系我们</a></li>
+					<li class="active"><a href="${HY_CONTEXT }/aboutus/forAboutus">联系我们</a></li>
 					<li><a href="${HY_CONTEXT }/aboutus/forPosition">招纳贤士</a></li>
 				</ul>
 			</div>
@@ -30,16 +30,7 @@
 			<li><span>邮编：</span> <span>100000<span></li>
 			<li><span>邮箱：</span> <span>kf@liangye.com</span></li>
 			<li><span>联系电话：</span> <span>400-12345678</span></li>
+			<li class="map"><img src="${HY_CONTEXT}/resources/images/map.jpg" /></li>
 		</ul>
-	</div>
-	<div class="well well-sm">
-		<div class="navbar navbar-inverse">
-			<div class="navbar-header">
-				<a class="navbar-brand"> 公司简介 </a>
-			</div>
-		</div>
-		<p class="summary">
-			${home.content }
-		</p>
 	</div>
 </div>
