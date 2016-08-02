@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
-@RequestMapping("activities")
+@RequestMapping("aboutus")
 public class AboutusController {
     Logger log = Logger.getLogger(AboutusController.class);
     
-    @RequestMapping(value = "forIndex", method = RequestMethod.GET)
+    @RequestMapping(value = "forSummary", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forIndex(Model model) {
     	
-        return "activities/index";
+        return "aboutus/summary";
     }
     
 }
