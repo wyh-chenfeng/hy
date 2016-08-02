@@ -35,9 +35,9 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="${HY_CONTEXT }/index">首页</a></li>
 					<li><a href="${HY_CONTEXT }/solutions/index">解决方案</a></li>
-					<li><a href="cases.html">经典案例</a></li>
-					<li><a href="activities.html">动态</a></li>
-					<li><a href="aboutus.html">关于我们</a></li>
+					<li><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
+					<li><a href="${HY_CONTEXT }/activities/forIndex">动态</a></li>
+					<li><a href="${HY_CONTEXT }/aboutus/forIndex">关于我们</a></li>
 				</ul>
 			</div>
 			<div class="navbar-right-icon">
