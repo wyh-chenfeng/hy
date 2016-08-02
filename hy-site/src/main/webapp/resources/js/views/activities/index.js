@@ -6,12 +6,7 @@
 
 	var bindEvent = {
 		bindMenuCss : function() {
-<<<<<<< HEAD
-			$(".active").removeClass("active");
-=======
-			$(".active")
-					.removeClass("active");
->>>>>>> 3d9e49f0b59a8aedf9e50b93e7131e73b921e874
+			$("#navbar .active").removeClass("active");
 			$(constant.MENU_CSS).addClass("active");
 		}
 	};
