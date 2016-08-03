@@ -2,7 +2,7 @@ package com.chenfeng.hy.service.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +47,7 @@ public class PositionServiceImpl extends
 	@Override
 	public List<DepartmentDto> findAll() {
 		List<DepartmentDto> departmentDtos = new ArrayList<DepartmentDto>();
-		Map<String, List<Position>> map = new HashMap<String, List<Position>>();
+		Map<String, List<Position>> map = new LinkedHashMap<String, List<Position>>();
 		List<Position> positions = repository.findAll();
 		for (Position position : positions) {
 			List<Position>  list = map.get(position.getDepartmentName());

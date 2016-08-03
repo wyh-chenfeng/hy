@@ -42,75 +42,26 @@
 		<div class="row">
 			<ul id="tabs" class="nav col-md-2" data-bind="foreach: { data: departments, as: 'department' }">
 				<li data-bind="attr:{class: department.bindClass}">
-					<a href="#marketDep" data-toggle="tab" data-bind="text: department.departmentName, attr:{href: '#' + department.departmentId() }">市场部 </a>
+					<a href="#marketDep" data-toggle="tab" data-bind="text: department.departmentName, attr:{href: '#department' + department.departmentId() }">市场部 </a>
 				</li>
 			</ul>
-			<div id="tabContent" class="tab-content col-md-10">
-				<div class="tab-pane fade in active" id="marketDep">
-					<div data-toggle="collapse" data-target="#saleManager">
-						销售经理<i class="glyphicon"></i>
+			<div id="tabContent" class="tab-content col-md-10" data-bind="foreach: { data: departments, as: 'department' }">
+				<div class="tab-pane fade in active" id="marketDep" data-bind="attr: {id: 'department' + department.departmentId(), class: department.bindDepartmentClass }">
+					<!-- ko foreach: { data: department.positions, as: 'position' } -->
+					<div data-toggle="collapse" data-bind="attr: {'data-target': '#position_' + position.id(), class: position.bindNameClass  }">
+						<!-- ko text:position.name -->销售经理<!-- /ko --><i class="glyphicon"></i>
 					</div>
-					<div id="saleManager" class="panel-collapse collapse in">
+					<div data-bind="attr: {id: 'position_' + position.id(), class: position.bindPositionClass }">
 						<p>工作内容/职位描述：</p>
-						<p>1.负责电商PC产品线，包括产品需求分析、目标制定、产品规划、项目推进等；
+						<p data-bind="html: position.duty">1.负责电商PC产品线，包括产品需求分析、目标制定、产品规划、项目推进等；
 							2.对新事物、新产品怀有激情，具有创新意识，勇于尝试； 3.关注用户需求、用户体验，主导产品需求方向和易用性；
 							4.负责跨部门协调和沟通，推动产品的开发进度，把控产品质量</p>
 						<p>任职资格：</p>
-						<p>1.大学本科以上学历； 2.2年及以上互联网产品经理经验，具有电商前端产品经验优先； 3.有很强的逻辑分析和总结能力；
+						<p data-bind="html: position.recruitment">1.大学本科以上学历； 2.2年及以上互联网产品经理经验，具有电商前端产品经验优先； 3.有很强的逻辑分析和总结能力；
 							4.对业务需求有较强的协调能力；对用户、业务反馈的问题能够及时处理
 							5.有较强的数据分析能力，以及良好的沟通协调能力，突出的团队合作精神；</p>
 					</div>
-					<div data-toggle="collapse" data-target="#relationManager" class="collapsed">
-						公关经理<b class="glyphicon"></b>
-					</div>
-					<div id="relationManager" class="panel-collapse collapse">
-						<p>工作内容/职位描述：</p>
-						<p>1.负责电商PC产品线，包括产品需求分析、目标制定、产品规划、项目推进等；
-							2.对新事物、新产品怀有激情，具有创新意识，勇于尝试； 3.关注用户需求、用户体验，主导产品需求方向和易用性；
-							4.负责跨部门协调和沟通，推动产品的开发进度，把控产品质量</p>
-						<p>任职资格：</p>
-						<p>1.大学本科以上学历； 2.2年及以上互联网产品经理经验，具有电商前端产品经验优先； 3.有很强的逻辑分析和总结能力；
-							4.对业务需求有较强的协调能力；对用户、业务反馈的问题能够及时处理
-							5.有较强的数据分析能力，以及良好的沟通协调能力，突出的团队合作精神；</p>
-					</div>
-					<div data-toggle="collapse" data-target="#marketManager" class="collapsed">
-						市场经理<i class="glyphicon"></i>
-					</div>
-					<div id="marketManager" class="panel-collapse collapse">
-						<p>工作内容/职位描述：</p>
-						<p>1.负责电商PC产品线，包括产品需求分析、目标制定、产品规划、项目推进等；
-							2.对新事物、新产品怀有激情，具有创新意识，勇于尝试； 3.关注用户需求、用户体验，主导产品需求方向和易用性；
-							4.负责跨部门协调和沟通，推动产品的开发进度，把控产品质量</p>
-						<p>任职资格：</p>
-						<p>1.大学本科以上学历； 2.2年及以上互联网产品经理经验，具有电商前端产品经验优先； 3.有很强的逻辑分析和总结能力；
-							4.对业务需求有较强的协调能力；对用户、业务反馈的问题能够及时处理
-							5.有较强的数据分析能力，以及良好的沟通协调能力，突出的团队合作精神；</p>
-					</div>
-				</div>
-				<div class="tab-pane fade in" id="productDep">
-					<div data-toggle="collapse" data-target="#product">
-						产品经理<i class="glyphicon"></i>
-					</div>
-					<div>
-						id="product" class="panel-collapse collapse in">
-						<p>工作内容/职位描述：</p>
-						<p>1.负责电商PC产品线，包括产品需求分析、目标制定、产品规划、项目推进等；
-							2.对新事物、新产品怀有激情，具有创新意识，勇于尝试；</p>
-					</div>
-				</div>
-				<div class="tab-pane fade in" id="projectDep">
-					<div data-toggle="collapse" data-parent="#accordion" data-target="#engineer">
-						Web攻城狮<b class="glyphicon"></b>
-					</div>
-					<div id="engineer" class="panel-collapse collapse in">
-						<p>工作内容/职位描述：</p>
-						<p>1.负责电商PC产品线，包括产品需求分析、目标制定、产品规划、项目推进等；
-							2.对新事物、新产品怀有激情，具有创新意识，勇于尝试； 3.关注用户需求、用户体验，主导产品需求方向和易用性；
-							4.负责跨部门协调和沟通，推动产品的开发进度，把控产品质量</p>
-						<p>任职资格：</p>
-						<p>1.大学本科以上学历； 2.2年及以上互联网产品经理经验，具有电商前端产品经验优先； 3.有很强的逻辑分析和总结能力；
-						</p>
-					</div>
+					<!-- /ko -->
 				</div>
 			</div>
 		</div>

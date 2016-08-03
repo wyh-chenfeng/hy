@@ -6,24 +6,28 @@
 	
 	var viewModel = {
 		departments: ko.observableArray([]),
-		positions: ko.observableArray([]),
 	};
 
 	var format = {
 		formatInit : function(departmentDtos) {
-			$.each(departmentDtos, function(i, n) {
+			$.each(departmentDtos, function(i, d) {
 				if (i == 0) {
-					n.bindClass = ko.observable('active');
+					d.bindClass = ko.observable('active');
+					d.bindDepartmentClass = ko.observable('tab-pane fade in active');
+					
 				} else {
-					n.bindClass = ko.observable('');
+					d.bindClass = ko.observable('');
+					d.bindDepartmentClass = ko.observable('tab-pane fade in');
 				}
-				n.clik = function(n) {
-					$.each(departmentDtos, function(j, d) {
-						d.bindClass('');
-					});
-					n.bindClass("active");
-					viewModel.positions(n.positions());
-				};
+				$.each(d.positions(), function(j, p) {
+					if (j == 0) {
+						p.bindPositionClass = 'panel-collapse collapse in';
+						p.bindNameClass = '';
+					} else {
+						p.bindPositionClass = 'panel-collapse collapse';
+						p.bindNameClass = 'collapsed';
+					}
+				});
 			});
 		}
 	};
