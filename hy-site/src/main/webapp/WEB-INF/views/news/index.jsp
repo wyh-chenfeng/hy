@@ -15,25 +15,31 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">公司动态</a></li>
-					<li><a href="#">行业动态</a></li>
+					<li id="company" class="active">
+						<a href="javaScript:void(0);">公司动态</a>
+					</li>
+					<li id="industry" >
+						<a href="javaScript:void(0);">行业动态</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="media">
-			<a class="media-img pull-left" href="#"> <img
-				class="media-object" src="${HY_CONTEXT}/resources/images/solution1.png" alt="媒体对象">
-			</a>
-			<div class="media-body">
-				<h4 class="media-heading">News</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Aenean euismod bibendum laoreet Proin gravida dolor sit amet lacus
-					accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-					Cum sociis natoque penatibus et magnis dis parturient montes,
-					nascetur ridiculus mus.</p>
+		<!-- ko foreach: { data: news, as: 'n' } -->
+			<div class="media">
+				<a class="media-img pull-left" href="#"> 
+					<img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" alt="媒体对象" src="">
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading" data-bind="text: n.title">News</h4>
+					<p data-bind="text: n.content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Aenean euismod bibendum laoreet Proin gravida dolor sit amet lacus
+						accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+						Cum sociis natoque penatibus et magnis dis parturient montes,
+						nascetur ridiculus mus.</p>
+				</div>
 			</div>
-		</div>
+        <!-- /ko -->
 		
 		<ul id="paginator"></ul>
 	</div>

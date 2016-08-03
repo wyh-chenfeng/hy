@@ -3,16 +3,33 @@
 	var constant = {
 		MENU_CSS : '.bind-menu-news',
 		PAGINATOR : '#paginator',
+		COMPANY : '#company',
+		INDUSTRY : '#industry',
 	};
 
 	var viewModel = {
 		news: ko.observableArray([]),
+		type: ko.observable(1),
 	};
 	
 	var bindEvent = {
 		bindMenuCss : function() {
 			$("#navbar .active").removeClass("active");
 			$(constant.MENU_CSS).addClass("active");
+		},
+		initNewsClick : function() {
+			$(constant.COMPANY).on('click', function() {
+				$(constant.INDUSTRY).removeClass("active");
+				$(constant.COMPANY).addClass("active");
+				viewModel.type(1);
+				bindEvent.getData(1);
+			});
+			$(constant.INDUSTRY).on('click', function() {
+				$(constant.COMPANY).removeClass("active");
+				$(constant.INDUSTRY).addClass("active");
+				viewModel.type(2);
+				bindEvent.getData(1);
+			});
 		},
 		bindPaginator : function(curPage, totalPages) {
 			var options = {
@@ -48,9 +65,9 @@
 				type : 'POST',
 				url : $.HY.context + '/news/query',
 				dataType : 'JSON',
-				data : {"curPage": curPage, "type": 1},
+				data : {"curPage": curPage, "type": viewModel.type()},
 				success : function(data) {
-					var temp = ko.mapping.fromJS(data.content); 
+					var temp = ko.mapping.fromJS(data.data); 
 					if(data.totalPages > 0) {
 						bindEvent.bindPaginator(data.curPage, data.totalPages);
 					} else {
@@ -64,6 +81,8 @@
 
 	var create = {
 		init : function() {
+			ko.applyBindings(viewModel);
+			bindEvent.initNewsClick();
 			bindEvent.bindMenuCss();
 			bindEvent.getData(1);
 		}
