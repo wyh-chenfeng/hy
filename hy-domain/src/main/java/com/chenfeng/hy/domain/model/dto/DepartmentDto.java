@@ -17,16 +17,18 @@ public class DepartmentDto implements Serializable{
 	
 	private static final long serialVersionUID = -6650723249243262916L;
 
-	private String DepartmentName;
+	private String departmentName;
+
+	private Long departmentId;
 	
 	private List<Position> positions;
 
 	public String getDepartmentName() {
-		return DepartmentName;
+		return departmentName;
 	}
 
 	public void setDepartmentName(String departmentName) {
-		DepartmentName = departmentName;
+		this.departmentName = departmentName;
 	}
 
 	public List<Position> getPositions() {
@@ -35,6 +37,14 @@ public class DepartmentDto implements Serializable{
 
 	public void setPositions(List<Position> positions) {
 		this.positions = positions;
+	}
+
+	public Long getDepartmentId() {
+		return departmentId;
+	}
+
+	public void setDepartmentId(Long departmentId) {
+		this.departmentId = departmentId;
 	}
 	
 }

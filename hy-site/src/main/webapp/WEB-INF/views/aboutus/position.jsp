@@ -40,11 +40,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<ul id="tabs" class="nav col-md-2">
-				<li class="active"><a href="#marketDep" data-toggle="tab">
-						市场部 </a></li>
-				<li><a href="#productDep" data-toggle="tab">产品部</a></li>
-				<li><a href="#projectDep" data-toggle="tab">工程部</a></li>
+			<ul id="tabs" class="nav col-md-2" data-bind="foreach: { data: departments, as: 'department' }">
+				<li data-bind="attr:{class: department.bindClass}">
+					<a href="#marketDep" data-toggle="tab" data-bind="text: department.departmentName, attr:{href: '#' + department.departmentId() }">市场部 </a>
+				</li>
 			</ul>
 			<div id="tabContent" class="tab-content col-md-10">
 				<div class="tab-pane fade in active" id="marketDep">

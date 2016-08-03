@@ -60,6 +60,9 @@ public class PositionServiceImpl extends
 		for (Entry<String, List<Position>> entry : map.entrySet()) {
 			DepartmentDto departmentDto = new DepartmentDto();
 			departmentDto.setDepartmentName(entry.getKey());
+			if (!entry.getValue().isEmpty()) {
+				departmentDto.setDepartmentId(entry.getValue().get(0).getDepartmentId());
+			}
 			departmentDto.setPositions(entry.getValue());
 			departmentDtos.add(departmentDto);
 		}

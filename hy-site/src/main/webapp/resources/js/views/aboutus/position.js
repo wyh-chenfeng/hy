@@ -9,6 +9,25 @@
 		positions: ko.observableArray([]),
 	};
 
+	var format = {
+		formatInit : function(departmentDtos) {
+			$.each(departmentDtos, function(i, n) {
+				if (i == 0) {
+					n.bindClass = ko.observable('active');
+				} else {
+					n.bindClass = ko.observable('');
+				}
+				n.clik = function(n) {
+					$.each(departmentDtos, function(j, d) {
+						d.bindClass('');
+					});
+					n.bindClass("active");
+					viewModel.positions(n.positions());
+				};
+			});
+		}
+	};
+	
 	var bindEvent = {
 		bindMenuCss : function() {
 			$("#navbar .active").removeClass("active");
@@ -21,8 +40,9 @@
 				dataType : 'JSON',
 				data : {},
 				success : function(data) {
-//					var temp = ko.mapping.fromJS(data); 
-//					viewModel.departments(temp());
+					var temp = ko.mapping.fromJS(data); 
+					format.formatInit(temp());
+					viewModel.departments(temp());
 				}
 			});
 		}
