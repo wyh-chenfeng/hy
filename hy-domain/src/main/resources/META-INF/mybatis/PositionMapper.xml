@@ -167,5 +167,14 @@
 		t_position.*,
     	m_department.name AS department_name 
     FROM t_position LEFT JOIN m_department ON t_position.department_id = m_department.id
+    ORDER BY t_position.update_time DESC
+  </select>
+
+  <select id="findAll" resultMap="PositionResultMap">
+    SELECT 
+		t_position.*,
+    	m_department.name AS department_name 
+    FROM t_position LEFT JOIN m_department ON t_position.department_id = m_department.id
+    ORDER BY t_position.department_id, t_position.update_time DESC
   </select>
 </mapper>
