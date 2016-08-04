@@ -36,6 +36,12 @@ public class AboutusController {
         return "aboutus/summary";
     }
 
+    @RequestMapping(value = "forCore", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forCore(Model model) {
+    	return "aboutus/core";
+    }
+
     @RequestMapping(value = "forAboutus", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forAboutus() {
