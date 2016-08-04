@@ -280,7 +280,7 @@
 			</activation>
 		</profile>
 		<profile>
-			<id>formal</id>
+			<id>prod</id>
 			<properties>
 				<!-- MySql -->
 				<database_driverClassName>com.mysql.jdbc.Driver</database_driverClassName>
