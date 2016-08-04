@@ -293,7 +293,7 @@
 				<cp_minIdle>0</cp_minIdle>
 				<cp_maxWait>60000</cp_maxWait>
 				<!-- log level -->
-				<log_level>debug</log_level>
+				<log_level>info</log_level>
 				<!-- nginx -->
 				<image_url>http://182.92.198.168:8080/</image_url>
 				<image_server>/usr/local/nginx/html</image_server>
