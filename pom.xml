@@ -296,12 +296,12 @@
 				<cp_minIdle>0</cp_minIdle>
 				<cp_maxWait>60000</cp_maxWait>
 				<!-- log level -->
-				<log_level>info</log_level>
+				<log_level>error</log_level>
 				<log_hy_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
 				<image_url>http://182.92.198.168:8080/</image_url>
-				<image_server>/usr/local/nginx/html</image_server>
+				<image_server>/usr/local/nginx/html/</image_server>
 			</properties>
 			<activation>
 				<activeByDefault>false</activeByDefault>

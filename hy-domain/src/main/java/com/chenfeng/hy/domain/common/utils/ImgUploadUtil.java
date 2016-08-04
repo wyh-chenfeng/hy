@@ -29,13 +29,6 @@ public class ImgUploadUtil {
 	public static String saveIMGFile(SystemConfig config, MultipartFile file,
 			ImgTypeEnum imgType, Long... id) {
 		
-		System.out.println("=====================================================");
-		System.out.println("=====================================================");
-		System.out.println(config.getImageServer());
-		System.out.println(config.getImageUrl());
-		System.out.println("=====================================================");
-		System.out.println("=====================================================");
-		
 		if (config != null && file != null && !file.isEmpty() && imgType != null) {
 			String suffix = "." + file.getOriginalFilename().split("\\.")[1];
 			String fileFormat = suffix.toUpperCase();
@@ -62,9 +55,8 @@ public class ImgUploadUtil {
 				file.transferTo(targetFile);
 				return (folder + "/" + fileName);
 			} catch (Exception e) {
-				log.debug(e.getMessage());
 				e.printStackTrace();
-				throw new IllegalArgumentException();
+				log.error(e.getMessage());
 			}
 		}
 		return null;
