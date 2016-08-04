@@ -28,6 +28,14 @@ public class ImgUploadUtil {
 
 	public static String saveIMGFile(SystemConfig config, MultipartFile file,
 			ImgTypeEnum imgType, Long... id) {
+		
+		System.out.println("=====================================================");
+		System.out.println("=====================================================");
+		System.out.println(config.getImageServer());
+		System.out.println(config.getImageUrl());
+		System.out.println("=====================================================");
+		System.out.println("=====================================================");
+		
 		if (config != null && file != null && !file.isEmpty() && imgType != null) {
 			String suffix = "." + file.getOriginalFilename().split("\\.")[1];
 			String fileFormat = suffix.toUpperCase();
