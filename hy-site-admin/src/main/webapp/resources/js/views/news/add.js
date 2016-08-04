@@ -83,7 +83,7 @@
 		init : function() {
 			bindEvent.validateFrom();
 			bindEvent.doValidate();
-//			bindEvent.bindMenuCss();
+			bindEvent.bindMenuCss();
 		}
 	};
 
