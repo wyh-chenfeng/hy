@@ -36,7 +36,7 @@
 				<a class="navbar-brand"> 公司简介 </a>
 			</div>
 		</div>
-		<p class="summary">
+		<p class="summary text-indent">
 			${home.content }
 		</p>
 	</div>
