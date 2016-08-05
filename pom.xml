@@ -277,6 +277,9 @@
 				<!-- nginx -->
 				<image_url>http://localhost/</image_url>
 				<image_server>D:/nginx/</image_server>
+				<!-- admin user -->
+				<user_name>admin</user_name>
+				<user_password>admin</user_password>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -302,6 +305,9 @@
 				<!-- nginx -->
 				<image_url>http://182.92.198.168:8080/</image_url>
 				<image_server>/usr/local/nginx/html/</image_server>
+				<!-- admin user -->
+				<user_name>admin</user_name>
+				<user_password>admin</user_password>
 			</properties>
 			<activation>
 				<activeByDefault>false</activeByDefault>

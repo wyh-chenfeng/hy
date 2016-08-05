@@ -26,5 +26,4 @@ public class SystemConfig {
 	public void setImageServer(String imageServer) {
 		this.imageServer = imageServer;
 	}
-	
 }
