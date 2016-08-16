@@ -15,10 +15,10 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${HY_CONTEXT }/forIndex"> EcoHuanyu </a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
+				<li class="bind-menu-index"><a class="navbar-brand active" href="${HY_CONTEXT }/forIndex"> EcoHuanyu </a></li>
 				<li class="bind-menu-solutions"><a href="${HY_CONTEXT }/solutions/forIndex">解决方案</a></li>
 				<li class="bind-menu-cases"><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
 				<li class="bind-menu-news"><a href="${HY_CONTEXT }/news/forIndex">动态</a></li>
