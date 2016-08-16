@@ -16,10 +16,10 @@
 				</p>
 			</div>
 			<div class="col-md-4 qrcode">
-				<div class="weibocode">
+				<%-- <div class="weibocode">
 					<img src="${HY_CONTEXT}/resources/images/wbcode.jpg" />
 					<p>官方微博</p>
-				</div>
+				</div> --%>
 				<div class="weixincode">
 					<img src="${HY_CONTEXT}/resources/images/wecode.jpg" />
 					<p>官方微信</p>

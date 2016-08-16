@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8" isELIgnored="false"%>
 
 <!-- header start -->
-<div class="navbar navbar-inverse header">
+<div class="navbar navbar-inverse navbar-fixed-top header">
 	<div class="container">
 		<div class="welcome">
 			<a>欢迎来到环域</a>
@@ -15,11 +15,10 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"> EcoHuanyu </a>
+			<a class="navbar-brand" href="${HY_CONTEXT }/forIndex"> EcoHuanyu </a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
-				<li><a href="${HY_CONTEXT }/forIndex">首页</a></li>
 				<li class="bind-menu-solutions"><a href="${HY_CONTEXT }/solutions/forIndex">解决方案</a></li>
 				<li class="bind-menu-cases"><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
 				<li class="bind-menu-news"><a href="${HY_CONTEXT }/news/forIndex">动态</a></li>
@@ -28,7 +27,7 @@
 		</div>
 		<div class="navbar-right-icon">
 			<p class="navbar-text">
-				<a href="#" class="navbar-link">水环境治理服务提供商</a> <img
+				<a class="navbar-link">水环境治理服务提供商</a> <img
 					src="${HY_CONTEXT}/resources/images/icon.png">
 			</p>
 		</div>

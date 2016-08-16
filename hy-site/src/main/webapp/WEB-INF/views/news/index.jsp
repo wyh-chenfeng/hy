@@ -31,12 +31,8 @@
 					<img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" alt="媒体对象" src="">
 				</a>
 				<div class="media-body">
-					<h4 class="media-heading" data-bind="text: n.title">News</h4>
-					<p data-bind="text: n.content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Aenean euismod bibendum laoreet Proin gravida dolor sit amet lacus
-						accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-						Cum sociis natoque penatibus et magnis dis parturient montes,
-						nascetur ridiculus mus.</p>
+					<h4 class="media-heading" data-bind="text: n.title"></h4>
+					<p data-bind="text: n.content"></p>
 				</div>
 			</div>
         <!-- /ko -->

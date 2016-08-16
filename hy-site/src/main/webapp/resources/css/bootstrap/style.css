@@ -83,11 +83,28 @@ input, select {
 	padding:20px 0 7px 0;
 	font-size: 20px;
 }
+.welcome a{
+	text-decoration:none;
+	color:#008DCC;
+}
+.welcome a:hover{
+	color:#008DCC;
+}
 .header .container{
 	position: relative;
 }
-.navbar-brand{
+.header .navbar-brand{
 	font-size: 14px;
+	color:#fff;
+}
+.header .navbar-link{
+	color:#fff;
+}
+.header .navbar-link:hover,.header .navbar-link:active{
+	text-decoration:none;
+}
+.header .navbar-brand.active,.header .navbar-brand:hover{
+	color:#008DCC;
 }
 #navbar .navbar-nav>.active>a, #navbar .navbar-nav>.active>a:focus{
 	color:#008DCC;
@@ -98,6 +115,7 @@ input, select {
  }
 #navbar .navbar-nav>li>a{
 	font-size: 14px;
+	color: #fff;
 }
 .navbar-right-icon{
 	position: absolute;
@@ -129,46 +147,57 @@ input, select {
 }
 
 .carousel-nav-control.left{
-	left: 15%;
+	left: 20px;
 }
 .carousel-nav-control.right{
-	right: 15%
+	right: 20px;
 }
 .item-desc{
-	padding:40px 30px;
-	background-color: #fff;
-	opacity: 0.8;
+	padding:20px 15px;
+	background-color: rgba(255,255,255,0.6);
 	position: absolute;
-	width: 398px;
-	right: 15%;
+	width: 308px;
+	right: 7%;
 	margin-right: 116px;
 	top:50%;
-	margin-top:-143px;
+	margin-top:-97px;
 }
 .item-desc .item-title{
-	font-size: 21px;
+	font-size: 18px;
 	color: #050505;
 }
 .item-desc .item-content{
-	padding: 36px 0;
-	font-size: 18px;
+	padding: 15px 0;
+	font-size: 16px;
 	color: #050505;
 }
 .item-desc .item-kown-more{
 	color: #000;
-	font-size: 22px;
+	font-size: 18px;
 }
 .banners img{
 	width:100%;
 	display: block;
 	height: 234px;
 }
+.banners .item{
+	display: block;
+	color: #000;
+	text-decoration: none;
+	padding-top: 15px;
+}
+.banners .item:hover{
+	background-color: #f1f1f1;
+}
+.banners .item:hover,.banners .item:active,.banners .item:link{
+	text-decoration: none;
+}
 .banners .title{
-	font-size: 24px;
-	color: #011D45;
-	padding: 17px 0 16px 73px;
+	font-size: 20px;
+	color: #000;
+	padding: 17px 0 16px 0;
 	position: relative;
-	border-bottom: 2px solid #000;
+	border-bottom: 1px solid #000;
 }
 .banners .desc{
 	font-size: 14px;
@@ -188,11 +217,9 @@ input, select {
 	font-size: 14px;
 	padding-bottom: 10px;
 }
-.footer .qrcode .weixincode{
-	padding-right: 34px;
-}
+
 .footer .qrcode .weixincode, .footer .qrcode .weibocode{
-	float: right;
+	float: left;
 }
 .footer .qrcode .weixincode>p,.footer .qrcode .weibocode>p{
 	padding-top: 10px;
@@ -217,13 +244,16 @@ input, select {
 .main_wrap{
 	background-size: contain;
 	background-repeat: no-repeat; 
+	background-color: #f9f9f9;
 }
 .main-content{
-	margin-top: 150px;
+	padding-top: 150px;
 }
 .main-content .well{
     background: #fff;
 	padding:30px;
+	border:0;
+	box-shadow: none;
 }
 .main-content .navbar-inverse{
 	background: #fff;
@@ -235,15 +265,20 @@ input, select {
 	background-color: transparent;
 }
 .main-content .navbar-brand{
-	font-size: 21px;
+	font-size: 20px;
 	color: #000;
+	padding-left: 0;
 }
 .main-content .navbar-brand:hover{
 	color: #000;
 }
+.main-content .navbar-inverse .navbar-nav>li:last-child>a{
+	padding-right: 0;
+}
 .main-content .navbar-inverse .navbar-nav>li>a{
 	color: #000;
-	font-size: 18px;
+	font-size: 14px;
+	padding-left: 0;
 }
 .main-content .navbar-inverse .navbar-nav>li>a:hover{
     color:#008DCC;
@@ -262,7 +297,8 @@ input, select {
 }
 .main_content_desc{
 	color: #050505;
-	font-size: 18px;
+	font-size: 14px;
+	line-height: 1.5
 }
 .main-content .well .media .media-img{
    width:50%;
@@ -272,25 +308,32 @@ input, select {
 }
 .main-content .well .media .media-body{
    height:100%;
-   font-size: 18px;
+   font-size: 14px;
+   line-height: 1.5;
 }
 .main-content .well .media .media-body .media-heading{
-   font-size: 24px;
+   font-size: 20px;
 }
+
 .main-content .thumbnail {
 	border:0;
 }
+.main-content .thumbnail .caption{
+	padding:9px 0;
+}
 .main-content .thumbnail .caption h3{
 	font-size:18px;
+	padding: 8px 0;
 }
 .main-content .thumbnail .caption p{
 	font-size:14px;
+	line-height: 1.5;
 }
 .main-content .thumbnail .caption .kownmore{
 	padding:8px 0;
 }
 .contact_us > li{
-   font-size: 18px;
+   font-size: 14px;
    line-height: 1.5;
    overflow: hidden;
 }
@@ -302,17 +345,16 @@ input, select {
 	left: 0;
 }
 .contact_us > li.address >span:last-child{
-	padding-left:60px;
+	padding-left:48px;
 	display: inline-block;
 }
 .contact_us .map{
 	padding:15px 0;
 }
-#tabs{
-	font-size:18px; 
-}
+
 #tabs li >a{
 	color: #000;
+	font-size: 14px;
 }
 #tabs li.active >a{
 	color: #008DCC;
@@ -326,6 +368,7 @@ input, select {
 	font-size: 18px;
 	line-height: 1.5;
 	padding-left: 30px;
+	font-size: 14px;
 }
 #tabContent [data-toggle]{
 	padding:10px 0;
@@ -340,27 +383,11 @@ input, select {
 	font-size: 12px;
 }
 .main-content .summary{
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 1.5;
 }
 .text-indent{
 	text-indent:2em;
-}
-@media (max-width: 1340px){
-	.item-desc{
-		padding:20px 15px;
-		margin-top: -115px;
-	}
-	.item-desc .item-title{
-		font-size: 20px;
-	}
-	.item-desc .item-content{
-		padding: 20px 0;
-		font-size: 18px;
-	}
-	.item-desc .item-kown-more{
-		font-size:18px;
-	}
 }
 @media (max-width: 1218px){
 	.carousel-nav-control{
@@ -369,17 +396,6 @@ input, select {
 		font-size: 40px;
 		margin-top: -54px;
 		line-height:92px;
-	}
-	.item-desc{
-		margin-top:-90px;
-		width: 340px;
-		margin-right: 86px;
-	}
-	.item-desc .item-title{
-		font-size: 18px;
-	}
-	.item-desc .item-content, .item-desc .item-kown-more{
-		font-size: 16px;
 	}
 }
 @media (max-width: 992px){
@@ -391,7 +407,7 @@ input, select {
 		display: none;
 	}
 	.item-desc{
-		padding:20px 15px;
+		padding:15px;
 		margin-top: -80px;
 		margin-right: 50px;
 		width:270px;
@@ -411,7 +427,6 @@ input, select {
 	}
 	.banners .title{
 		padding:13px 0 12px 60px;
-		font-size: 20px;
 	}
 	.banners .desc{
 		padding: 16px 0;
@@ -428,10 +443,6 @@ input, select {
 	}
 	.footer{
 		padding-top:10px;
-	}
-	.footer .qrcode .weixincode, .footer .qrcode .weibocode{
-		float: left;
-		padding-right: 20px;
 	}
 	.footer .copyright{
 		padding: 10px 0;
@@ -473,7 +484,6 @@ input, select {
 }
 @media (max-width: 768px){
 	.header{
-		position: relative; !important;
 		margin-bottom: 0;
 	}
 	.navbar-right-icon {
@@ -490,7 +500,7 @@ input, select {
 		line-height:65px;
 	}
 	.main-content{
-		margin-top: 70px;
+		padding-top: 70px;
 	}
 	.main-content .well .media .media-img{
 	   width:auto;
