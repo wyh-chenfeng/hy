@@ -13,7 +13,7 @@
 	<!-- 轮播（Carousel）项目 -->
 	<div class="carousel-inner">
 		<c:forEach items="${banners }" var="banner" varStatus="status">
-			<div class="item <c:if test='${status.first}'>active</c:if>">
+			<div class="item <c:if test='${status.first}'>active</c:if>" style="background-image:url(${IMAGE_URL}${banner.image})">
 				<div class="item-desc">
 					<h3 class="item-title">${banner.title }</h3>
 					<p class="item-content">
