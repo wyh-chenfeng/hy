@@ -4,22 +4,12 @@
 <div class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-sm-6">
 				<p>语言版本 : 中国</p>
 				<p>关于我们</p>
 				<p>反馈建议：xxx@sina.com.cn</p>
 			</div>
-			<div class="col-md-4">
-				<p>合作伙伴</p>
-				<p>
-					<img src="${HY_CONTEXT}/resources/images/coparations.png" />
-				</p>
-			</div>
-			<div class="col-md-4 qrcode">
-				<%-- <div class="weibocode">
-					<img src="${HY_CONTEXT}/resources/images/wbcode.jpg" />
-					<p>官方微博</p>
-				</div> --%>
+			<div class="col-sm-6 qrcode">
 				<div class="weixincode">
 					<img src="${HY_CONTEXT}/resources/images/wecode.jpg" />
 					<p>官方微信</p>

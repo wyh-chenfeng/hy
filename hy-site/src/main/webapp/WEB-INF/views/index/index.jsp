@@ -26,9 +26,10 @@
 		</c:forEach>
 	</div>
 	<!-- 轮播（Carousel）导航 -->
-	<a class="carousel-nav-control left" href="#myCarousel"
-		data-slide="prev">&lsaquo;</a> <a class="carousel-nav-control right"
-		href="#myCarousel" data-slide="next">&rsaquo;</a>
+   	<a class="carousel-nav-control left" href="#myCarousel" 
+      	data-slide="prev"><img src="${HY_CONTEXT}/resources/images/carousel_left.png"/></a>
+   	<a class="carousel-nav-control right" href="#myCarousel" 
+      	data-slide="next"><img src="${HY_CONTEXT}/resources/images/carousel_right.png"/></a>
 </div>
 
 
