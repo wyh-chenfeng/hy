@@ -14,7 +14,7 @@
 	
 	var bindEvent = {
 		bindMenuCss : function() {
-			$("#navbar .active").removeClass("active");
+			$("#menu .active").removeClass("active");
 			$(constant.MENU_CSS).addClass("active");
 		},
 		initNewsClick : function() {

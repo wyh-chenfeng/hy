@@ -3,7 +3,7 @@
 
 <!-- header start -->
 <div class="navbar navbar-inverse navbar-fixed-top header">
-	<div class="container" id="navbar">
+	<div class="container" id="menu">
 		<div class="welcome">
 			<a>欢迎来到环域</a>
 		</div>
@@ -17,7 +17,7 @@
 			</button>
 			<a class="navbar-brand active bind-menu-index" href="${HY_CONTEXT }/forIndex"> EcoHuanyu </a>
 		</div>
-		<div class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
 				<li class="bind-menu-solutions"><a href="${HY_CONTEXT }/solutions/forIndex">解决方案</a></li>
 				<li class="bind-menu-cases"><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
