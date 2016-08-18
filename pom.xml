@@ -275,8 +275,8 @@
 				<log_hy_file>/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
-				<image_url>http://localhost/</image_url>
-				<image_server>D:/nginx/</image_server>
+				<image_url>http://localhost/hy-site/</image_url>
+				<image_server>D:/nginx/hy-site/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
 				<user_password>admin</user_password>
@@ -303,8 +303,8 @@
 				<log_hy_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
-				<image_url>http://182.92.198.168:8080/</image_url>
-				<image_server>/usr/local/nginx/html/</image_server>
+				<image_url>http://182.92.198.168/hy-site/</image_url>
+				<image_server>/usr/local/nginx/html/hy-site/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
 				<user_password>admin</user_password>
