@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -20,11 +21,11 @@ public class CasesController {
         return "cases/index";
     }
 
-    @RequestMapping(value = "forDetail", method = RequestMethod.GET)
+    @RequestMapping(value = "forDetail/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public String forDetail(Model model) {
+    public String forDetail(@PathVariable("id") Long id, Model model) {
     	
-    	return "cases/detail";
+    	return "cases/case_detail_" + id;
     }
     
 }

@@ -15,10 +15,10 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
+					<li><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forSpongeCity">海绵城市</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forWaterPullution">农村污水治理</a></li>
-					<li><a href="${HY_CONTEXT}/solutions/forConstructedWetland">人工湿地</a></li>
+					<li class="active"><a href="${HY_CONTEXT}/solutions/forConstructedWetland">人工湿地</a></li>
 				</ul>
 			</div>
 		</div>
@@ -30,23 +30,34 @@
 	<div class="well well-sm">
 		<div class="media">
 			<a class="media-img pull-left"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution.jpg" alt="媒体对象">
+				src="${HY_CONTEXT}/resources/images/wetland.jpg" alt="媒体对象">
 			</a>
 			<div class="media-body">
 				<p>
-					水环境污染是城市化进程的产物；随着经济建设和社会进步，治理污染水环境是人类自身的要求，是和谐社会的必然需要。<br />
-					入河污染控制技术与工程<br /> 河道水质净化强化技术与工程<br /> 河口水质净化技术与工程
+					人工湿地由以下的结构单元构成：<br /> 底部的防渗层<br /> 由土壤、植物根系及微生物组成的基质层<br />
+					湿地植物落叶及微生物尸体等组成的腐质层
 				</p>
 			</div>
 		</div>
 		<div class="media">
 			<a class="media-img pull-right"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution2.jpg" alt="媒体对象">
+				src="${HY_CONTEXT}/resources/images/wetland2.jpg" alt="媒体对象">
 			</a>
 			<div class="media-body">
 				<p>
-					重点解决的问题<br /> 1、雨污混流；<br /> 2、污水直排；<br /> 3、生态破坏；<br />
-					4、水体动力衰减（物理、化学、生物学）
+					关键问题： <br /> C:N失衡,微生物活性低,TN 去除难度大<br /> 奥运期间-： <br /> 生物处理+超滤膜
+					,膜生物反应器MBR MBR+RO
+				</p>
+			</div>
+		</div>
+		<div class="media">
+			<a class="media-img pull-left"> <img class="media-object"
+				src="${HY_CONTEXT}/resources/images/wetland3.jpg" alt="媒体对象">
+			</a>
+			<div class="media-body">
+				<p>
+					山西湿地工程项目规模日处理10万立方米，是目前国内最大的人工湿地污水处理项目，<br />
+					工程用地中70%为河道滩涂湿地，工程建成后，水质得到明显改善，生态环境得到有效恢复
 				</p>
 			</div>
 		</div>

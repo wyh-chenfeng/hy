@@ -6,7 +6,7 @@
 
 	var bindEvent = {
 		bindMenuCss : function() {
-			$(".active").removeClass("active");
+			$("#menu .active").removeClass("active");
 			$(constant.MENU_CSS).addClass("active");
 		}
 	};

@@ -15,8 +15,8 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
-					<li><a href="${HY_CONTEXT}/solutions/forSpongeCity">海绵城市</a></li>
+					<li><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
+					<li class="active"><a href="${HY_CONTEXT}/solutions/forSpongeCity">海绵城市</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forWaterPullution">农村污水治理</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forConstructedWetland">人工湿地</a></li>
 				</ul>
@@ -30,23 +30,29 @@
 	<div class="well well-sm">
 		<div class="media">
 			<a class="media-img pull-left"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution.jpg" alt="媒体对象">
+				src="${HY_CONTEXT}/resources/images/sponge_city.jpg" alt="媒体对象">
 			</a>
 			<div class="media-body">
 				<p>
-					水环境污染是城市化进程的产物；随着经济建设和社会进步，治理污染水环境是人类自身的要求，是和谐社会的必然需要。<br />
-					入河污染控制技术与工程<br /> 河道水质净化强化技术与工程<br /> 河口水质净化技术与工程
-				</p>
+					基于LID理念，建立了“在线无动力分离-渗蓄滞留减排-生态净化回用”的雨污水三级处理技术体系，为各级处理单元提供了理论依据</p>
 			</div>
 		</div>
 		<div class="media">
 			<a class="media-img pull-right"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution2.jpg" alt="媒体对象">
+				src="${HY_CONTEXT}/resources/images/sponge_city2.jpg" alt="媒体对象">
 			</a>
 			<div class="media-body">
 				<p>
-					重点解决的问题<br /> 1、雨污混流；<br /> 2、污水直排；<br /> 3、生态破坏；<br />
-					4、水体动力衰减（物理、化学、生物学）
+					针对道路、广场瞬时流量大，粒径分布广，采用一体三级分离室集成设计，对75-2000μm范围内颗粒物的去除率可达74-95%。</p>
+			</div>
+		</div>
+		<div class="media">
+			<a class="media-img pull-left"> <img class="media-object"
+				src="${HY_CONTEXT}/resources/images/sponge_city3.jpg" alt="媒体对象">
+			</a>
+			<div class="media-body">
+				<p>
+					针对混合区，雨污水难分离<br /> 借助旋流产生的离心力，去除水中粒径较大的颗粒物；并借助虹吸作用自动实现反冲洗,<br />装置对雨水、污水中粒径20-300μm颗粒物的去除率超过97%，颗粒物的总去除率超过95%。
 				</p>
 			</div>
 		</div>

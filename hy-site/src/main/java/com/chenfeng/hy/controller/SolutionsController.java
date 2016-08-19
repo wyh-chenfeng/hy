@@ -19,5 +19,26 @@ public class SolutionsController {
     	
         return "solutions/index";
     }
+
+    @RequestMapping(value = "forSpongeCity", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forSpongeCity(Model model) {
+    	
+    	return "solutions/sponge_city";
+    }
+
+    @RequestMapping(value = "forWaterPullution", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forWaterPullution(Model model) {
+    	
+    	return "solutions/water_pullution";
+    }
+
+    @RequestMapping(value = "forConstructedWetland", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forConstructedWetland(Model model) {
+    	
+    	return "solutions/constructed_wetland";
+    }
     
 }

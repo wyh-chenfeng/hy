@@ -15,9 +15,9 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
+					<li><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forSpongeCity">海绵城市</a></li>
-					<li><a href="${HY_CONTEXT}/solutions/forWaterPullution">农村污水治理</a></li>
+					<li class="active"><a href="${HY_CONTEXT}/solutions/forWaterPullution">农村污水治理</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forConstructedWetland">人工湿地</a></li>
 				</ul>
 			</div>
@@ -30,24 +30,33 @@
 	<div class="well well-sm">
 		<div class="media">
 			<a class="media-img pull-left"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution.jpg" alt="媒体对象">
+				src="${HY_CONTEXT}/resources/images/water_pullution.jpg" alt="媒体对象">
 			</a>
 			<div class="media-body">
 				<p>
-					水环境污染是城市化进程的产物；随着经济建设和社会进步，治理污染水环境是人类自身的要求，是和谐社会的必然需要。<br />
-					入河污染控制技术与工程<br /> 河道水质净化强化技术与工程<br /> 河口水质净化技术与工程
+					针对单户型污水水量小，瞬时水力负荷及污染负荷大特点<br /> 采用具有良好水力传导性能、高微生物附着性能的新型复合多介质材料<br />
+					显著提高了湿地耐冲击负荷能力及脱氮除磷能力<br /> 占地面积较传统面积缩小50%，服务人口1~10人
 				</p>
 			</div>
 		</div>
 		<div class="media">
 			<a class="media-img pull-right"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution2.jpg" alt="媒体对象">
+				src="${HY_CONTEXT}/resources/images/water_pullution2.jpg" alt="媒体对象">
 			</a>
 			<div class="media-body">
 				<p>
-					重点解决的问题<br /> 1、雨污混流；<br /> 2、污水直排；<br /> 3、生态破坏；<br />
-					4、水体动力衰减（物理、化学、生物学）
+					针对传统人工湿地氮磷同时脱除导致湿地后段磷源严重不足，反硝化的微生物群落较低，微生物的反硝化能力显著减弱的问题，通过各区段不同填料的有效组合，实现人工湿地分区脱氮除磷，保证湿地的后段磷源的充足，显著提高了人工湿地的脱氮效率。TN去除率高达80%，TP去除率达95%，服务人口10-2000人
 				</p>
+			</div>
+		</div>
+		<div class="media">
+			<a class="media-img pull-left"> <img class="media-object"
+				src="${HY_CONTEXT}/resources/images/water_pullution3.jpg" alt="媒体对象">
+			</a>
+			<div class="media-body">
+				<p>
+					针对人工湿地溶解氧浓度低，湿地硝化能力弱脱氮效率低、易堵塞的问题，基于短程硝化原理，采取微量曝气技术，内嵌高氨氮吸附性能分子筛及高性能防堵塞技术，最终显著提高了人工湿地的脱氮系统脱氮效率，缓解了无机颗粒物堵塞问题。COD、TN去除率为94.4%
+					，86.0%，服务人口2000-30000人</p>
 			</div>
 		</div>
 	</div>
