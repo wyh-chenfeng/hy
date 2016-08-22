@@ -286,6 +286,34 @@
 			</activation>
 		</profile>
 		<profile>
+			<id>stg</id>
+			<properties>
+				<!-- MySql -->
+				<database_driverClassName>com.mysql.jdbc.Driver</database_driverClassName>
+				<database_url>jdbc:mysql://localhost:3306/hydb?characterEncoding=utf8</database_url>
+				<database_username>root</database_username>
+				<database_password>root</database_password>
+				<!-- connection pool -->
+				<cp_maxActive>96</cp_maxActive>
+				<cp_maxIdle>16</cp_maxIdle>
+				<cp_minIdle>0</cp_minIdle>
+				<cp_maxWait>60000</cp_maxWait>
+				<!-- log level -->
+				<log_level>info</log_level>
+				<log_hy_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site.log</log_hy_file>
+				<log_admin_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site-admin.log</log_admin_file>
+				<!-- nginx -->
+				<image_url>http://182.92.198.168/hy-site/</image_url>
+				<image_server>/usr/local/nginx/html/hy-site/</image_server>
+				<!-- admin user -->
+				<user_name>admin</user_name>
+				<user_password>admin</user_password>
+			</properties>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
 			<id>prod</id>
 			<properties>
 				<!-- MySql -->
@@ -303,8 +331,8 @@
 				<log_hy_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/usr/local/tomcat/apache-tomcat-7.0.70/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
-				<image_url>http://182.92.198.168/hy-site/</image_url>
-				<image_server>/usr/local/nginx/html/hy-site/</image_server>
+				<image_url>http://182.92.198.168:8080/</image_url>
+				<image_server>/usr/local/nginx/html/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
 				<user_password>admin</user_password>
