@@ -13,6 +13,7 @@
 <c:set var="IMAGE_URL" value="<%=systemConfig.getImageUrl()%>" scope="application" />
 <c:set var="HY_CONTEXT" value="${pageContext.request.contextPath}" scope="application" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="${HY_CONTEXT}/resources/css/fonts/iconfont.css" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/style.css" />
 
 <script src="${HY_CONTEXT}/resources/js/lib/jquery/jquery.min.js"></script>

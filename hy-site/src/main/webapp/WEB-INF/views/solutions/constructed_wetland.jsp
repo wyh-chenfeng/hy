@@ -5,12 +5,9 @@
 	<div class="well well-sm">
 		<div class="navbar navbar-inverse">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#subnavbar"
-					aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subnavbar" aria-expanded="false" aria-controls="navbar">
+	            	<i class="iconfont"></i>
+	          	</button>
 				<a class="navbar-brand"> 解决方案 </a>
 			</div>
 			<div class="collapse navbar-collapse navbar-right" id="subnavbar">

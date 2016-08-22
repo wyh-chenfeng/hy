@@ -44,24 +44,20 @@
 			<a class="item col-md-4" href="${HY_CONTEXT }/solutions/forIndex">
 				<img src="${HY_CONTEXT}/resources/images/banner2.png">
 				<h2 class="title">解决方案</h2>
-				<p class="desc">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Aenean euismod bibendum laoreet Proin gravida
-					dolor sit amet lacus accumsan et viverra justo commodo. Proin
-					sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis
-					parturient montes, nascetur ridiculus mus. Nam fermentum,
-					nullaluctus pharetra vulputate, felis tellus mollis orci, sed
-					rhoncus sapien nunc eget odio.</p>
+				<p class="desc">水环境污染是城市化进程的产物；随着经济建设和社会进步，治理污染水环境是人类自身的要求，是和谐社会的必然需要。 <br>
+入河污染控制技术与工程<br>
+河道水质净化强化技术与工程<br>
+河口水质净化技术与工程</p>
 			</a>
 			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
 				<img src="${HY_CONTEXT}/resources/images/banner3.png">
 				<h2 class="title">联系我们</h2>
-				<p class="desc">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Aenean euismod bibendum laoreet Proin gravida
-					dolor sit amet lacus accumsan et viverra justo commodo. Proin
-					sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis
-					parturient montes, nascetur ridiculus mus. Nam fermentum,
-					nullaluctus pharetra vulputate, felis tellus mollis orci, sed
-					rhoncus sapien nunc eget odio.</p>
+				<p class="desc">
+				地址：北京市朝阳区安外北苑5号院 北苑大酒店908室 <br>
+				邮编： 102218<br>
+				电话： 010-（预计8月12日之前完成报装电话传真）<br>
+				传真： 010-
+				</p>
 			</a>
 		</div>
 	</div>
