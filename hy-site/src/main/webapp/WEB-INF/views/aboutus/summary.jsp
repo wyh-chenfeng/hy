@@ -21,20 +21,6 @@
 				</ul>
 			</div>
 		</div>
-
-		<ul class="contact_us">
-			<li class="address"><span>地址：</span> <span>北京市朝阳区安外北苑5号院 北苑大酒店908室</span></li>
-			<li><span>邮编：</span> <span>102218<span></li>
-			<li><span>电话：</span> <span>010-（预计8月12日之前完成报装电话传真）</span></li>
-			<li><span>传真：</span> <span>010-</span></li>
-		</ul>
-	</div>
-	<div class="well well-sm">
-		<div class="navbar navbar-inverse">
-			<div class="navbar-header">
-				<a class="navbar-brand"> 公司简介 </a>
-			</div>
-		</div>
 		<p class="summary text-indent">
 			${home.content }
 		</p>

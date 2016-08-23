@@ -22,19 +22,6 @@
 			</div>
 		</div>
 
-		<ul class="contact_us">
-			<li class="address"><span>地址：</span> <span>北京市朝阳区安外北苑5号院 北苑大酒店908室</span></li>
-			<li><span>邮编：</span> <span>102218<span></li>
-			<li><span>电话：</span> <span>010-（预计8月12日之前完成报装电话传真）</span></li>
-			<li><span>传真：</span> <span>010-</span></li>
-		</ul>
-	</div>
-	<div class="well well-sm">
-		<div class="navbar navbar-inverse">
-			<div class="navbar-header">
-				<a class="navbar-brand"> 核心团队 </a>
-			</div>
-		</div>
 		<p class="summary text-indent">
 			北京环域生态环保技术有限公司致力于黑臭水体治理修复以及河道管护运营，同时在农村污水治理、海绵城市、人工湿地等领域建树颇丰，是中国最具实力的水环境治理技术集成与综合解决方案领导者。
 		</p>

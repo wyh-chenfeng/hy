@@ -35,8 +35,9 @@
 				</div>
 			</div>
         <!-- /ko -->
-		
-		<ul id="paginator"></ul>
+		<div class="ac_pagination">
+			<ul id="paginator"></ul>
+		</div>
 	</div>
 </div>
 

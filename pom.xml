@@ -275,8 +275,8 @@
 				<log_hy_file>/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
-				<image_url>http://localhost/hy-site/</image_url>
-				<image_server>D:/nginx/hy-site/</image_server>
+				<image_url>http://localhost/</image_url>
+				<image_server>D:/nginx/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
 				<user_password>admin</user_password>
