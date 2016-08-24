@@ -1,5 +1,5 @@
 package com.chenfeng.hy.service.constant;
 
 public abstract class Constants {
-	public static final int PAGE_SIZE = 5;
+	public static final int PAGE_SIZE = 3;
 }
