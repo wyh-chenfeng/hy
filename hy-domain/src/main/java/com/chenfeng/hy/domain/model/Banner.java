@@ -21,6 +21,11 @@ public class Banner {
      */
     private String content;
 
+    /**
+     * 内容
+     */
+    private String url;
+
     public Long getId() {
         return id;
     }
@@ -52,4 +57,12 @@ public class Banner {
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
     }
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 }

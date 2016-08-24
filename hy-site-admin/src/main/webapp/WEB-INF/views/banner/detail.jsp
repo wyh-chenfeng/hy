@@ -15,6 +15,10 @@
       	<td>${banner.title }</td>
     </tr>
     <tr>
+     	<td class="active text-center">链接地址</td>
+      	<td>${banner.url }</td>
+    </tr>
+    <tr>
     	<td class="active text-center">内容</td>
       	<td>${banner.content }</td>
     </tr>
@@ -35,4 +39,26 @@
 function submitClick() {
 	window.location.href = "${HY_CONTEXT}/banner/forIndex";
 }
+(function($) {
+
+	var constant = {
+		MENU_CSS : '.bind-menu-banner',
+	};
+
+	var bindEvent = {
+		bindMenuCss : function() {
+			$(".active").removeClass("active");
+			$(constant.MENU_CSS).addClass("active");
+		},
+	};
+
+	var create = {
+		init : function() {
+			bindEvent.bindMenuCss();
+		}
+	};
+	$(function() {
+		create.init();
+	});                                                                                                                                               
+})(jQuery);
 </script>

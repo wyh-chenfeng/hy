@@ -8,8 +8,9 @@
 <table id="bannerTable" class="table-condensed table-bordered table-striped table-hover">
     <tr>
         <th w_index="id" width="10%;">ID</th>
-        <th w_index="title" width="15%;">标题</th>
-        <th w_index="content" width="20%;">内容</th>
+        <th w_index="title" width="10%;">标题</th>
+        <th w_index="url" width="10%;">链接地址</th>
+        <th w_index="content" width="15%;">内容</th>
         <th w_render="$.bindEvent.image" width="20%;">图片</th>
         <th w_render="$.bindEvent.operate" width="20%;">操作</th>
     </tr>

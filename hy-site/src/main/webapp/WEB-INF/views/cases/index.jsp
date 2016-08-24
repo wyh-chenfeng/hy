@@ -14,7 +14,7 @@
 	</div>
 	<div class="well well-sm">
 		<div class="row">
-			<div class="col-sm-6 col-md-4">
+			<div class="col-md-4">
 				<div class="thumbnail">
 					<h3>老段浦黑臭治理与生态修复工程</h3>
 					<img src="${HY_CONTEXT}/resources/images/case1.jpg">
@@ -32,14 +32,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-4">
+			<div class="col-md-4">
 				<div class="thumbnail">
 					<h3>施北界黑臭治理与生态修复工程</h3>
 					<img src="${HY_CONTEXT}/resources/images/case2.jpg">
 					<div class="caption">
 						<p>
-							河道原貌：黑臭<br /> 污染源：倒马桶、菜地垃圾、农药、化肥直接入河等<br /> 采用技术<br /> 1、截污
-							2、沟通水体<br /> 3、沟造自然湿地利用废弃池塘形成净化湿地 4、种植水生植物
+							河道原貌：黑臭<br /> 
+							污染源：倒马桶、菜地垃圾、农药、化肥直接入河等<br /> 
+							采用技术<br /> 
+							1、截污 2、沟通水体<br /> 
+							3、沟造自然湿地利用废弃池塘形成净化湿地 
+							4、种植水生植物
 						</p>
 						<p class="kownmore">
 							<a href="${HY_CONTEXT}/cases/forDetail/2"> 了解更多<i
@@ -49,15 +53,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-4">
+			<div class="col-md-4">
 				<div class="thumbnail">
 					<h3>曹杨环浜生态修复工程</h3>
 					<img src="${HY_CONTEXT}/resources/images/case3.jpg">
 					<div class="caption">
 						<p>
-							河道概况：曹杨环浜是位于上海市普陀区曹杨新村的一条环形封闭水道，全长2208m，宽8～14m。<br />
-							治理前河道状况：曹杨环浜位处上海市老城区腹地，过去由于大量城市污水和垃圾注入的污染影响，环浜水体发黑发臭严重，沿途环境污浊不堪，是上海市有名的城中心臭水沟，周围市民深…
-						</p>
+							河道概况：曹杨环浜是位于上海市普陀区曹杨新村的一条环形封闭水道，全长2208m，宽8～14m。<br/>
+							治理前河道状况：曹杨环浜位处上海市老城区腹地，过去由于大量城市污水和垃圾注入的污染影响，环浜水体发黑发臭严重，沿途环境污浊不堪，是上海市有名的城中心臭水沟，周围市民深受其苦
+			            </p>
 						<p class="kownmore">
 							<a href="${HY_CONTEXT}/cases/forDetail/3"> 了解更多<i
 								class="glyphicon glyphicon-chevron-right"></i>

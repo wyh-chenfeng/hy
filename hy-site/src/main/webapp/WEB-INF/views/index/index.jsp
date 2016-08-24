@@ -19,7 +19,7 @@
 					<p class="item-content">
 						${banner.content }
 					</p>
-					<a class="item-kown-more" href="">了解更多 &rsaquo;</a>
+					<a class="item-kown-more" href="${HY_CONTEXT}/${banner.url }">了解更多 &rsaquo;</a>
 				</div>
 				<img src="${IMAGE_URL}${banner.image}" alt="${status.index} slide">
 			</div>

@@ -19,6 +19,14 @@
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="url" class="col-sm-2 control-label">
+			链接地址
+		</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="url" id="url" />
+		</div>
+	</div>
+	<div class="form-group">
 		<label for="content" class="col-sm-2 control-label">
 			内容
 		</label>

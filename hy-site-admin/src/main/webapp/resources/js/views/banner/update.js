@@ -7,7 +7,8 @@
 		FILE_UP_LOAD : '.bind-file-up-loading',
 		INIT_IMAGE_FILE : '#init_image_file',
 		TITLE : '标题',
-		CONTENT : '内容'
+		CONTENT : '内容',
+		URL : '链接地址',
 	};
 
 	var bindEvent = {
@@ -19,6 +20,10 @@
 				rules : {
 					title : {
 						required : [ constant.TITLE, true ],
+						maxlength : 100
+					},
+					url : {
+						required : [ constant.URL, true ],
 						maxlength : 100
 					},
 					content : {

@@ -43,4 +43,26 @@
 function submitClick() {
 	window.location.href = "${HY_CONTEXT}/position/forIndex";
 }
+(function($) {
+
+	var constant = {
+		MENU_CSS : '.bind-menu-position',
+	};
+
+	var bindEvent = {
+		bindMenuCss : function() {
+			$(".active").removeClass("active");
+			$(constant.MENU_CSS).addClass("active");
+		},
+	};
+
+	var create = {
+		init : function() {
+			bindEvent.bindMenuCss();
+		}
+	};
+	$(function() {
+		create.init();
+	});                                                                                                                                               
+})(jQuery);
 </script>

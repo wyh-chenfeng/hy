@@ -26,13 +26,14 @@
 
 		<!-- ko foreach: { data: news, as: 'n' } -->
 			<div class="media">
-				<a class="media-img pull-left" href="#"> 
-					<img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" alt="媒体对象" src="">
-				</a>
+			
 				<div class="media-body">
-					<h4 class="media-heading" data-bind="text: n.title"></h4>
-					<p data-bind="text: n.content"></p>
-				</div>
+		         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
+			     <h4 class="media-heading" data-bind="text: n.title"></h4>
+			     <p>
+			     	<p data-bind="text: n.content"></p>
+			     </p>
+			   </div>
 			</div>
         <!-- /ko -->
 		<div class="ac_pagination">
