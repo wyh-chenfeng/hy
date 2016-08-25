@@ -16,7 +16,11 @@
     </tr>
     <tr>
      	<td class="active text-center">链接地址</td>
-      	<td>${banner.url }</td>
+      	<td>
+      		<c:if test="${banner.url == 'solutions/forIndex'}">解决方案</c:if>
+			<c:if test="${banner.url == 'cases/forIndex'}">经典案例</c:if>
+			<c:if test="${banner.url == 'aboutus/forSummary'}">关于我们</c:if>
+		</td>
     </tr>
     <tr>
     	<td class="active text-center">内容</td>

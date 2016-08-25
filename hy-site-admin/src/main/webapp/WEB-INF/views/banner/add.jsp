@@ -23,7 +23,11 @@
 			链接地址
 		</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="url" id="url" />
+			<select class="form-control" name="url" id="url"> 
+				<option value="solutions/forIndex">解决方案</option>
+				<option value="cases/forIndex">经典案例</option>
+				<option value="aboutus/forSummary">关于我们</option>
+			</select>
 		</div>
 	</div>
 	<div class="form-group">

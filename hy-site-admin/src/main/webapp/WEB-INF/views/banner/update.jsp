@@ -25,7 +25,11 @@
 			链接地址
 		</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" name="url" value="${banner.url }" id="url" />
+			<select class="form-control" name="url" id="url"> 
+				<option value="solutions/forIndex" <c:if test="${banner.url == 'solutions/forIndex'}">selected="selected"</c:if>>解决方案</option>
+				<option value="cases/forIndex" <c:if test="${banner.url == 'cases/forIndex'}">selected="selected"</c:if>>经典案例</option>
+				<option value="aboutus/forSummary" <c:if test="${banner.url == 'aboutus/forSummary'}">selected="selected"</c:if>>关于我们</option>
+			</select>
 		</div>
 	</div>
 	<div class="form-group">
