@@ -38,8 +38,8 @@
 				totalPages: totalPages,
 				numberOfPages: 10,
 				bootstrapMajorVersion:3,
-				alignment:'center',
-				tooltipTitles: function (type, page, current) {
+				alignment:'right',
+				itemTexts: function (type, page, current) {
 	                switch (type) {
 	                case "first":
 	                    return "首页";
@@ -50,9 +50,13 @@
 	                case "last":
 	                    return "尾页";
 	                case "page":
-	                    return "第" + page + "页";
+	                    return page;
 	                }
 	            },
+	            shouldShowPage:function(type, page, current){
+					
+					return true;
+				},
 	            onPageClicked: function(e,originalEvent,type,page){
 	            	bindEvent.getData(page);
 	            }
