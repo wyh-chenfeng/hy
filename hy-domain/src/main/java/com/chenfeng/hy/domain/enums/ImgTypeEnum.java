@@ -2,7 +2,9 @@ package com.chenfeng.hy.domain.enums;
 
 public enum  ImgTypeEnum{
     
-    NEWS(1, "news"), BANNER(2, "banner");
+    NEWS(1, "news"), 
+    BANNER(2, "banner"),
+    CASES(3, "cases");
     
     private int value;
     

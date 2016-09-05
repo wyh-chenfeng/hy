@@ -34,7 +34,7 @@ public class CasesServiceImpl extends
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 	public void add(Cases cases, MultipartFile imageFile) {
-		String imagePath = ImgUploadUtil.saveIMGFile(systemConfig, imageFile, ImgTypeEnum.NEWS);
+		String imagePath = ImgUploadUtil.saveIMGFile(systemConfig, imageFile, ImgTypeEnum.CASES);
 		cases.setImage(imagePath);
 		cases.setCreateTime(new Date());
 		cases.setUpdateTime(new Date());
@@ -51,7 +51,7 @@ public class CasesServiceImpl extends
 	@Transactional(rollbackFor=Exception.class)
 	public void update(Cases cases, MultipartFile imageFile) {
 		
-		String imagePath = ImgUploadUtil.updateIMGFile(systemConfig, cases.getImage(), imageFile, ImgTypeEnum.NEWS);
+		String imagePath = ImgUploadUtil.updateIMGFile(systemConfig, cases.getImage(), imageFile, ImgTypeEnum.CASES);
 		cases.setImage(imagePath);
 		cases.setCreateTime(new Date());
 		update(cases);
@@ -62,7 +62,7 @@ public class CasesServiceImpl extends
 	public void delete(Long id) {
 		Cases cases = findOne(id);
 		if (cases != null) {
-			ImgUploadUtil.deleteIMGFile(systemConfig, cases.getImage(), ImgTypeEnum.NEWS);
+			ImgUploadUtil.deleteIMGFile(systemConfig, cases.getImage(), ImgTypeEnum.CASES);
 			super.delete(id);
 		}
 	}
