@@ -1,6 +1,8 @@
 package com.chenfeng.hy.service;
 
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import com.chenfeng.hy.domain.model.Cases;
@@ -35,5 +37,11 @@ public interface CasesService extends CrudService<Cases, Long> {
 	 * @param imageFile 上传的图片
 	 */
 	void update(Cases cases, MultipartFile imageFile);
+
+	/**
+	 * 获取全部案例
+	 * @return
+	 */
+	List<Cases> findAll();
 	
 }

@@ -1,11 +1,10 @@
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-cases',
+		MENU_CSS : '.bind-menu-casesDetail',
 		CREATE_FROM : '.bind-create-from',
 		CREATE_SUBMIT_BUTTON : '.bind-create-submit-button',
 		FILE_UP_LOAD : '.bind-file-up-loading',
-		INIT_IMAGE_FILE : '#init_image_file',
 		TITLE : '标题',
 		CONTENT : '内容'
 	};
@@ -43,16 +42,19 @@
 		},
 		doValidate : function() {
 			$(constant.CREATE_SUBMIT_BUTTON).on('click', function() {
-				if ($(constant.CREATE_FROM).validate().form()) {
+				var file = $(constant.FILE_UP_LOAD).val();
+				if(!file || file == '') {
+					alert("必须上传图片！");
+				} else if ($(constant.CREATE_FROM).validate().form()) {
 					$(constant.CREATE_SUBMIT_BUTTON).attr('disabled', 'disabled');
 					$.ajaxFileUpload({
-						url : $.HY.context + '/cases/update',
+						url : $.HY.context + '/casesDetail/add',
 						secureuri : false, //是否启用安全提交,默认为false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 						fileElementId : 'imageFile', //文件选择框的id属性                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 						dataType : 'json', //服务器返回的格式,可以是json或xml等   
 						data: $(constant.CREATE_FROM).serializeJson(),
 						success : function(data, status) { //服务器响应成功时的处理函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-							window.location.href = $.HY.context + '/cases/forIndex';
+							window.location.href = $.HY.context + '/casesDetail/forIndex';
 						},
 						error : function(data, status, e) { //服务器响应失败时的处理函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 						
@@ -72,19 +74,7 @@
                 enctype: 'multipart/form-data',
                 showUpload: false, //是否显示上传按钮
                 showCaption: true,//是否显示标题
-                browseClass: "btn btn-primary", //按钮样式 
-                initialPreview: [
-                    $.HY.imageUrl + $(constant.INIT_IMAGE_FILE).val()
- 				],
- 				initialPreviewAsData: true,
- 				/*initialPreviewConfig: [
-				    {caption: "Moon.jpg", size: 930321, width: "120px", key: 1, showDelete: false}
-            	],*/
- 				initialPreviewConfig: [
-	                {caption: $(constant.INIT_IMAGE_FILE).val(),showDelete: false}
-	            ],
- 				overwriteInitial: true,
- 				initialCaption: $(constant.INIT_IMAGE_FILE).val()
+                browseClass: "btn btn-primary", //按钮样式        
             });
 		}
 	};

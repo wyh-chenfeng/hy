@@ -1,5 +1,7 @@
 package com.chenfeng.hy.admin.controller;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +15,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.chenfeng.hy.domain.model.Cases;
 import com.chenfeng.hy.domain.model.CasesDetail;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
 import com.chenfeng.hy.domain.model.vo.ResultVo;
 import com.chenfeng.hy.service.CasesDetailService;
+import com.chenfeng.hy.service.CasesService;
 import com.github.pagehelper.Page;
 
 @Controller
@@ -27,10 +31,15 @@ public class CasesDetailController {
     @Autowired
     private CasesDetailService casesDetailService;
 
+    @Autowired
+    private CasesService casesService;
+
     @RequestMapping(value = "forAdd", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     @Secured("ROLE_ADMIN")
     public String forAdd(Model model) {
+    	List<Cases> cases = casesService.findAll();
+    	model.addAttribute("cases", cases);
     	return "casesDetail/add";
     }
     
@@ -87,7 +96,9 @@ public class CasesDetailController {
     @Secured("ROLE_ADMIN")
     public String forDetail(@RequestParam("id") Long id, Model model) {
     	CasesDetail casesDetail = casesDetailService.findOne(id);
+    	Cases cases = casesService.findOne(casesDetail.getCasesId());
     	model.addAttribute("casesDetail", casesDetail);
+    	model.addAttribute("casesName", cases == null ? "" : cases.getTitle());
     	return "casesDetail/detail";
     }
 
@@ -96,7 +107,9 @@ public class CasesDetailController {
     @Secured("ROLE_ADMIN")
     public String forUpdate(@RequestParam("id") Long id, Model model) {
     	CasesDetail casesDetail = casesDetailService.findOne(id);
+    	List<Cases> cases = casesService.findAll();
     	model.addAttribute("casesDetail", casesDetail);
+    	model.addAttribute("cases", cases);
     	return "casesDetail/update";
     }
 

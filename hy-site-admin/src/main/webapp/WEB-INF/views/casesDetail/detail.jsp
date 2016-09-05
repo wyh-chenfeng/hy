@@ -1,30 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  
-<i class="glyphicon glyphicon-list-alt"></i> 动态详情
+<i class="glyphicon glyphicon-list-alt"></i> 经典案例详情
 <hr>
 <!-- <h5>订单基本信息</h5> -->
 <table class="table table-hover table-condensed  table-bordered text-left">
   <tbody>
     <tr>                    
       <td class="active text-center" style="width:15%">ID</td>
-      <td style="width:85%">${news.id }</td>
+      <td style="width:85%">${casesDetail.id }</td>
     </tr>
     <tr>
-     	<td class="active text-center">标题</td>
-      	<td>${news.title }</td>
+     	<td class="active text-center">案例</td>
+      	<td>${casesDetail.casesName }</td>
     </tr>
     <tr>
     	<td class="active text-center">内容</td>
-      	<td>${news.content }</td>
-    </tr>
-    <tr>
-    	<td class="active text-center">类型</td>
-      	<td><c:if test="${news.type == 1}">公司新闻</c:if><c:if test="${news.type == 2}">行业新闻</c:if></td>
+      	<td>${casesDetail.content }</td>
     </tr>
     <tr>                    
       <td class="active text-center">图片</td>
-      <td><img alt="" src="${IMAGE_URL }${news.image }" style="width:100%"></td>
+      <td><img alt="" src="${IMAGE_URL }${casesDetail.image }"></td>
     </tr>
   </tbody>
 </table>
@@ -35,14 +31,15 @@
 			class="btn btn-sm btn-danger">返回</button>
 	</div>
 </div>
+</br>
 <script type="text/javascript">
 function submitClick() {
-	window.location.href = "${HY_CONTEXT}/news/forIndex";
+	window.location.href = "${HY_CONTEXT}/casesDetail/forIndex";
 }
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-news',
+		MENU_CSS : '.bind-menu-casesDetail',
 	};
 
 	var bindEvent = {

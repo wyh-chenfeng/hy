@@ -1,6 +1,7 @@
 package com.chenfeng.hy.service.impl;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -65,6 +66,11 @@ public class CasesServiceImpl extends
 			ImgUploadUtil.deleteIMGFile(systemConfig, cases.getImage(), ImgTypeEnum.CASES);
 			super.delete(id);
 		}
+	}
+	
+	@Override
+	public List<Cases> findAll() {
+		return repository.findAll();
 	}
 
 }

@@ -1,7 +1,7 @@
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-cases',
+		MENU_CSS : '.bind-menu-casesDetail',
 		CREATE_FROM : '.bind-create-from',
 		CREATE_SUBMIT_BUTTON : '.bind-create-submit-button',
 		FILE_UP_LOAD : '.bind-file-up-loading',
@@ -46,13 +46,13 @@
 				if ($(constant.CREATE_FROM).validate().form()) {
 					$(constant.CREATE_SUBMIT_BUTTON).attr('disabled', 'disabled');
 					$.ajaxFileUpload({
-						url : $.HY.context + '/cases/update',
+						url : $.HY.context + '/casesDetail/update',
 						secureuri : false, //是否启用安全提交,默认为false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 						fileElementId : 'imageFile', //文件选择框的id属性                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 						dataType : 'json', //服务器返回的格式,可以是json或xml等   
 						data: $(constant.CREATE_FROM).serializeJson(),
 						success : function(data, status) { //服务器响应成功时的处理函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-							window.location.href = $.HY.context + '/cases/forIndex';
+							window.location.href = $.HY.context + '/casesDetail/forIndex';
 						},
 						error : function(data, status, e) { //服务器响应失败时的处理函数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 						

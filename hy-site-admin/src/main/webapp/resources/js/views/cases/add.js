@@ -22,7 +22,7 @@
 					},
 					content : {
 						required : [ constant.CONTENT, true ],
-						maxlength : 5000
+						maxlength : 1000
 					}
 				},
 				highlight : function(element) {

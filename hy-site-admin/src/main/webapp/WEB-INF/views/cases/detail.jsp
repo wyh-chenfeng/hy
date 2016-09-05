@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  
-<i class="glyphicon glyphicon-list-alt"></i> BANNER详情
+<i class="glyphicon glyphicon-list-alt"></i> 经典案例
 <hr>
 <!-- <h5>订单基本信息</h5> -->
 <table class="table table-hover table-condensed  table-bordered text-left">

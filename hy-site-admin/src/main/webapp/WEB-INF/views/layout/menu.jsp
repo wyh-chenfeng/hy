@@ -16,5 +16,8 @@
 		<li class="bind-menu-cases">
 			<a href="${HY_CONTEXT}/cases/forIndex">经典案例管理</a>
 		</li>
+		<li class="bind-menu-casesDetail">
+			<a href="${HY_CONTEXT}/casesDetail/forIndex">经典案例详情管理</a>
+		</li>
 	</ul>
 </div>
