@@ -2,16 +2,16 @@
 
 	var constant = {
 		MENU_CSS : '.bind-menu-cases',
-		BANNER_TABLE : 'newsTable'
+		BANNER_TABLE : 'casesTable'
 	};
 
-	var newsTable;
+	var casesTable;
 	
 	$.bindEvent = {
 		initTable : function() {
 			/* 初始化表格 */
-			newsTable = $.fn.bsgrid.init(constant.BANNER_TABLE,{
-				url : $.HY.context + '/news/query',
+			casesTable = $.fn.bsgrid.init(constant.BANNER_TABLE,{
+				url : $.HY.context + '/cases/query',
 				stripeRows : true,
 				rowHoverColor : true, 
 				pageSize : 10,
@@ -22,14 +22,14 @@
 			});
 		},
 		doSearch : function() {
-			//newsTable.options.otherParames = $("#search_form").serializeArray();
-			newsTable.gotoPage(1);
+			//casesTable.options.otherParames = $("#search_form").serializeArray();
+			casesTable.gotoPage(1);
 		},
 		forDetail : function(id){
-			location.href = $.HY.context + "/news/forDetail?id=" + id;
+			location.href = $.HY.context + "/cases/forDetail?id=" + id;
 		},
 		forUpdate : function(id){
-			location.href = $.HY.context + "/news/forUpdate?id=" + id;
+			location.href = $.HY.context + "/cases/forUpdate?id=" + id;
 		},
 		forDelete : function(id){
 			$.confirm('您确认要删除该条数据吗？', function () {
@@ -37,7 +37,7 @@
 					// ajax提交删除
 					$.ajax({
 						type : "POST",
-						url : $.HY.context + "/news/delete",
+						url : $.HY.context + "/cases/delete",
 						data : {"id": id},
 						dataType : "json",
 						success : function(data) {

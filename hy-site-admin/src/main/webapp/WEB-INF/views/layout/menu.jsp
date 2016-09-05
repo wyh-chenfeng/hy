@@ -14,7 +14,7 @@
 			<a href="${HY_CONTEXT}/home/forAdd">公司简介管理</a>
 		</li>
 		<li class="bind-menu-cases">
-			<a href="${HY_CONTEXT}/cases/forAdd">经典案例管理</a>
+			<a href="${HY_CONTEXT}/cases/forIndex">经典案例管理</a>
 		</li>
 	</ul>
 </div>
