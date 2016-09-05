@@ -39,24 +39,24 @@
 				numberOfPages: 10,
 				bootstrapMajorVersion:3,
 				alignment:'right',
-				itemTexts: function (type, page, current) {
-	                switch (type) {
-	                case "first":
-	                    return "首页";
-	                case "prev":
-	                    return "上一页";
-	                case "next":
-	                    return "下一页";
-	                case "last":
-	                    return "尾页";
-	                case "page":
-	                    return page;
-	                }
-	            },
-	            shouldShowPage:function(type, page, current){
-					
-					return true;
-				},
+//				itemTexts: function (type, page, current) {
+//	                switch (type) {
+//	                case "first":
+//	                    return "首页";
+//	                case "prev":
+//	                    return "上一页";
+//	                case "next":
+//	                    return "下一页";
+//	                case "last":
+//	                    return "尾页";
+//	                case "page":
+//	                    return page;
+//	                }
+//	            },
+//	            shouldShowPage:function(type, page, current){
+//					
+//					return true;
+//				},
 	            onPageClicked: function(e,originalEvent,type,page){
 	            	bindEvent.getData(page);
 	            }
