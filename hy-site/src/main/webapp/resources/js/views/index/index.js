@@ -12,7 +12,7 @@
 		},
 		initCarousel : function() {
 			$(constant.CAROUSEL).carousel({
-			  interval: 2000
+			  interval: 3500
 			});
 		},
 		
