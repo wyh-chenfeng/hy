@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <div class="container main-content">
 	<div class="well well-sm">
 		<div class="navbar navbar-inverse">
@@ -12,29 +14,35 @@
 		</p>
 	</div>
 	<div class="well well-sm">
-		<div class="media">
-			<a class="media-img pull-left"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/case_detail3.jpg" alt="媒体对象">
-			</a>
-			<div class="media-body">
-				<h4 class="media-heading">施北界黑臭治理与生态修复工程</h4>
-				<p>
-					河道原貌：黑臭<br /> 污染源：倒马桶、菜地垃圾、农药、化肥直接入河等
-				</p>
-			</div>
-		</div>
-		<div class="media">
-			<a class="media-img pull-right"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/case_detail4.jpg" alt="媒体对象">
-			</a>
-			<div class="media-body">
-				<p>
-					采用技术<br /> 1、截污<br /> 2、沟通水体<br /> 3、沟造自然湿地：利用废弃池塘形成净化湿地<br />
-					4、种植水生植物
-				</p>
-			</div>
-		</div>
+		<c:forEach items="${casesDetails }" step="2" varStatus="status">
+			<c:forEach items="${casesDetails }" var="casesDetail" begin="${status.index }" end="${status.index }">
+				<div class="media">
+					<a class="media-img pull-left"> 
+						<img class="media-object" src="${IMAGE_URL}${casesDetail.image }" alt="媒体对象">
+					</a>
+					<div class="media-body">
+						<c:if test="${status.index == 0}">
+							<h4 class="media-heading">${casesDetail.casesName }</h4>
+						</c:if>
+						<p>
+							${casesDetail.content }
+						</p>
+					</div>
+				</div>
+			</c:forEach>
+			<c:forEach items="${casesDetails }" var="casesDetail" begin="${status.index + 1}" end="${status.index + 1}">
+				<div class="media">
+					<a class="media-img pull-right"> 
+						<img class="media-object" src="${IMAGE_URL}${casesDetail.image }" alt="媒体对象">
+					</a>
+					<div class="media-body">
+						<p>
+							${casesDetail.content }
+						</p>
+					</div>
+				</div>
+			</c:forEach>
+		</c:forEach>
 	</div>
 </div>
-
 <script src="${HY_CONTEXT}/resources/js/views/cases/index.js"></script>

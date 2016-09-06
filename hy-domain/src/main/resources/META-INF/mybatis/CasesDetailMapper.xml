@@ -139,9 +139,22 @@
   </resultMap>
 
   <select id="findAll" resultMap="ExtendsResultMap">
-  	select 
-    	<include refid="Base_Column_List" />
-    from t_cases_detail
+  	SELECT
+		t_cases_detail.*,
+		t_cases.title AS cases_name
+	FROM
+		t_cases_detail
+	LEFT JOIN t_cases ON t_cases.id = t_cases_detail.cases_id
+  </select>
+  
+  <select id="findByCasesId" resultMap="ExtendsResultMap">
+  	SELECT
+		t_cases_detail.*,
+		t_cases.title AS cases_name
+	FROM
+		t_cases_detail
+	LEFT JOIN t_cases ON t_cases.id = t_cases_detail.cases_id
+	WHERE t_cases_detail.cases_id = #{casesId,jdbcType=BIGINT}
   </select>
 
   <select id="query" resultMap="ExtendsResultMap">

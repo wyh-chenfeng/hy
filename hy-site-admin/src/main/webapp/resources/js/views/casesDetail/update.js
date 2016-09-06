@@ -6,7 +6,7 @@
 		CREATE_SUBMIT_BUTTON : '.bind-create-submit-button',
 		FILE_UP_LOAD : '.bind-file-up-loading',
 		INIT_IMAGE_FILE : '#init_image_file',
-		TITLE : '标题',
+		TITLE : '案例',
 		CONTENT : '内容'
 	};
 
@@ -17,9 +17,8 @@
 				errorClass : 'help-block',
 				focusInvalid : false,
 				rules : {
-					title : {
-						required : [ constant.TITLE, true ],
-						maxlength : 100
+					casesId : {
+						required : [ constant.TITLE, true ]
 					},
 					content : {
 						required : [ constant.CONTENT, true ],
