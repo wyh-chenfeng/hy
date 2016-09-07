@@ -1,5 +1,11 @@
 package com.chenfeng.hy.admin.controller;
 
+import java.io.IOException;
+import java.util.UUID;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.baidu.ueditor.ActionEnter;
 import com.chenfeng.hy.domain.model.News;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
 import com.chenfeng.hy.domain.model.vo.ResultVo;
@@ -138,5 +145,24 @@ public class NewsController {
 			resultVo.setStatus(0);
 		}
 		return resultVo;
+	}
+
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "fileUplod", method = RequestMethod.GET)
+    @Secured("ROLE_ADMIN")
+	public void fileUplod(HttpServletRequest request, HttpServletResponse response) {
+    	try {
+			response.getWriter().print(new ActionEnter(request, "/hy-site-admin").exec());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+    	
+//		try {
+//			response.getWriter().print("{'uuid':'" + UUID.randomUUID() + "','original':'','url':'','title':'','state':'SUCCESS'}");
+//		} catch (Exception e) {
+//			log.error("图片上传初始化错误" + e);
+//		}
 	}
 }

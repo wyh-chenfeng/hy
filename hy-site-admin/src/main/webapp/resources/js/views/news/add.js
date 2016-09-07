@@ -6,6 +6,7 @@
 		CREATE_SUBMIT_BUTTON : '.bind-create-submit-button',
 		FILE_UP_LOAD : '.bind-file-up-loading',
 		TITLE : '标题',
+		SUMMARY : '摘要',
 		CONTENT : '内容'
 	};
 
@@ -76,6 +77,9 @@
                 showCaption: true,//是否显示标题
                 browseClass: "btn btn-primary", //按钮样式        
             });
+		},
+		initEditor: function() {
+			var ue = UE.getEditor('container', {serverUrl: 'fileUplod'});
 		}
 	};
 
@@ -84,6 +88,7 @@
 			bindEvent.validateFrom();
 			bindEvent.doValidate();
 			bindEvent.bindMenuCss();
+			bindEvent.initEditor();
 		}
 	};
 
