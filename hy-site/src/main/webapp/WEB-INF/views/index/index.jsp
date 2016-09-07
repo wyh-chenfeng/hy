@@ -14,13 +14,13 @@
 	<div class="carousel-inner">
 		<c:forEach items="${banners }" var="banner" varStatus="status">
 			<div class="item <c:if test='${status.first}'>active</c:if>" style="background-image:url(${IMAGE_URL}${banner.image})">
-				<div class="item-desc">
+				<%-- <div class="item-desc">
 					<h3 class="item-title">${banner.title }</h3>
 					<p class="item-content">
 						${banner.content }
 					</p>
 					<a class="item-kown-more" href="${HY_CONTEXT}/${banner.url }">了解更多 &rsaquo;</a>
-				</div>
+				</div> --%>
 				<img src="${IMAGE_URL}${banner.image}" alt="${status.index} slide">
 			</div>
 		</c:forEach>
