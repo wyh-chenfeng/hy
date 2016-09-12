@@ -38,8 +38,8 @@
 		<div class="banners row">
 			<a class="item col-md-4" href="${HY_CONTEXT }/news/forIndex">
 				<img src="${HY_CONTEXT}/resources/images/banner1.png">
-				<h2 class="title">公司动态</h2>
-				<p class="desc">${news.content }</p>
+				<h2 class="title">公司简介</h2>
+				<p class="desc">${home.content }</p>
 			</a>
 			<a class="item col-md-4" href="${HY_CONTEXT }/solutions/forIndex">
 				<img src="${HY_CONTEXT}/resources/images/banner2.png">
@@ -53,10 +53,9 @@
 				<img src="${HY_CONTEXT}/resources/images/banner3.png">
 				<h2 class="title">联系我们</h2>
 				<p class="desc">
-				地址：北京市朝阳区安外北苑5号院 北苑大酒店908室 <br>
-				邮编： 102218<br>
-				电话： 010-（预计8月12日之前完成报装电话传真）<br>
-				传真： 010-
+				传真：010-84927873<br/>
+				邮箱：business@ecohuanyu.com<br/>
+				地址：北京市朝阳区安外北苑5号院北苑大酒店9层
 				</p>
 			</a>
 		</div>

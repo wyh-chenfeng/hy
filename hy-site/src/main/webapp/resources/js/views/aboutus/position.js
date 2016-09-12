@@ -1,7 +1,7 @@
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-aboutus',
+		MENU_CSS : '.bind-menu-position',
 	};
 	
 	var viewModel = {

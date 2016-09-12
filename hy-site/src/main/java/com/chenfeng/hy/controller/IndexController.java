@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.chenfeng.hy.domain.model.Banner;
-import com.chenfeng.hy.domain.model.News;
+import com.chenfeng.hy.domain.model.Home;
 import com.chenfeng.hy.service.BannerService;
-import com.chenfeng.hy.service.NewsService;
-import com.github.pagehelper.Page;
+import com.chenfeng.hy.service.HomeService;
 
 @Controller
 public class IndexController {
@@ -25,15 +24,15 @@ public class IndexController {
     private BannerService bannerService;
 
     @Autowired
-    private NewsService newsService;
+    private HomeService homeService;
     
     @RequestMapping(value = "forIndex", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forIndex(Model model) {
     	List<Banner> banners = bannerService.findAll();
-    	Page<News> news = newsService.query(1, 1);
+    	Home home = homeService.companyProfile();
+    	model.addAttribute("home", home);
     	model.addAttribute("banners", banners);
-    	model.addAttribute("news", news.isEmpty() ? new News() : news.get(0));
         return "index/index";
     }
     

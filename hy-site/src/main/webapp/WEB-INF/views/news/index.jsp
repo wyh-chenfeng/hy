@@ -12,7 +12,7 @@
 				</button>
 				<a class="navbar-brand"> 动态 </a>
 			</div>
-			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
+			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
 					<li id="company" class="active">
 						<a href="javaScript:void(0);">公司动态</a>

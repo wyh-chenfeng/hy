@@ -1,7 +1,7 @@
 (function($) {
 
 	var constant = {
-		MENU_CSS : '.bind-menu-position',
+		MENU_CSS : '.bind-menu-aboutus',
 	};
 
 	var bindEvent = {
