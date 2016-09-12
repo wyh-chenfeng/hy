@@ -12,7 +12,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
+					<li><a href="${HY_CONTEXT}/solutions/forIndex">黑臭河道治理技术体系</a></li>
 					<li class="active"><a href="${HY_CONTEXT}/solutions/forSpongeCity">海绵城市</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forWaterPullution">农村污水治理</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forConstructedWetland">人工湿地</a></li>
