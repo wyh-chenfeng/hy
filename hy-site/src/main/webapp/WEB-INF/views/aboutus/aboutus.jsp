@@ -37,7 +37,7 @@
 		 		<span>地址：</span>
 		 		<span>北京市朝阳区安外北苑5号院北苑大酒店9层</span>
 		 	</li>
-			<li class="map"><img src="${HY_CONTEXT}/resources/images/map.jpg" /></li>
+			<li class="map"><img src="${HY_CONTEXT}/resources/images/map.png" /></li>
 		</ul>
 	</div>
 </div>
