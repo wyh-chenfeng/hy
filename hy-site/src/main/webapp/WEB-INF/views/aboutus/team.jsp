@@ -15,9 +15,9 @@
 			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
 					<li><a href="${HY_CONTEXT }/aboutus/forSummary">企业简介</a></li>
-					<li><a href="${HY_CONTEXT }/aboutus/forCore">企业文化</a></li>
+					<%-- <li><a href="${HY_CONTEXT }/aboutus/forCore">企业文化</a></li>
 					<li><a href="${HY_CONTEXT }/aboutus/forMiss">企业使命</a></li>
-					<li><a href="${HY_CONTEXT }/aboutus/forVision">企业愿景</a></li>
+					<li><a href="${HY_CONTEXT }/aboutus/forVision">企业愿景</a></li> --%>
 					<li><a href="${HY_CONTEXT }/aboutus/forCto">首席技术官</a></li>
 					<li class="active"><a href="${HY_CONTEXT }/aboutus/forTeam">团队风采</a></li>
 				</ul>
