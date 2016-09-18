@@ -36,12 +36,12 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="banners row">
-			<a class="item col-md-4" href="${HY_CONTEXT }/news/forIndex">
+			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
 				<img src="${HY_CONTEXT}/resources/images/banner1.png">
 				<h2 class="title">公司简介</h2>
 				<p class="desc">${home.content }</p>
 			</a>
-			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
+			<a class="item col-md-4" href="${HY_CONTEXT }/solutions/forIndex">
 				<img src="${HY_CONTEXT}/resources/images/banner2.png">
 				<h2 class="title">解决方案</h2>
 				<p class="desc">
@@ -52,7 +52,7 @@
 					人工湿地
 				</p>
 			</a>
-			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
+			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forAboutus">
 				<img src="${HY_CONTEXT}/resources/images/banner3.png">
 				<h2 class="title">联系我们</h2>
 				<p class="desc">
