@@ -41,7 +41,7 @@
 				<h2 class="title">公司简介</h2>
 				<p class="desc">${home.content }</p>
 			</a>
-			<a class="item col-md-4" href="${HY_CONTEXT }/solutions/forIndex">
+			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
 				<img src="${HY_CONTEXT}/resources/images/banner2.png">
 				<h2 class="title">解决方案</h2>
 				<p class="desc">

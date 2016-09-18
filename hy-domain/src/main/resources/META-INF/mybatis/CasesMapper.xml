@@ -138,10 +138,12 @@
   	select 
     	<include refid="Base_Column_List" />
     from t_cases
+    order by create_time desc
   </select>
   <select id="query" resultMap="BaseResultMap">
   	select 
     	<include refid="Base_Column_List" />
     from t_cases
+    order by create_time desc
   </select>
 </mapper>
