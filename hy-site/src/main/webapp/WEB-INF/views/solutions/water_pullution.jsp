@@ -72,7 +72,7 @@
 		      <img class="media-object" src="${HY_CONTEXT}/resources/images/water_pullution8.jpg">
 		   </a>
 		   <div class="media-body">
-		     <p class="text-indent text-bold">总结<p>
+		     <p class="text-indent text-bold">总结：<p>
 		     <p class="text-indent">
 		      村镇生活污水有机成分含量高，可生化性强，生物处理技术是该类污水处理的最佳选择。基于我国农村普遍欠发达的现状，各地农村的经济社会发展水平、区域特点、自然地理条件和环境目标不尽相同，采用经济有效、简便易行、节约资源、工艺可靠并能够与当地自然环境高度融合的污水生态处理技术，使生活污水排放与处理无害化和资源化，是我国村镇生活污水处理技术未来发展方向的特点。
 		     </p>

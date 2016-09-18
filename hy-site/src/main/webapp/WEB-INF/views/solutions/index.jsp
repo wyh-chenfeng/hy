@@ -39,7 +39,7 @@
 		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution.jpg">
 		   </a>
 		   <div class="media-body">
-		     <p class="text-indent text-bold">精准的问题诊断技术<p>
+		     <p class="text-indent text-bold">精准的问题诊断技术:<p>
 		     <p class="text-indent">
 		      针对黑臭河道污染源繁多，识别困难的问题，环域生态应用卫星遥感解译、同位素及线粒体溯源等先进的科技成果进行精准的问题分析，解析污染源，为黑臭河道的治理方案的编制提供科学的数据支持。
 		     </p>

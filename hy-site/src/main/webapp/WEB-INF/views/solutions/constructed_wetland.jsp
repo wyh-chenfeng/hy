@@ -41,7 +41,7 @@
 		      <img class="media-object" src="${HY_CONTEXT}/resources/images/wetland4.jpg">
 		   </a>
 		   <div class="media-body">
-		     <p class="text-indent text-bold">核心发明专利1：微曝气的污水再生处理与循环利用技术</p>
+		     <p class="text-indent text-bold">核心发明专利1：微曝气的污水再生处理与循环利用技术：</p>
 		     <p class="text-indent">
 		      冬季，气温低，湿地植物死亡，微生物活性降低，处理效果差；优化农村有机废物和枯萎的湿地植物配比，填至湿地周边，利用物料发酵产热，为湿地持续增温加热；通过曝气与快速排水优化控制，使湿地表层形成冰层空气层的保温层，为湿地保温。最终实现冬季高效率脱氮和防堵塞协同，COD、TN去除率为94.4% ，86.0%，获中国专利优秀奖。
 		     </p>
