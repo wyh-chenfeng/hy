@@ -50,15 +50,9 @@
 		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution1.jpg">
 		   </a>
 		   <div class="media-body">
-<<<<<<< HEAD
 		     <p>
 		      <strong> 完备的治理技术数据库：</strong><br/>
 		        通过实践的积累，公司积累了近300多种国内外的先进技术。根据每条河道的污染现状特征，在公司建立的数据库中集成适用技术开展黑臭河道治理方案编制，科学地运用系统工程学的理论与方法，制定符合实际的治理目标，并对各种治理方案做出评价，筛选出最优设计与控制方案，
-=======
-	         <p class="text-indent text-bold">完备的治理技术数据库<p>
-		     <p class="text-indent">
-		        通过国内的积累，公司积累了近300多种国内外的先进技术。根据每条河道的污染现状特征，在公司建立的数据苦衷集成适用技术开展黑臭河道治理方案编制，科学地运用系统工程学的理论与方法，制定符合实际的治理目标，并对各种治理方案做出评价，筛选出最优设计与控制方案，
->>>>>>> 34be5ca1cfda27045213e41e3a3550055f123fb8
 		     </p>
 		   </div>
 		</div>
@@ -67,13 +61,8 @@
 		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution2.jpg">
 		   </a>
 		   <div class="media-body">
-<<<<<<< HEAD
 		     <p>
 		        <strong>多目标方案优化技术：</strong><br/>
-=======
-		     <p class="text-indent text-bold">多目标方案优化技术<p>
-		     <p class="text-indent">
->>>>>>> 34be5ca1cfda27045213e41e3a3550055f123fb8
 		        以多种治理方案为依据，基于河流营养物来源的特点及输移变化规律，以河流水环境容量综合利用最优化与河流生态功能保障为目标，通过系统动力学（SD）方法构建河流水质和容量发展预测模型，在模型率定的基础上，对河流的水环境容量和水质变化进行预测评价，分析规划的方案与产业政策，提出优化的水环境质量改善策略。
 		     </p>
 		   </div>
@@ -83,15 +72,9 @@
 		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution0.jpg">
 		   </a>
 		   <div class="media-body">
-<<<<<<< HEAD
 		     <p>
 		        <strong>科学管护技术：</strong><br/>
 		        在黑臭河道的治理过程中不但要注重治理技术和治理措施，更要注重对黑臭河道治理的维护与管理，从而确保整个治理工程有序、高效进行；环域生态拥有着生态感知、信息共享、实时反馈、智慧处理的科学管护系统。
-=======
-		     <p class="text-indent text-bold">科学管护技术<p>
-		     <p class="text-indent">
-		        在黑臭河道的治理过程中不但要注重治理技术和治理指施，更要注重对黑臭河道治理的维护与管理，从而确保整个治理工程有序、高效进行；环域生态拥有着生态感知、信息共享、实时反馈、智慧处理的科学管护系统。
->>>>>>> 34be5ca1cfda27045213e41e3a3550055f123fb8
 		     </p>
 		   </div>
 		</div>
