@@ -43,6 +43,12 @@
 				</div>
 			</c:forEach>
 		</c:forEach>
+		
+		<div class="back_btn clearfix">
+			<div class="pull-right">
+				<a href="${HY_CONTEXT}/cases/forIndex" class="btn btn-back">返回</a>
+			</div>
+		</div>
 	</div>
 </div>
 <script src="${HY_CONTEXT}/resources/js/views/cases/index.js"></script>
