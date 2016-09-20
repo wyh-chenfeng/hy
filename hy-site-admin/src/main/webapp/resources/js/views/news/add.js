@@ -79,7 +79,28 @@
             });
 		},
 		initEditor: function() {
-			var ue = UE.getEditor('container', {serverUrl: 'fileUplod'});
+			var options = {
+					serverUrl: 'initUpload',
+					//图片上传配置区
+			        imageUrl:$.HY.context + "/fileUpload",        //图片上传提交地址
+			        imagePath:URL + "jsp/",           		//图片修正地址，引用了fixedImagePath,如有特殊需求，可自行配置
+			        imageFieldName:"file",                  //图片数据的key,若此处修改，需要在后台对应文件修改对应参数
+
+					toolbars: [[
+					            'fullscreen', 'source', '|', 'undo', 'redo', '|',
+					            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+					            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+					            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+					            'directionalityltr', 'directionalityrtl', 'indent', '|',
+					            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+					            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+					            'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
+					            'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+					            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+					            'print', 'preview', 'searchreplace', 'drafts', 'help'
+					        ]]
+			};
+			var ue = UE.getEditor('container', options);
 		}
 	};
 
