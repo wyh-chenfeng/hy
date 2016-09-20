@@ -21,6 +21,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="copyright">京ICP备1234567号 ｜ 京ICP号1234567号</div>
+		<div class="copyright">京ICP备16044660号</div>
 	</div>
 </div>
