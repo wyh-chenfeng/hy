@@ -39,6 +39,7 @@
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
 		</dependency>
+		<!-- log -->
 	</dependencies>
 
 	<build>
