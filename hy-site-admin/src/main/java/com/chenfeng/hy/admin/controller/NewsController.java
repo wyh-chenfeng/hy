@@ -1,13 +1,13 @@
 package com.chenfeng.hy.admin.controller;
 
-import java.io.File;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -23,6 +23,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.baidu.ueditor.ActionEnter;
+import com.chenfeng.hy.domain.common.config.SystemConfig;
 import com.chenfeng.hy.domain.model.News;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
 import com.chenfeng.hy.domain.model.vo.ResultVo;
@@ -34,6 +36,9 @@ import com.github.pagehelper.Page;
 public class NewsController {
     Logger log = Logger.getLogger(NewsController.class);
     
+    @Resource
+    private SystemConfig systemConfig;
+
     @Autowired
     private NewsService newsService;
 
@@ -159,51 +164,58 @@ public class NewsController {
      */
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(value = "initUpload")
+    @RequestMapping(value = "initUpload", method = RequestMethod.GET)
     @Secured("ROLE_ADMIN")
 	public void initUpload(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			response.getWriter().print("{'uuid':'" + UUID.randomUUID() + "','original':'','url':'','title':'','state':'SUCCESS'}");
+			request.setCharacterEncoding( "utf-8" );
+			response.setHeader("Content-Type" , "text/html");
+			
+			request.getParameter("upfile");
+			
+			response.getWriter().print(new ActionEnter( request,  request.getSession().getServletContext().getRealPath("/")).exec());
 		} catch (Exception e) {
 			log.error("图片上传初始化错误" + e);
 		}
 	}
 
-    
+
+    /**
+     * 编辑器上传图片
+     * @param file
+     * @author zhangjie
+     * @return
+     */
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(value = "fileUplod", method = RequestMethod.GET)
+    @RequestMapping(value = "initUpload", method = RequestMethod.POST)
     @Secured("ROLE_ADMIN")
-    public Object fileUplod(@RequestParam("file") MultipartFile file) {
+    public void fileUplod(@RequestParam("upfile") MultipartFile file, HttpServletResponse response) {
 
         if (file == null || file.isEmpty()) {
-            return "上传文件不能为空！";
+            //return "上传文件不能为空！";
         }
 
-        Map<String, Object> result = new HashMap<String, Object>(4);
-        result.put("success", false);
-        File temFile = null;
+        Map<String, Object> result = new HashMap<String, Object>();
+        result.put("state", "上传文件失败");
         try {
             //上传到图片服务器。
             String imagePath = newsService.fileUpload(file);
-    		
             if(StringUtils.isNotEmpty(imagePath)){            	
-	            result.put("success", true);
-	            result.put("url", imagePath);
-	            result.put("id", new Date().getTime());
-	            result.put("name", file.getOriginalFilename());
-	            return result;
+            	result.put("name", imagePath.split("/")[1]);
+            	result.put("original", "file");
+            	result.put("size", file.getSize());
+	            result.put("state", "SUCCESS");
+	            result.put("type", "." + imagePath.split("\\.")[1]);
+	            result.put("url", systemConfig.getImageUrl() + imagePath);
+	            
+	            response.getWriter().print(JSONObject.fromObject(result).toString());
+	            //return result;
             }
         } catch (Exception e) {
-            log.error(e.getMessage());
-
-        } finally {
-            // 4. 删除临时文件
-            if (temFile != null) {
-                temFile.deleteOnExit();
-            }
-        }
-        return result;
+            log.error(e.getMessage(), e);
+        } 
+        //return result;
 
     }
 }
