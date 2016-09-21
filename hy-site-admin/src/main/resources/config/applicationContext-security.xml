@@ -17,7 +17,7 @@
 		<form-login login-page="/user/login" default-target-url="/position/forIndex"
 			authentication-failure-url="/user/login?error=true" />
 		<logout logout-success-url="/user/login" />
-		<csrf disabled="true"/>
+		<csrf disabled="true"/>	
 		<!-- 解决百度富文本编辑器 跨域问题 start -->
 		<headers>
 			<frame-options  policy="SAMEORIGIN" />

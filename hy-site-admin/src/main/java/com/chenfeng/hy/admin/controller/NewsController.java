@@ -2,6 +2,7 @@ package com.chenfeng.hy.admin.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -166,12 +167,7 @@ public class NewsController {
     @Secured("ROLE_ADMIN")
 	public void initUpload(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			request.setCharacterEncoding( "utf-8" );
-			response.setHeader("Content-Type" , "text/html");
-			
-			request.getParameter("upfile");
-			
-			response.getWriter().print(new ActionEnter( request,  request.getSession().getServletContext().getRealPath("/")).exec());
+			response.getWriter().print(new ActionEnter( request, request.getSession().getServletContext().getRealPath("/") ).exec());
 		} catch (Exception e) {
 			log.error("图片上传初始化错误" + e);
 		}
@@ -194,18 +190,18 @@ public class NewsController {
             return "上传文件不能为空！";
         }
 
-        Map<String, Object> result = new HashMap<String, Object>();
-        result.put("state", "上传文件失败");
+        Map<String, Object> result = new HashMap<String, Object>(4);
+        result.put("success", false);	
         try {
-            //上传到图片服务器。
-            String imagePath = newsService.fileUpload(file);
-            if(StringUtils.isNotEmpty(imagePath)){            	
-            	result.put("name", imagePath.split("/")[1]);
-            	result.put("original", "file");
-            	result.put("size", file.getSize());
+        	
+        	String imagePath = newsService.fileUpload(file);
+
+            if(StringUtils.isNotEmpty(imagePath)){
+	            result.put("uuid", UUID.randomUUID());
+            	result.put("original", imagePath.split("/")[1]);
+            	result.put("url", systemConfig.getImageUrl() + imagePath);
+            	result.put("title", imagePath.split("/")[1]);
 	            result.put("state", "SUCCESS");
-	            result.put("type", "." + imagePath.split("\\.")[1]);
-	            result.put("url", systemConfig.getImageUrl() + imagePath);
 	            
 	            return result;
             }
