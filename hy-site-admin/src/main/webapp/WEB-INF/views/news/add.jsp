@@ -19,7 +19,7 @@
 		</div>
 	</div>
 		<div class="form-group">
-		<label for="content" class="col-sm-2 control-label">
+		<label for="summary" class="col-sm-2 control-label">
 			摘要
 		</label>
 		<div class="col-sm-6">
@@ -32,7 +32,7 @@
 		</label>
 		<div class="col-sm-6">
 			<!-- 加载编辑器的容器 -->
-			<div id="container" name="container"></div>
+			<div id="content" name="content"></div>
 		</div>
 	</div>
 	<div class="form-group">

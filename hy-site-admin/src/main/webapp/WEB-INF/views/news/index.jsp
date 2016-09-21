@@ -9,7 +9,7 @@
     <tr>
         <th w_index="id" width="5%;">ID</th>
         <th w_index="title" width="15%;">标题</th>
-        <th w_index="content" width="17%;">内容</th>
+        <!-- <th w_index="summary" width="17%;">摘要</th> -->
         <th w_render="$.bindEvent.type" width="18%;">类型</th>
         <th w_render="$.bindEvent.image" width="15%;">图片</th>
         <th w_render="$.bindEvent.operate" width="15%;">操作</th>

@@ -29,6 +29,14 @@
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="content" class="col-sm-2 control-label">
+			内容
+		</label>
+		<div class="col-sm-6">
+			<textarea rows="8" name="content" id="content" class="form-control">${news.content }</textarea>
+		</div>
+	</div>
+	<div class="form-group">
 		<label for="type" class="col-sm-2 control-label">
 			类型
 		</label>

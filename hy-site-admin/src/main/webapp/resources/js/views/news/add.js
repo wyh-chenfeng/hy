@@ -95,7 +95,7 @@
 					            'preview', 'searchreplace', 'help'
 					        ]]
 			};
-			var ue = UE.getEditor('container', options);
+			var ue = UE.getEditor('content', options);
 		}
 	};
 
