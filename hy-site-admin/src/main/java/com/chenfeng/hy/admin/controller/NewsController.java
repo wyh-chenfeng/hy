@@ -1,7 +1,13 @@
 package com.chenfeng.hy.admin.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +29,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.baidu.ueditor.ActionEnter;
 import com.chenfeng.hy.domain.common.config.SystemConfig;
 import com.chenfeng.hy.domain.model.News;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
@@ -168,12 +173,7 @@ public class NewsController {
     @Secured("ROLE_ADMIN")
 	public void initUpload(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			request.setCharacterEncoding( "utf-8" );
-			response.setHeader("Content-Type" , "text/html");
-			
-			request.getParameter("upfile");
-			
-			response.getWriter().print(new ActionEnter( request,  request.getSession().getServletContext().getRealPath("/")).exec());
+			response.getWriter().print("{'uuid':'" + UUID.randomUUID() + "','original':'','url':'','title':'','state':'SUCCESS'}");
 		} catch (Exception e) {
 			log.error("图片上传初始化错误" + e);
 		}
@@ -190,32 +190,76 @@ public class NewsController {
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "initUpload", method = RequestMethod.POST)
     @Secured("ROLE_ADMIN")
-    public void fileUplod(@RequestParam("upfile") MultipartFile file, HttpServletResponse response) {
-
-        if (file == null || file.isEmpty()) {
-            //return "上传文件不能为空！";
+    public void fileUplod(@RequestParam("file") MultipartFile file, HttpServletResponse response) {
+    	if (file == null || file.isEmpty()) {
+            return ;
         }
 
-        Map<String, Object> result = new HashMap<String, Object>();
-        result.put("state", "上传文件失败");
+        Map<String, Object> result = new HashMap<String, Object>(4);
+        result.put("success", false);	
+        File temFile = null;
         try {
-            //上传到图片服务器。
-            String imagePath = newsService.fileUpload(file);
-            if(StringUtils.isNotEmpty(imagePath)){            	
-            	result.put("name", imagePath.split("/")[1]);
-            	result.put("original", "file");
-            	result.put("size", file.getSize());
+        	temFile = saveToTempDir(file);
+        	
+        	
+        	String imagePath = newsService.fileUpload(file);
+
+            if(StringUtils.isNotEmpty(imagePath)){
+	            result.put("uuid", UUID.randomUUID());
+            	result.put("original", imagePath.split("/")[1]);
+            	result.put("url", systemConfig.getImageUrl() + imagePath);
+            	result.put("title", imagePath.split("/")[1]);
 	            result.put("state", "SUCCESS");
-	            result.put("type", "." + imagePath.split("\\.")[1]);
-	            result.put("url", systemConfig.getImageUrl() + imagePath);
 	            
 	            response.getWriter().print(JSONObject.fromObject(result).toString());
-	            //return result;
             }
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
-        } 
-        //return result;
-
+            log.error(e.getMessage());
+        }finally {
+            // 4. 删除临时文件
+            if (temFile != null) {
+                temFile.deleteOnExit();
+            }
+            try {
+				response.getWriter().close();
+			} catch (IOException e) {
+				log.error("图片上传错误" + e);
+			}
+        }
+    }
+    
+    /**
+     * 将文件保存到本地临时目录。
+     *
+     * @param file
+     * @return 临时文件
+     * @throws IOException
+     */
+    private File saveToTempDir(MultipartFile file) throws IOException {
+        byte[] bytes = file.getBytes();
+        String rootPath = System.getProperty("user.home");
+        File dir = new File(rootPath + File.separator + "upload_temp_dir");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+      //  File savedFile = new File(dir.getAbsolutePath() + File.separator + UUID.randomUUID() + file.getOriginalFilename());
+        String fileName=file.getOriginalFilename();
+        File savedFile = new File(dir.getAbsolutePath() + File.separator + UUID.randomUUID() + fileName.substring(fileName.lastIndexOf("."), fileName.length()));
+        
+        OutputStream os = null;
+        BufferedOutputStream stream = null;
+        try{
+        	os = new FileOutputStream(savedFile);
+        	stream = new BufferedOutputStream(os);
+        	stream.write(bytes);
+        }finally{
+        	if(stream != null){
+        		stream.close();
+        	}
+        	if(os != null){
+        		os.close();
+        	}
+        }
+        return savedFile;
     }
 }

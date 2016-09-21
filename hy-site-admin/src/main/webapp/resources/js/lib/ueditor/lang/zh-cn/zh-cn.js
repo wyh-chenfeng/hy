@@ -68,25 +68,34 @@ UE.I18N['zh-cn'] = {
         'hi':'明显强调'
     },
     'autoupload': {
-        'exceedSizeError': '文件大小超出限制',
-        'exceedTypeError': '文件格式不允许',
+        'exceedSizeError': '请上传最大不超过500kb的图片',
+        'exceedTypeError': '请上传jpg或png格式的图片',
         'jsonEncodeError': '服务器返回格式错误',
         'loading':"正在上传...",
         'loadError':"上传错误",
         'errorLoadConfig': '后端配置项没有正常加载，上传插件不能正常使用！'
     },
-    'simpleupload':{
+  /*  'simpleupload':{
         'exceedSizeError': '文件大小超出限制',
-        'exceedTypeError': '文件格式不允许',
+        'exceedTypeError': '文件格式错误',
         'jsonEncodeError': '服务器返回格式错误',
         'loading':"正在上传...",
         'loadError':"上传错误",
         'errorLoadConfig': '后端配置项没有正常加载，上传插件不能正常使用！'
+    },*/
+    'simpleupload':{
+    	'exceedSizeError': '请上传最大不超过500kb的图片',
+    	'exceedTypeError': '请上传jpg或png格式的图片',
+    	'jsonEncodeError': '服务器返回格式错误',
+    	'loading':"正在上传...",
+    	'loadError':"上传错误",
+    	'errorLoadConfig': '后端配置项没有正常加载，上传插件不能正常使用！'
     },
     'elementPathTip':"元素路径",
     'wordCountTip':"字数统计",
     'wordCountMsg':'当前已输入{#count}个字符, 您还可以输入{#leave}个字符。 ',
-    'wordOverFlowMsg':'<span style="color:red;">字数超出最大允许值，服务器可能拒绝保存！</span>',
+    //'wordOverFlowMsg':'<span style="color:red;">字数超出最大允许值，服务器可能拒绝保存！</span>',
+    'wordOverFlowMsg':'<span style="color:red;">请输入最多不超过10000个字符</span>',
     'ok':"确认",
     'cancel':"取消",
     'closeDialog':"关闭对话框",
@@ -334,7 +343,7 @@ UE.I18N['zh-cn'] = {
         'errorNotSupport': 'WebUploader 不支持您的浏览器！如果你使用的是IE浏览器，请尝试升级 flash 播放器。',
         'errorLoadConfig': '后端配置项没有正常加载，上传插件不能正常使用！',
         'errorExceedSize':'文件大小超出',
-        'errorFileType':'文件格式不允许',
+        'errorFileType':'请上传jpg或png格式的图片',
         'errorInterrupt':'文件传输中断',
         'errorUploadRetry':'上传失败，请重试',
         'errorHttp':'http请求错误',

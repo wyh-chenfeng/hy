@@ -79,10 +79,7 @@
             });
 		},
 		initEditor: function() {
-			var options = {
-					serverUrl: 'initUpload',
-			};
-			var ue = UE.getEditor('container', options);
+			var ue = UE.getEditor('container');
 		}
 	};
 
