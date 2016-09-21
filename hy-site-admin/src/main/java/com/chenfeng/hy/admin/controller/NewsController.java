@@ -7,8 +7,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONObject;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -190,10 +188,10 @@ public class NewsController {
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "initUpload", method = RequestMethod.POST)
     @Secured("ROLE_ADMIN")
-    public void fileUplod(@RequestParam("upfile") MultipartFile file, HttpServletResponse response) {
+    public Object fileUplod(@RequestParam("upfile") MultipartFile file, HttpServletResponse response) {
 
         if (file == null || file.isEmpty()) {
-            //return "上传文件不能为空！";
+            return "上传文件不能为空！";
         }
 
         Map<String, Object> result = new HashMap<String, Object>();
@@ -209,13 +207,12 @@ public class NewsController {
 	            result.put("type", "." + imagePath.split("\\.")[1]);
 	            result.put("url", systemConfig.getImageUrl() + imagePath);
 	            
-	            response.getWriter().print(JSONObject.fromObject(result).toString());
-	            //return result;
+	            return result;
             }
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         } 
-        //return result;
+        return result;
 
     }
 }
