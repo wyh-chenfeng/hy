@@ -82,10 +82,10 @@
 			var options = {
 					serverUrl: 'initUpload',
 					//图片上传配置区
-			        imageUrl:$.HY.context + "/fileUpload",        //图片上传提交地址
-			        imagePath:URL + "jsp/",           		//图片修正地址，引用了fixedImagePath,如有特殊需求，可自行配置
-			        imageFieldName:"file",                  //图片数据的key,若此处修改，需要在后台对应文件修改对应参数
-
+			        imageActionName: "fileUpload", /* 执行上传图片的action名称 */
+			        imageFieldName: "file", /* 提交的图片表单名称 */
+			        imageMaxSize: 2048000, /* 上传大小限制，单位B */
+			        imageAllowFiles: [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* 上传图片格式显示 */
 					toolbars: [[
 					            'fullscreen', 'source', '|', 'undo', 'redo', '|',
 					            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',

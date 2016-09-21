@@ -23,8 +23,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.chenfeng.hy.domain.common.utils.ImgUploadUtil;
-import com.chenfeng.hy.domain.enums.ImgTypeEnum;
 import com.chenfeng.hy.domain.model.News;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
 import com.chenfeng.hy.domain.model.vo.ResultVo;
@@ -161,7 +159,7 @@ public class NewsController {
      */
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(value = "initUpload", method = RequestMethod.GET)
+    @RequestMapping(value = "initUpload")
     @Secured("ROLE_ADMIN")
 	public void initUpload(HttpServletRequest request, HttpServletResponse response) {
 		try {
