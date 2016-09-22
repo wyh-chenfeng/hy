@@ -23,7 +23,7 @@
 							<img src="${IMAGE_URL}${ca.image }">
 							<div class="caption"> 
 								<p>
-									${ca.content }
+									${ca.summary }
 								</p>
 								<p class="kownmore">
 									<a href="${HY_CONTEXT}/cases/forDetail/${ca.id }"> 了解更多<i

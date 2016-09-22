@@ -34,9 +34,9 @@ public class CasesController {
     @RequestMapping(value = "forDetail/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forDetail(@PathVariable("id") Long id, Model model) {
-//    	List<CasesDetail> casesDetails = casesDetailService.findByCasesId(id);
-//    	model.addAttribute("casesDetails", casesDetails);
-    	return "cases/case_detail";
+    	Cases cases = casesService.findOne(id);
+    	model.addAttribute("cases", cases);
+    	return "cases/detail";
     }
     
 }

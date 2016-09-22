@@ -14,35 +14,13 @@
 		</p>
 	</div>
 	<div class="well well-sm">
-		<c:forEach items="${casesDetails }" step="2" varStatus="status">
-			<c:forEach items="${casesDetails }" var="casesDetail" begin="${status.index }" end="${status.index }">
-				<div class="media">
-					<a class="media-img pull-left"> 
-						<img class="media-object" src="${IMAGE_URL}${casesDetail.image }" alt="媒体对象">
-					</a>
-					<div class="media-body">
-						<c:if test="${status.index == 0}">
-							<h4 class="media-heading">${casesDetail.casesName }</h4>
-						</c:if>
-						<p>
-							${casesDetail.content }
-						</p>
-					</div>
-				</div>
-			</c:forEach>
-			<c:forEach items="${casesDetails }" var="casesDetail" begin="${status.index + 1}" end="${status.index + 1}">
-				<div class="media">
-					<a class="media-img pull-right"> 
-						<img class="media-object" src="${IMAGE_URL}${casesDetail.image }" alt="媒体对象">
-					</a>
-					<div class="media-body">
-						<p>
-							${casesDetail.content }
-						</p>
-					</div>
-				</div>
-			</c:forEach>
-		</c:forEach>
+		<div class="media">
+			<div class="media-body">
+				<p>
+					${cases.content }
+				</p>
+			</div>
+		</div>
 		
 		<div class="back_btn clearfix">
 			<div class="pull-right">
