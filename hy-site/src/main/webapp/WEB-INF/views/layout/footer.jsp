@@ -7,10 +7,9 @@
 			<div class="col-sm-6">
 				<p>
 					北京环域生态环保技术有限公司
-					<img src="${HY_CONTEXT}/resources/images/footer_icon.png"/>
 				</p>
 				<p class="footer_icon">
-					<img src="./images/footer_icon.png"/>
+					<img src="${HY_CONTEXT}/resources/images/footer_icon.png"/>
 				</p>
 				<p>联系电话：010-84921703</p>
 				<p>邮箱：business@ecohuanyu.com</p>
