@@ -7,6 +7,7 @@
 		FILE_UP_LOAD : '.bind-file-up-loading',
 		INIT_IMAGE_FILE : '#init_image_file',
 		TITLE : '标题',
+		SUMMARY : '摘要',
 		CONTENT : '内容'
 	};
 
@@ -20,6 +21,10 @@
 					title : {
 						required : [ constant.TITLE, true ],
 						maxlength : 100
+					},
+					summary : {
+						required : [ constant.SUMMARY, true ],
+						maxlength : 1000
 					},
 					content : {
 						required : [ constant.CONTENT, true ],

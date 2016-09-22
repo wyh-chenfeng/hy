@@ -14,13 +14,17 @@
      	<td class="active text-center">标题</td>
       	<td>${cases.title }</td>
     </tr>
-    <tr>
-    	<td class="active text-center">内容</td>
-      	<td>${cases.content }</td>
-    </tr>
     <tr>                    
       <td class="active text-center">图片</td>
       <td><img alt="" src="${IMAGE_URL }${cases.image }"></td>
+    </tr>
+     <tr>
+    	<td class="active text-center">摘要</td>
+      	<td>${cases.summary }</td>
+    </tr>
+    <tr>
+    	<td class="active text-center">内容</td>
+      	<td>${cases.content }</td>
     </tr>
   </tbody>
 </table>
