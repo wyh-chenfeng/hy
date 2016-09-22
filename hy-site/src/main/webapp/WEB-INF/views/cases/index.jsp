@@ -14,26 +14,28 @@
 		</p>
 	</div>
 	<div class="well well-sm">
-		<div class="row">
-			<c:forEach items="${cases }" var="ca">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<h3>${ca.title }</h3>
-						<img src="${IMAGE_URL}${ca.image }">
-						<div class="caption"> 
-							<p>
-								${ca.content }
-							</p>
-							<p class="kownmore">
-								<a href="${HY_CONTEXT}/cases/forDetail/${ca.id }"> 了解更多<i
-									class="glyphicon glyphicon-chevron-right"></i>
-								</a>
-							</p>
+		<c:forEach items="${cases }" step="3" varStatus="status">
+			<div class="row">
+				<c:forEach items="${cases }" var="ca" begin="${status.index }" end="${status.index + 2}">
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<h3>${ca.title }</h3>
+							<img src="${IMAGE_URL}${ca.image }">
+							<div class="caption"> 
+								<p>
+									${ca.content }
+								</p>
+								<p class="kownmore">
+									<a href="${HY_CONTEXT}/cases/forDetail/${ca.id }"> 了解更多<i
+										class="glyphicon glyphicon-chevron-right"></i>
+									</a>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			</c:forEach>
-		</div>
+				</c:forEach>
+			</div>
+		</c:forEach>
 	</div>
 </div>
 

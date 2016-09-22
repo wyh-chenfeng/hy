@@ -10,15 +10,12 @@
 					aria-expanded="false" aria-controls="navbar">
 					<i class="iconfont"></i>
 				</button>
-				<a class="navbar-brand"> 关于我们 </a>
+				<a class="navbar-brand">加入我们 </a>
 			</div>
-			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
+			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="${HY_CONTEXT }/aboutus/forSummary">公司简介</a></li>
-					<li><a href="${HY_CONTEXT }/aboutus/forCore">核心团队</a></li>
+					<li class="active"><a href="${HY_CONTEXT }/aboutus/forPosition">招纳贤士</a></li>
 					<li><a href="${HY_CONTEXT }/aboutus/forAboutus">联系我们</a></li>
-					<li class="active"><a
-						href="${HY_CONTEXT }/aboutus/forPosition">招纳贤士</a></li>
 				</ul>
 			</div>
 		</div>

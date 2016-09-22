@@ -5,17 +5,23 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<p>语言版本 : 中国</p>
-				<p>关于我们</p>
-				<p>反馈建议：xxx@sina.com.cn</p>
+				<p>
+					北京环域生态环保技术有限公司
+				</p>
+				<p class="footer_icon">
+					<img src="${HY_CONTEXT}/resources/images/footer_icon.png"/>
+				</p>
+				<p>联系电话：010-84921703</p>
+				<p>邮箱：business@ecohuanyu.com</p>
+				<p>地址：北京市朝阳区安外北苑5号院北苑大酒店9层</p>
 			</div>
 			<div class="col-sm-6 qrcode">
 				<div class="weixincode">
-					<img src="${HY_CONTEXT}/resources/images/wecode.jpg" />
+					<img src="${HY_CONTEXT}/resources/images/wecode.jpg"/>
 					<p>官方微信</p>
 				</div>
 			</div>
 		</div>
-		<div class="copyright">京ICP备1234567号 ｜ 京ICP号1234567号</div>
+		<div class="copyright">京ICP备16044660号</div>
 	</div>
 </div>

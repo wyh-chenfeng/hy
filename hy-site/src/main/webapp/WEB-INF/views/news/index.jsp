@@ -12,7 +12,7 @@
 				</button>
 				<a class="navbar-brand"> 动态 </a>
 			</div>
-			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
+			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
 					<li id="company" class="active">
 						<a href="javaScript:void(0);">公司动态</a>
@@ -31,7 +31,7 @@
 		         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
 			     <h4 class="media-heading" data-bind="text: n.title"></h4>
 			     <p>
-			     	<p data-bind="text: n.content"></p>
+			     	<p data-bind="html: n.content"></p>
 			     </p>
 			   </div>
 			</div>

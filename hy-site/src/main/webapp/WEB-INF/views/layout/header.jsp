@@ -20,10 +20,11 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
-				<li class="bind-menu-solutions"><a href="${HY_CONTEXT }/solutions/forIndex">解决方案</a></li>
+				<li class="bind-menu-aboutus"><a href="${HY_CONTEXT }/aboutus/forSummary">关于环域</a></li>
+				<li class="bind-menu-solutions"><a href="${HY_CONTEXT }/solutions/forIndex">业务领域</a></li>
 				<li class="bind-menu-cases"><a href="${HY_CONTEXT }/cases/forIndex">经典案例</a></li>
-				<li class="bind-menu-news"><a href="${HY_CONTEXT }/news/forIndex">动态</a></li>
-				<li class="bind-menu-aboutus"><a href="${HY_CONTEXT }/aboutus/forSummary">关于我们</a></li>
+				<li class="bind-menu-news"><a href="${HY_CONTEXT }/news/forIndex">新闻中心</a></li>
+				<li class="bind-menu-position"><a href="${HY_CONTEXT }/aboutus/forPosition">加入我们</a></li>
 			</ul>
 		</div>
 		<div class="navbar-right-icon">

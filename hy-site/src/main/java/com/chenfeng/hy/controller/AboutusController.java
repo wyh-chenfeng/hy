@@ -64,4 +64,32 @@ public class AboutusController {
     	return positionService.findAll();
     }
     
+    @RequestMapping(value = "forMiss", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forMiss() {
+    	
+    	return "aboutus/miss";
+    }
+    
+    @RequestMapping(value = "forVision", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forVision() {
+    	
+    	return "aboutus/vision";
+    }
+    
+    @RequestMapping(value = "forCto", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forCto() {
+    	
+    	return "aboutus/cto";
+    }
+
+    @RequestMapping(value = "forTeam", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forTeam() {
+    	
+    	return "aboutus/team";
+    }
+    
 }

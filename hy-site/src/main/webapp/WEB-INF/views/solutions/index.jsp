@@ -8,11 +8,11 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subnavbar" aria-expanded="false" aria-controls="navbar">
 					<i class="iconfont"></i>
 				</button>
-				<a class="navbar-brand"> 解决方案 </a>
+				<a class="navbar-brand"> 业务领域 </a>
 			</div>
-			<div class="collapse navbar-collapse navbar-right" id="subnavbar">
+			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="${HY_CONTEXT}/solutions/forIndex">黑臭水治理</a></li>
+					<li class="active"><a href="${HY_CONTEXT}/solutions/forIndex">黑臭河道治理技术体系</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forSpongeCity">海绵城市</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forWaterPullution">农村污水治理</a></li>
 					<li><a href="${HY_CONTEXT}/solutions/forConstructedWetland">人工湿地</a></li>
@@ -20,34 +20,65 @@
 			</div>
 		</div>
 		<p class="main_content_desc">
-			北京环域生态环保技术有限公司（以下简称公司或环域生态）作为中国环境科学研究院水环境科学家研发技术的转化平台，从成立伊始到不断发展过程中，得到中国环保部相关司局、中国环境科学研究院、中国水利水电科学研究院、北极光创投基金等国家部门及社会机构的大力支持。<br />
-			公司是中国最具实力的水环境技术集成与系统解决方案提供商。团队核心成员拥有数十项水治理专利，并在国家水环保政策和标准制订、重大环保工程验收及水污染重大专项整装研发课题中发挥出重要作用。
+		公司是一家集科研、设计、生产建设、运营为一体的高科技水环境治理公司。主要致力于与水环境相关的各种工程设计咨询与产品研发，公司拥有国内水平最高的设计研发团队，近四十余项专利技术，旨在为客户提供专业工程咨询、设计施工及维护等一体化服务，业务覆盖城市污染河流湖泊治理；受损河流湖泊生态修复；海绵城市规划设计；乡镇及农村生活污水系统建设；人工湿地尾水深度处理与安全回用。公司依托著名研究院所、高校，在一批全国知名专家的支持下，在水环境治理、污水处理、生态领域方面具有强大的技术优势，是中国环境领域技术水平最高、综合实力最强的企业之一。
 		</p>
 	</div>
 	<div class="well well-sm">
-		<div class="media">
-			<a class="media-img pull-left"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution.jpg" alt="媒体对象">
-			</a>
-			<div class="media-body">
-				<p>
-					水环境污染是城市化进程的产物；随着经济建设和社会进步，治理污染水环境是人类自身的要求，是和谐社会的必然需要。<br />
-					入河污染控制技术与工程<br /> 河道水质净化强化技术与工程<br /> 河口水质净化技术与工程
-				</p>
-			</div>
+	 	<div class="media">
+		   <a class="media-img pull-left">
+		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution1.png">
+		   </a>
+		   <div class="media-body">
+		     <p class="text-indent">
+		      环域生态针对不同河道的特点，集成国内外各种先进工艺、因地制宜的编制治理方案，一河一策。通过对黑臭河流治理方案的优化与合理性分析，因地制宜的筛选适用性技术，在综合考虑方案的工程量、工程投资及产出的效益、方案风险、方案可操作性及方案实施后的环境经济与社会效益情况，制定出令客户满意的设计方案，为客户实现“综合措施、技术集成、经济可行、统筹管理、长效运行”的黑臭水体治理目标。
+		     </p>
+		   </div>
+		</div>
+	 	<div class="media">
+		   <a class="media-img pull-right">
+		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution.jpg">
+		   </a>
+		   <div class="media-body">
+		     <p class="text-indent text-bold">精准的问题诊断技术:<p>
+		     <p class="text-indent">
+		      针对黑臭河道污染源繁多，识别困难的问题，环域生态应用卫星遥感解译、同位素及线粒体溯源等先进的科技成果进行精准的问题分析，解析污染源，为黑臭河道的治理方案的编制提供科学的数据支持。
+		     </p>
+		   </div>
 		</div>
 		<div class="media">
-			<a class="media-img pull-right"> <img class="media-object"
-				src="${HY_CONTEXT}/resources/images/solution2.jpg" alt="媒体对象">
-			</a>
-			<div class="media-body">
-				<p>
-					重点解决的问题<br /> 1、雨污混流；<br /> 2、污水直排；<br /> 3、生态破坏；<br />
-					4、水体动力衰减（物理、化学、生物学）
-				</p>
-			</div>
+		   <a class="media-img pull-left">
+		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution1.jpg">
+		   </a>
+		   <div class="media-body">
+	         <p class="text-indent text-bold">完备的治理技术数据库:<p>
+		     <p class="text-indent">
+		        通过实践的积累，公司积累了近300多种国内外的先进技术。根据每条河道的污染现状特征，在公司建立的数据库中集成适用技术开展黑臭河道治理方案编制，科学地运用系统工程学的理论与方法，制定符合实际的治理目标，并对各种治理方案做出评价，筛选出最优设计与控制方案。
+		     </p>
+		   </div>
 		</div>
-	</div>
+		<div class="media">
+		   <a class="media-img pull-right">
+		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution2.jpg">
+		   </a>
+		   <div class="media-body">
+		     <p class="text-indent text-bold">多目标方案优化技术:<p>
+		     <p class="text-indent">
+		        以多种治理方案为依据，基于河流营养物来源的特点及输移变化规律，以河流水环境容量综合利用最优化与河流生态功能保障为目标，通过系统动力学（SD）方法构建河流水质和容量发展预测模型，在模型率定的基础上，对河流的水环境容量和水质变化进行预测评价，分析规划的方案与产业政策，提出优化的水环境质量改善策略。
+		     </p>
+		   </div>
+		</div>
+		<div class="media">
+		   <a class="media-img pull-left">
+		      <img class="media-object" src="${HY_CONTEXT}/resources/images/solution0.jpg">
+		   </a>
+		   <div class="media-body">
+		     <p class="text-indent text-bold">科学管护技术:<p>
+		     <p class="text-indent">
+		        在黑臭河道的治理过程中不但要注重治理技术和治理措施，更要注重对黑臭河道治理的维护与管理，从而确保整个治理工程有序、高效进行；环域生态拥有着生态感知、信息共享、实时反馈、智慧处理的科学管护系统。
+		     </p>
+		   </div>
+		</div>
+	 </div>
 </div>
 
 <script src="${HY_CONTEXT}/resources/js/views/solutions/index.js"></script>
