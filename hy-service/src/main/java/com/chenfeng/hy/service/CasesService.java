@@ -43,5 +43,12 @@ public interface CasesService extends CrudService<Cases, Long> {
 	 * @return
 	 */
 	List<Cases> findAll();
+
+	/**
+	 * 上传文件
+	 * @param file
+	 * @return
+	 */
+	String fileUpload(MultipartFile file);
 	
 }

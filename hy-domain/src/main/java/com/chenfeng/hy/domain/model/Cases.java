@@ -17,6 +17,11 @@ public class Cases {
      * 图片
      */
     private String image;
+    
+    /**
+     * 摘要
+     */
+    private String summary;
 
     /**
      * 内容
@@ -79,6 +84,14 @@ public class Cases {
 
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
 }

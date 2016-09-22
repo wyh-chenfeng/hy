@@ -73,4 +73,8 @@ public class CasesServiceImpl extends
 		return repository.findAll();
 	}
 
+	@Override
+	public String fileUpload(MultipartFile file) {
+		return ImgUploadUtil.saveIMGFile(systemConfig, file, ImgTypeEnum.CASES);
+	}
 }

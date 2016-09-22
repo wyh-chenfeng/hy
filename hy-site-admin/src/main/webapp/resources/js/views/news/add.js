@@ -21,6 +21,10 @@
 						required : [ constant.TITLE, true ],
 						maxlength : 100
 					},
+					summary : {
+						required : [ constant.SUMMARY, true ],
+						maxlength : 1000
+					},
 					content : {
 						required : [ constant.CONTENT, true ],
 						maxlength : 5000
