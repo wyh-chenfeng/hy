@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,6 +31,14 @@ public class NewsController {
     public String forIndex(Model model) {
     	
         return "news/index";
+    }
+
+    @RequestMapping(value = "forDetail/{id}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String forDetail(@PathVariable("id") Long id, Model model) {
+    	News news = newsService.findOne(id);
+    	model.addAttribute("news", news);
+    	return "news/detail";
     }
 
     @RequestMapping(value = "query", method = RequestMethod.POST)
