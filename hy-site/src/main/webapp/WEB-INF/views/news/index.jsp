@@ -26,14 +26,17 @@
 
 		<!-- ko foreach: { data: news, as: 'n' } -->
 			<div class="media">
-				<a class="" data-bind="attr:{href:'${HY_CONTEXT }/news/forDetail/' + n.id()}">
-					<div class="media-body">
-			         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
-				     <h4 class="media-heading" data-bind="text: n.title"></h4>
-				     <br/>
-				     <p class="text-indent" data-bind="html: n.summary"></p>
-				   </div>
-				</a>
+				<div class="media-body">
+		         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
+			     <h4 class="media-heading" data-bind="text: n.title"></h4>
+			     <br/>
+			     <p class="text-indent" data-bind="html: n.summary"></p>
+			     <p class="kownmore">
+	                <a data-bind="attr:{href:'${HY_CONTEXT }/news/forDetail/' + n.id()}" href="activitie_detail.html">
+	                  	了解详情<i class="glyphicon glyphicon-chevron-right"></i>
+	                </a> 
+	             </p>
+			   </div>
 			</div>
         <!-- /ko -->
 		<div class="ac_pagination">
