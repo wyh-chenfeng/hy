@@ -271,12 +271,12 @@
 				<cp_minIdle>0</cp_minIdle>
 				<cp_maxWait>60000</cp_maxWait>
 				<!-- log level -->
-				<log_level>debug</log_level>
+				<log_level>error</log_level>
 				<log_file>/logs/hy-site/hy-site.log</log_file>
 				<log_hy_file>/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
-				<image_url>http://localhost/</image_url>
+				<image_url>http://xiaolyuh.imwork.net/</image_url>
 				<image_server>D:/nginx/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
