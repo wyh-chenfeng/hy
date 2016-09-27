@@ -14,7 +14,8 @@
 	<tiles:insertAttribute name="resource" />
 </head>
 <body>
-	<div class="main_wrap" style="background-image: url(${HY_CONTEXT}/resources/images/1.png);">
+	<tiles:importAttribute name="background" toName="_background" scope="request" ignore="true" />
+	<div class="main_wrap" style="background-image: url(${HY_CONTEXT}/resources/images/${_background });">
 		<tiles:insertAttribute name="header" />
 		<tiles:insertAttribute name="content" />
 		<tiles:insertAttribute name="footer" />

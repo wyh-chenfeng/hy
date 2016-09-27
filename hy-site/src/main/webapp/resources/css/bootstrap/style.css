@@ -14,7 +14,6 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
     vertical-align:baseline;
     background:transparent;
 }
@@ -75,9 +74,13 @@ hr {
 input, select {
     vertical-align:middle;
 }
-
+p{
+	color:#252525;
+	letter-spacing: 1px;
+	line-height: 1.8;
+}
 .header{
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.4);
 	border:0;
 }
 .welcome{
@@ -142,6 +145,11 @@ input, select {
 
 .navbar-right-icon .navbar-text{
 	font-size: 14px;
+	letter-spacing: 0px;
+}
+.navbar-right-icon .navbar-text > img{
+	display: block;
+	margin-bottom: 15px;
 }
 #myCarousel .carousel-inner > .item {
 	width: 100%;
@@ -213,6 +221,8 @@ input, select {
 	padding: 15px 0;
 	font-size: 14px;
 	color: #050505;
+	letter-spacing: 0px;
+	line-height: 1.5;
 }
 .item-desc .item-kown-more{
 	color: #008DCC;
@@ -240,13 +250,23 @@ input, select {
 	color: #000;
 	padding: 17px 0 16px 0;
 	position: relative;
-	border-bottom: 1px solid #000;
+	/*border-bottom: 1px solid #808080;*/
+}
+.banners .title:after{
+	width: 200%;
+	content: '';
+	display: block;
+	height: 1px;
+	background-color: #808080;
+	position: absolute;
+	bottom: 0;
+	transform: scale(0.5);
+	transform-origin: 0 0 ;
 }
 .banners .desc{
 	font-size: 14px;
 	margin:23px 0;
-	height: 145px;
-	line-height: 1.5;
+	height: 172px;
 	text-overflow: -o-ellipsis-lastline;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -259,8 +279,7 @@ input, select {
 	margin-bottom: 0;
 }
 .footer{
-	background-color: #0e86bc;
-	opacity: 0.8;
+	background-color: #6f6f6f;
 	padding-top:41px;
 }
 .footer .footer_icon img{
@@ -272,9 +291,10 @@ input, select {
 	font-size: 14px;
 	padding-bottom: 10px;
 	line-height: 1.2;
+	letter-spacing: 0;
 }
 .footer .container{
-	background-image: url('../images/footer.png'); 
+	/*background-image: url('../images/footer.png');*/ 
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -285,7 +305,10 @@ input, select {
 .footer .qrcode .weixincode, .footer .qrcode .weibocode{
 	float: right;
 }
-.footer .qrcode .weixincode img{
+.footer .qrcode .weibocode{
+	margin-left: 10px;
+}
+.footer .qrcode .weixincode img, .footer .qrcode .weibocode img{
 	width: 80px;
 	height: auto;
 }
@@ -315,8 +338,8 @@ input, select {
 	background-color: #f9f9f9;
 }
 .main-content{
-	padding-top: 190px;
-	min-height: 415px;
+	padding-top: 240px;
+	min-height: 620px;
 }
 .main-content .well{
     background: #fff;
@@ -368,21 +391,28 @@ input, select {
 	background-color:#000;
 }
 .main_content_desc{
-	color: #050505;
 	font-size: 14px;
-	line-height: 1.5
+}
+.main-content .well.activities .media{
+	border-bottom:1px solid #ddd;
+	padding-bottom: 10px;
 }
 .main-content .well .media {
-	padding-bottom: 10px;
-	border-bottom:1px solid #ddd; 
+	padding: 0 32px;
+	text-align: center;
 }
 .main-content .well .media .media-body .media-object{
 	width: 350px;
 	margin-right: 10px;
 }
 .main-content .well .media .media-object{
-   width:450px;
+   max-width:500px;
+   display: inline-block;
+   margin:10px 0;
    float: left;
+}
+.main-content .well .media .media-object + .media-object{
+   margin-left: 15px;
 }
 .main-content .well .media .pull-right .media-object{
 	margin-left: 10px;
@@ -393,12 +423,23 @@ input, select {
 .main-content .well .media .media-body{
    height:100%;
    font-size: 14px;
-   line-height: 1.5;
+   text-align: left;
+}
+.main-content .well .media .media-body > h6{
+   line-height: 1.8;
+   font-size: 16px;
+   font-weight: bold;
 }
 .main-content .well .media .media-body .media-heading{
-   font-size: 20px;
+   font-size: 16px;
+   font-weight: bold;
    margin: 0;
    padding-bottom: 8px;
+}
+.main-content .well .media .media-img{
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
 }
 
 
@@ -411,12 +452,19 @@ input, select {
 .main-content .thumbnail>img{
  	margin: 0;
 }
+ .main-content .case_list .thumbnail>img{
+ 	height: 250px;
+ 	width: 100%;
+}
 .main-content .thumbnail .caption{
 	padding:9px 0;
 }
 .main-content .thumbnail h3{
 	font-size:18px;
 	padding: 8px 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .main-content .thumbnail .caption p{
 	font-size:14px;
@@ -485,10 +533,9 @@ input, select {
 }
 .main-content .summary{
 	font-size: 14px;
-	line-height: 1.5;
 }
 .text-indent{
-	text-indent:2em;
+	text-indent:32px;
 }
 .text-bold{
 	font-weight:bold;
@@ -509,6 +556,20 @@ input, select {
 	background-color: rgb(221,221,221);
 	color:#333;
 }
+.cto_name{
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: 0px;
+}
+.main-content .honor_list .thumbnail>img{
+	border: 1px solid #808080;
+}
+.sub-title{
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 15px;
+}
 @media (max-width: 1218px){
 	.carousel-nav-control{
 		width:30px;
@@ -522,9 +583,6 @@ input, select {
 	.welcome{
 		padding:15px 0 7px;
 		font-size: 16px;
-	}
-	.navbar-right-icon .navbar-link{
-		display: none;
 	}
 	.item-desc{
 		padding:15px;
@@ -578,6 +636,9 @@ input, select {
 	.main-content .thumbnail .caption p{
 		height: auto;
 	}
+	.main-content .case_list .thumbnail>img{
+		height: auto;
+	}
 }
 
 @media (max-width: 768px){
@@ -616,9 +677,14 @@ input, select {
 	   width:100%;
 	   float: none;
 	   margin-right: 0;
+	   max-width: auto;
+	}
+	.main-content .well .media .media-object + .media-object{
+	   margin-left: 0;
+	   margin-top: 10px;
 	}
 	.main-content .well .media .media-body{
-	   padding:15px 10px;
+	   padding:0 10px;
 	}
 	.footer .qrcode .weixincode, .footer .qrcode .weibocode{
 		float: left;

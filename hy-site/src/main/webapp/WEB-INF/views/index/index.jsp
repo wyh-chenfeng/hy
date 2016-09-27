@@ -39,27 +39,26 @@
 			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
 				<img src="${HY_CONTEXT}/resources/images/banner1.png">
 				<h2 class="title">公司简介</h2>
-				<p class="desc">${home.content }</p>
+				<p class="desc text-indent">${home.content }</p>
 			</a>
 			<a class="item col-md-4" href="${HY_CONTEXT }/solutions/forIndex">
 				<img src="${HY_CONTEXT}/resources/images/banner2.png">
-				<h2 class="title">解决方案</h2>
+				<h2 class="title">业务领域</h2>
 				<p class="desc">
-					水环境污染是城市化进程的产物；随着经济建设和社会进步，治理污染水环境是人类自身的要求，是和谐社会的必然需要。 <br>
 					黑臭河道治理<br>
 					海绵城市<br>
 					农村污水治理<br>
 					人工湿地
 				</p>
 			</a>
-			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forAboutus">
+			<a class="item col-md-4" href="${HY_CONTEXT }/join/forAboutus">
 				<img src="${HY_CONTEXT}/resources/images/banner3.png">
 				<h2 class="title">联系我们</h2>
 				<p class="desc">
 				联系电话：010-84921703<br/>
 				传真：010-84927873<br/>
 				邮箱：business@ecohuanyu.com<br/>
-				地址：北京市朝阳区安外北苑5号院北苑大酒店9层
+				地址：北京市朝阳区安外北苑5号院北苑大酒店办公楼9层
 				</p>
 			</a>
 		</div>

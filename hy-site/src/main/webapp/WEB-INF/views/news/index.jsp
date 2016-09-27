@@ -25,17 +25,16 @@
 		</div>
 
 		<!-- ko foreach: { data: news, as: 'n' } -->
-				<div class="media">
-					<a class="" data-bind="attr:{href:'${HY_CONTEXT }/news/forDetail/' + n.id()}">
-						<div class="media-body">
-				         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
-					     <h4 class="media-heading" data-bind="text: n.title"></h4>
-					     <p>
-					     	<p data-bind="html: n.summary"></p>
-					     </p>
-					   </div>
-					</a>
-				</div>
+			<div class="media">
+				<a class="" data-bind="attr:{href:'${HY_CONTEXT }/news/forDetail/' + n.id()}">
+					<div class="media-body">
+			         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
+				     <h4 class="media-heading" data-bind="text: n.title"></h4>
+				     <br/>
+				     <p class="text-indent" data-bind="html: n.summary"></p>
+				   </div>
+				</a>
+			</div>
         <!-- /ko -->
 		<div class="ac_pagination">
 			<ul id="paginator"></ul>

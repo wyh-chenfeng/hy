@@ -40,7 +40,7 @@
 		initData : function(curPage) {
 			$.ajax({
 				type : 'POST',
-				url : $.HY.context + '/aboutus/position',
+				url : $.HY.context + '/join/position',
 				dataType : 'JSON',
 				data : {},
 				success : function(data) {
