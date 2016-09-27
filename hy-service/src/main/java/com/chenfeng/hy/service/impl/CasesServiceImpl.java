@@ -37,6 +37,7 @@ public class CasesServiceImpl extends
 	public void add(Cases cases, MultipartFile imageFile) {
 		String imagePath = ImgUploadUtil.saveIMGFile(systemConfig, imageFile, ImgTypeEnum.CASES);
 		cases.setImage(imagePath);
+		cases.setContent(cases.getContent().replaceAll("\"", "\'"));
 		cases.setCreateTime(new Date());
 		cases.setUpdateTime(new Date());
 		create(cases);
@@ -54,6 +55,7 @@ public class CasesServiceImpl extends
 		
 		String imagePath = ImgUploadUtil.updateIMGFile(systemConfig, cases.getImage(), imageFile, ImgTypeEnum.CASES);
 		cases.setImage(imagePath);
+		cases.setContent(cases.getContent().replaceAll("\"", "\'"));
 		cases.setCreateTime(new Date());
 		update(cases);
 	}
