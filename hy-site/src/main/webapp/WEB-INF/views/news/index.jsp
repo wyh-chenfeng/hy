@@ -30,9 +30,8 @@
 				<div class="media-body">
 		         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
 			     <h4 class="media-heading" data-bind="text: n.title"></h4>
-			     <p>
-			     	<p data-bind="html: n.content"></p>
-			     </p>
+			     <br/>
+			     <p class="text-indent" data-bind="html: n.content"></p>
 			   </div>
 			</div>
         <!-- /ko -->

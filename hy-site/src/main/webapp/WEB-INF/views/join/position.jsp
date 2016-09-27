@@ -14,8 +14,8 @@
 			</div>
 			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="${HY_CONTEXT }/aboutus/forPosition">招纳贤士</a></li>
-					<li><a href="${HY_CONTEXT }/aboutus/forAboutus">联系我们</a></li>
+					<li class="active"><a href="${HY_CONTEXT }/join/forPosition">招纳贤士</a></li>
+					<li><a href="${HY_CONTEXT }/join/forAboutus">联系我们</a></li>
 				</ul>
 			</div>
 		</div>
@@ -49,4 +49,4 @@
 	</div>
 </div>
 
-<script src="${HY_CONTEXT}/resources/js/views/aboutus/position.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/join/position.js"></script>

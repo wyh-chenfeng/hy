@@ -10,6 +10,28 @@
         <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
         <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
         <put-attribute name="content" value="" />
+        <put-attribute name="background" value="1.png" />
+    </definition>
+    
+    <definition name="news/*" extends="layouts">
+        <put-attribute name="background" value="news.jpg" />
+        <put-attribute name="content" value="/WEB-INF/views/news/{1}.jsp" />
+    </definition>
+    <definition name="cases/*" extends="layouts">
+        <put-attribute name="background" value="cases.jpg" />
+        <put-attribute name="content" value="/WEB-INF/views/cases/{1}.jsp" />
+    </definition>
+    <definition name="aboutus/*" extends="layouts">
+        <put-attribute name="background" value="aboutus.jpg" />
+        <put-attribute name="content" value="/WEB-INF/views/aboutus/{1}.jsp" />
+    </definition>
+    <definition name="solutions/*" extends="layouts">
+        <put-attribute name="background" value="solutions.jpg" />
+        <put-attribute name="content" value="/WEB-INF/views/solutions/{1}.jsp" />
+    </definition>
+	<definition name="join/*" extends="layouts">
+        <put-attribute name="content" value="/WEB-INF/views/join/{1}.jsp" />
+        <put-attribute name="background" value="1.png" />
     </definition>
     
     <definition name="*/*" extends="layouts">

@@ -14,8 +14,8 @@
 			</div>
 			<div class="collapse navbar-collapse" id="subnavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="${HY_CONTEXT }/aboutus/forPosition">招纳贤士</a></li>
-					<li class="active"><a href="${HY_CONTEXT }/aboutus/forAboutus">联系我们</a></li>
+					<li><a href="${HY_CONTEXT }/join/forPosition">招纳贤士</a></li>
+					<li class="active"><a href="${HY_CONTEXT }/join/forAboutus">联系我们</a></li>
 				</ul>
 			</div>
 		</div>
@@ -35,12 +35,12 @@
 		 	</li>
 		 	<li class="address">
 		 		<span>地址：</span>
-		 		<span>北京市朝阳区安外北苑5号院北苑大酒店9层</span>
+		 		<span>北京市朝阳区安外北苑5号院北苑大酒店办公楼9层</span>
 		 	</li>
 			<li class="map"><img src="${HY_CONTEXT}/resources/images/map.png" /></li>
 		</ul>
 	</div>
 </div>
 
-<script src="${HY_CONTEXT}/resources/js/views/aboutus/index.js"></script>
+<script src="${HY_CONTEXT}/resources/js/views/join/about.js"></script>
 
