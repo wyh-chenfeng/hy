@@ -46,7 +46,7 @@
 
 <!-- 富文本编辑器 ueditor -->
 <script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/ueditor/ueditor.all.js"></script>
+<script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/ueditor/ueditor.all.min.js"></script>
 <script type="text/javascript" src="${HY_CONTEXT}/resources/js/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
 
 <script type="text/javascript">
