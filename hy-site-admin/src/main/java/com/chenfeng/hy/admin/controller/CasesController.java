@@ -1,5 +1,14 @@
 package com.chenfeng.hy.admin.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.baidu.ueditor.ActionEnter;
+import com.chenfeng.hy.domain.common.config.SystemConfig;
 import com.chenfeng.hy.domain.model.Cases;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
 import com.chenfeng.hy.domain.model.vo.ResultVo;
@@ -23,6 +34,9 @@ import com.github.pagehelper.Page;
 @RequestMapping("cases")
 public class CasesController {
     Logger log = Logger.getLogger(CasesController.class);
+    
+    @Resource
+    private SystemConfig systemConfig;
     
     @Autowired
     private CasesService casesService;
@@ -139,4 +153,63 @@ public class CasesController {
 		}
 		return resultVo;
 	}
+    
+    /**
+     * 富文本编辑器初始化请求
+     * 
+     * @author wyh
+     * @param request
+     * @param response
+     */
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "initUpload", method = RequestMethod.GET)
+    @Secured("ROLE_ADMIN")
+	public String initUpload(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			return new ActionEnter( request, request.getSession().getServletContext().getRealPath("/") ).exec();
+		} catch (Exception e) {
+			log.error("图片上传初始化错误" + e);
+		}
+		return null;
+	}
+
+
+    /**
+     * 编辑器上传图片
+     * @param file
+     * @author zhangjie
+     * @return
+     */
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "initUpload", method = RequestMethod.POST)
+    @Secured("ROLE_ADMIN")
+    public Object fileUplod(@RequestParam("upfile") MultipartFile file, HttpServletResponse response) {
+
+        if (file == null || file.isEmpty()) {
+            return "上传文件不能为空！";
+        }
+
+        Map<String, Object> result = new HashMap<String, Object>(4);
+        result.put("success", false);	
+        try {
+        	
+        	String imagePath = casesService.fileUpload(file);
+
+            if(StringUtils.isNotEmpty(imagePath)){
+	            result.put("uuid", UUID.randomUUID());
+            	result.put("original", imagePath.split("/")[1]);
+            	result.put("url", systemConfig.getImageUrl() + imagePath);
+            	result.put("title", imagePath.split("/")[1]);
+	            result.put("state", "SUCCESS");
+	            
+	            return result;
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        } 
+        return result;
+
+    }
 }

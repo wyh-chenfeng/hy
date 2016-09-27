@@ -6,6 +6,7 @@
 		CREATE_SUBMIT_BUTTON : '.bind-create-submit-button',
 		FILE_UP_LOAD : '.bind-file-up-loading',
 		TITLE : '标题',
+		SUMMARY : '摘要',
 		CONTENT : '内容'
 	};
 
@@ -19,6 +20,10 @@
 					title : {
 						required : [ constant.TITLE, true ],
 						maxlength : 100
+					},
+					summary : {
+						required : [ constant.SUMMARY, true ],
+						maxlength : 1000
 					},
 					content : {
 						required : [ constant.CONTENT, true ],
@@ -76,6 +81,25 @@
                 showCaption: true,//是否显示标题
                 browseClass: "btn btn-primary", //按钮样式        
             });
+		},
+		initEditor: function() {
+			var options = {
+					serverUrl: 'initUpload',
+					toolbars: [[
+					            'fullscreen', 'source', '|', 'undo', 'redo', '|',
+					            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+					            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+					            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+					            'directionalityltr', 'directionalityrtl', 'indent', '|',
+					            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+					            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+					            'simpleupload', 'background', '|',
+					            'horizontal', 'date', 'time', 'spechars', '|',
+					            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+					            'preview', 'searchreplace', 'help'
+					        ]]
+			};
+			var ue = UE.getEditor('content', options);
 		}
 	};
 
@@ -84,6 +108,7 @@
 			bindEvent.validateFrom();
 			bindEvent.doValidate();
 			bindEvent.bindMenuCss();
+			bindEvent.initEditor();
 		}
 	};
 

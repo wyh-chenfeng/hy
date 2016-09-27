@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.chenfeng.hy.domain.model.Cases;
-import com.chenfeng.hy.domain.model.CasesDetail;
 import com.chenfeng.hy.domain.model.vo.BsgridVo;
-import com.chenfeng.hy.service.CasesDetailService;
 import com.chenfeng.hy.service.CasesService;
 import com.github.pagehelper.Page;
 
@@ -29,9 +27,6 @@ public class CasesController {
     @Autowired
     private CasesService casesService;
 
-    @Autowired
-    private CasesDetailService casesDetailService;
-    
     @RequestMapping(value = "forIndex", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forIndex(Model model) {
@@ -67,9 +62,9 @@ public class CasesController {
     @RequestMapping(value = "forDetail/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public String forDetail(@PathVariable("id") Long id, Model model) {
-    	List<CasesDetail> casesDetails = casesDetailService.findByCasesId(id);
-    	model.addAttribute("casesDetails", casesDetails);
-    	return "cases/case_detail";
+    	Cases cases = casesService.findOne(id);
+    	model.addAttribute("cases", cases);
+    	return "cases/detail";
     }
     
 }

@@ -19,14 +19,22 @@
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="summary" class="col-sm-2 control-label">
+			摘要
+		</label>
+		<div class="col-sm-6">
+			<textarea rows="8" name="summary" id="summary" class="form-control"></textarea>
+		</div>
+	</div>
+	<div class="form-group">
 		<label for="content" class="col-sm-2 control-label">
 			内容
 		</label>
 		<div class="col-sm-6">
-			<textarea rows="8" name="content" id="content" class="form-control"></textarea>
+			<!-- 加载编辑器的容器 -->
+			<div id="content" name="content"></div>
 		</div>
 	</div>
-	
 	<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-8">
 			<button class="btn btn-sm btn-primary bind-create-submit-button" type="button">保存</button>

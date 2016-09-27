@@ -10,21 +10,25 @@
       <td class="active text-center" style="width:15%">ID</td>
       <td style="width:85%">${news.id }</td>
     </tr>
+    <tr>                    
+      <td class="active text-center">图片</td>
+      <td><img alt="" src="${IMAGE_URL }${news.image }" style="width:100%"></td>
+    </tr>
     <tr>
      	<td class="active text-center">标题</td>
       	<td>${news.title }</td>
     </tr>
     <tr>
-    	<td class="active text-center">内容</td>
-      	<td>${news.content }</td>
-    </tr>
-    <tr>
     	<td class="active text-center">类型</td>
       	<td><c:if test="${news.type == 1}">公司新闻</c:if><c:if test="${news.type == 2}">行业新闻</c:if></td>
     </tr>
-    <tr>                    
-      <td class="active text-center">图片</td>
-      <td><img alt="" src="${IMAGE_URL }${news.image }" style="width:100%"></td>
+    <tr>
+    	<td class="active text-center">摘要</td>
+      	<td>${news.summary }</td>
+    </tr>
+    <tr>
+    	<td class="active text-center">内容</td>
+      	<td>${news.content }</td>
     </tr>
   </tbody>
 </table>

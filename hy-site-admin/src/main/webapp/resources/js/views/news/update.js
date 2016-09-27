@@ -7,6 +7,7 @@
 		FILE_UP_LOAD : '.bind-file-up-loading',
 		INIT_IMAGE_FILE : '#init_image_file',
 		TITLE : '标题',
+		SUMMARY : '摘要',
 		CONTENT : '内容'
 	};
 
@@ -20,6 +21,10 @@
 					title : {
 						required : [ constant.TITLE, true ],
 						maxlength : 100
+					},
+					summary : {
+						required : [ constant.SUMMARY, true ],
+						maxlength : 1000
 					},
 					content : {
 						required : [ constant.CONTENT, true ],
@@ -86,6 +91,28 @@
  				overwriteInitial: true,
  				initialCaption: $(constant.INIT_IMAGE_FILE).val()
             });
+		},
+		initEditor: function() {
+			var options = {
+					serverUrl: 'initUpload',
+					toolbars: [[
+					            'fullscreen', 'source', '|', 'undo', 'redo', '|',
+					            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+					            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+					            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+					            'directionalityltr', 'directionalityrtl', 'indent', '|',
+					            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+					            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+					            'simpleupload', 'background', '|',
+					            'horizontal', 'date', 'time', 'spechars', '|',
+					            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+					            'preview', 'searchreplace', 'help'
+					        ]]
+			};
+			var ue = UE.getEditor('content', options);
+			ue.ready(function() {
+		        ue.setContent($("#contentTem").val()); //赋值给UEditor
+		    });
 		}
 	};
 
@@ -94,6 +121,7 @@
 			bindEvent.validateFrom();
 			bindEvent.doValidate();
 			bindEvent.bindMenuCss();
+			bindEvent.initEditor();
 		}
 	};
 

@@ -58,6 +58,11 @@ public class NewsServiceImpl extends
 	}
 	
 	@Override
+	public String fileUpload(MultipartFile imageFile) {
+		return ImgUploadUtil.saveIMGFile(systemConfig, imageFile, ImgTypeEnum.NEWS);
+	}
+	
+	@Override
 	@Transactional(rollbackFor=Exception.class)
 	public void delete(Long id) {
 		News news = findOne(id);

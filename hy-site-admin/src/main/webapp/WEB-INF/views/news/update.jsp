@@ -21,11 +21,21 @@
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="summary" class="col-sm-2 control-label">
+			摘要
+		</label>
+		<div class="col-sm-6">
+			<textarea rows="8" name="summary" id="summary" class="form-control">${news.summary }</textarea>
+		</div>
+	</div>
+	<div class="form-group">
+		<input id="contentTem" type="hidden" value="${news.content }"> 
 		<label for="content" class="col-sm-2 control-label">
 			内容
 		</label>
 		<div class="col-sm-6">
-			<textarea rows="8" name="content" id="content" class="form-control">${news.content }</textarea>
+			<!-- 加载编辑器的容器 -->
+			<div id="content" name="content"></div>
 		</div>
 	</div>
 	<div class="form-group">

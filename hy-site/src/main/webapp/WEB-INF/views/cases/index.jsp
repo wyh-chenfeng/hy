@@ -22,10 +22,9 @@
 							<h3 data-bind="{text: ca.title() }"></h3>
 							<img data-bind="attr: {src:$.HY.imageUrl + ca.image()}">
 							<div class="caption"> 
-								<p class="text-indent" data-bind="{text: ca.content() }">
-								</p>
+								<p class="text-indent" data-bind="{text: ca.summary() }"></p>
 								<p class="kownmore">
-									<a data-bind="attr: {src:'$.HY.context/cases/forDetail/' + ca.id()}"> 了解更多<i
+									<a data-bind="attr: {href:$.HY.context + '/cases/forDetail/' + ca.id()}"> 了解更多<i
 										class="glyphicon glyphicon-chevron-right"></i>
 									</a>
 								</p>

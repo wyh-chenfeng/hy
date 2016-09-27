@@ -16,14 +16,9 @@ public class News {
     private String image;
 
     /**
-     * 创建时间
+     * 摘要
      */
-    private Date createTime;
-
-    /**
-     * 更新时间
-     */
-    private Date updateTime;
+    private String summary;
 
     /**
      * 内容
@@ -34,6 +29,16 @@ public class News {
      * 类型 1：公司，2：行业
      */
     private Integer type;
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+    
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
 
     public Long getId() {
         return id;
@@ -89,5 +94,13 @@ public class News {
 
 	public void setType(Integer type) {
 		this.type = type;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 }
