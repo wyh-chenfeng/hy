@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="container main-content">
-	<div class="well well-sm">
+	<div class="well well-sm activities">
 		<div class="navbar navbar-inverse">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
@@ -26,9 +26,11 @@
 
 		<!-- ko foreach: { data: news, as: 'n' } -->
 			<div class="media">
+				<a class="media-img pull-left">
+		         	<img class="media-object media_news" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
+			    </a>
 				<div class="media-body">
-		         <img class="media-object" data-bind="attr: {src:$.HY.imageUrl + n.image()}" src="./images/solution1.png">
-			     <h4 class="media-heading" data-bind="text: n.title"></h4>
+			     <h6 data-bind="text: n.title">水污染危害健康</h6>
 			     <br/>
 			     <p class="text-indent" data-bind="html: n.summary"></p>
 			     <p class="kownmore">

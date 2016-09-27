@@ -20,13 +20,8 @@
 					d.bindDepartmentClass = ko.observable('tab-pane fade in');
 				}
 				$.each(d.positions(), function(j, p) {
-					if (j == 0) {
-						p.bindPositionClass = 'panel-collapse collapse in';
-						p.bindNameClass = '';
-					} else {
-						p.bindPositionClass = 'panel-collapse collapse';
-						p.bindNameClass = 'collapsed';
-					}
+					p.bindPositionClass = 'panel-collapse collapse';
+					p.bindNameClass = 'collapsed';
 				});
 			});
 		}

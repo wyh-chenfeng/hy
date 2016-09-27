@@ -165,12 +165,14 @@ public class NewsController {
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "initUpload", method = RequestMethod.GET)
     @Secured("ROLE_ADMIN")
-	public void initUpload(HttpServletRequest request, HttpServletResponse response) {
+	public String initUpload(HttpServletRequest request) {
 		try {
-			response.getWriter().print(new ActionEnter( request, request.getSession().getServletContext().getRealPath("/") ).exec());
+			return new ActionEnter( request, request.getSession().getServletContext().getRealPath("/")).exec();
 		} catch (Exception e) {
 			log.error("图片上传初始化错误" + e);
 		}
+		
+		return null;
 	}
 
 
