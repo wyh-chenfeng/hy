@@ -18,11 +18,11 @@
 			<div class="col-sm-6 clearfix">
 				<div class="qrcode">
 					<div class="weixincode">
-						<img src="./images/wecode.jpg"/>
+						<img src="${HY_CONTEXT}/resources/images/wecode.jpg"/>
 						<p>官方微信</p>
 					</div>
 					<div class="weibocode">
-						<img src="./images/wbcode.jpg"/>
+						<img src="${HY_CONTEXT}/resources/images/wbcode.jpg"/>
 						<p>官方微博</p>
 					</div>
 				</div>
