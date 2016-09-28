@@ -5,7 +5,7 @@
 	<div class="well well-sm">
 		<h4 class="sub-title text-center">${news.title }</h4>
 		<div class="media">
-		   <div class="media-body block-indent">
+		   <div class="media-body">
 			  ${news.content }
 		   </div>
 		</div>
