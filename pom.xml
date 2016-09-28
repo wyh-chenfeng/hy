@@ -276,7 +276,7 @@
 				<log_hy_file>/logs/hy-site.log</log_hy_file>
 				<log_admin_file>/logs/hy-site-admin.log</log_admin_file>
 				<!-- nginx -->
-				<image_url>http://xiaolyuh.imwork.net/</image_url>
+				<image_url>http://localhost:8090/</image_url>
 				<image_server>D:/nginx/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
