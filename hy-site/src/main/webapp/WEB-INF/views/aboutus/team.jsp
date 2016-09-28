@@ -48,32 +48,6 @@
 		 	<div class="row">
 		 		<div class="col-sm-6 col-md-4">
 			        <div class="thumbnail">
-			            <img src="${HY_CONTEXT}/resources/images/team4.jpg">
-			            <h6 class="team_media_desc">公司环境</h6>
-			        </div>
-			    </div>
-			    <div class="col-sm-6 col-md-4">
-			        <div class="thumbnail">
-			            <img src="${HY_CONTEXT}/resources/images/team5.jpg">
-			            <h6 class="team_media_desc">公司环境</h6>
-			        </div>
-			    </div>
-			    <div class="col-sm-6 col-md-4">
-			        <div class="thumbnail">
-			            <img src="${HY_CONTEXT}/resources/images/team6.jpg">
-			            <h6 class="team_media_desc">公司环境</h6>
-			        </div>
-			    </div>
-		 	</div>
-		 	<div class="row">
-		 		<div class="col-sm-6 col-md-4">
-			        <div class="thumbnail">
-			            <img src="${HY_CONTEXT}/resources/images/team7.jpg">
-			            <h6 class="team_media_desc">公司召开技术研讨专题会议</h6>
-			        </div>
-			    </div>
-			    <div class="col-sm-6 col-md-4">
-			        <div class="thumbnail">
 			            <img src="${HY_CONTEXT}/resources/images/team8.jpg">
 			            <h6 class="team_media_desc">公司召开技术研讨专题会议</h6>
 			        </div>
@@ -82,6 +56,12 @@
 			        <div class="thumbnail">
 			            <img src="${HY_CONTEXT}/resources/images/team9.jpg">
 			            <h6 class="team_media_desc">公司独立董事王浩院士与员工在一起</h6>
+			        </div>
+			    </div>
+				<div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+			            <img src="${HY_CONTEXT}/resources/images/team7.jpg">
+			            <h6 class="team_media_desc">陕西省省长胡和平与公司总裁申彪博士</h6>
 			        </div>
 			    </div>
 		 	</div>
