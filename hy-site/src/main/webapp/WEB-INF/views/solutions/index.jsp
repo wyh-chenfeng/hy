@@ -27,7 +27,7 @@
 
  	<h4 class="sub-title">黑臭河道治理解决方案</h4>
  	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <p class="text-indent">
 	      环域生态针对不同河道的特点，集成国内外各种先进工艺、因地制宜的编制治理方案，一河一策。通过对黑臭河流治理方案的优化与合理性分析，因地制宜的筛选适用性技术，在综合考虑方案的工程量、工程投资及产出的效益、方案风险、方案可操作性及方案实施后的环境经济与社会效益情况，制定出令客户满意的设计方案，为客户实现“综合措施、技术集成、经济可行、统筹管理、长效运行”的黑臭水体治理目标。
 	     </p>
@@ -37,7 +37,7 @@
 	   </a>
 	</div>
  	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <h6 class="text-bold">精准的问题诊断技术</h6>
 	     <br/>
 	     <p class="text-indent">
@@ -49,7 +49,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
          <h6 class="text-bold">完备的治理技术数据库</h6>
          <br/>
 	     <p class="text-indent">
@@ -61,7 +61,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <h6 class="text-bold">多目标方案优化技术</h6>
 	     <br/>
 	     <p class="text-indent">
@@ -73,7 +73,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <h6 class="text-bold">科学管护技术</h6>
 	     <br/>
 	     <p class="text-indent">

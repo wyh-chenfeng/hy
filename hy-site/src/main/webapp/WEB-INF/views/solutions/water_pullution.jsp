@@ -26,7 +26,7 @@
 	</p>
 	<h4 class="sub-title">农村污水治理</h4>
  	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <p class="text-indent">
 	      环域生态通过多年农村污水处理技术经验，在工程实践中研发了低污染、低投资、低运行、易管理的“三低一易”型城乡统筹污水处理核心技术与设备。从图中可以看出，污水处理采用两种方式。一种是：黄色区域---城镇的污水和和距离城镇较近的城乡结合部的污水都纳入城市污水处理厂进行统一处理。另一种是：蓝色区域---距离城镇较远的农村污水采用分散式污水处理。
 	     </p>
@@ -36,7 +36,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	   	 <h6>微量曝气人工湿地级生物生态中水处理技术</h6>
 	   	 <br/>
 	     <p class="text-indent">
@@ -49,7 +49,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <h6>采用分区脱氮除磷人工湿地处理系统</h6>
 	     <br/>
 	     <p class="text-indent">
@@ -61,7 +61,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <h6>适合于单户污水治理的远郊分散型庭院景观化人工湿地</h6>
 	     <br/>
 	     <p class="text-indent">
@@ -73,7 +73,7 @@
 	   </a>
 	</div>
 	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	     <h6>总结</h6>
 	     <br/>
 	     <p class="text-indent">

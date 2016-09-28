@@ -26,7 +26,7 @@
 		</p>
 		<h4 class="sub-title">人工湿地</h4>
 	 	<div class="media">
-		   <div class="media-body">
+		   <div class="media-body block-indent">
 		     <p class="text-indent">
 		      人工湿地是一个综合的生态系统，它应用生态系统中物种共生、物质循环再生原理，结构与功能协调原则，在促进废水中污染物质良性循环的前提下，充分发挥资源的生产潜力，防止环境的再污染，获得污水处理与资源化的最佳效益。
 		     </p>
@@ -42,7 +42,7 @@
 		   </a>
 		</div>
 	 	<div class="media">
-		   <div class="media-body">
+		   <div class="media-body block-indent">
 		     <h6>核心发明专利1：微曝气的污水再生处理与循环利用技术</h6>
 		     <br/>
 		     <p class="text-indent">
@@ -57,7 +57,7 @@
 		   </a>
 		</div>
 		<div class="media">
-		   <div class="media-body">
+		   <div class="media-body block-indent">
 		     <h6>核心发明专利2：污水营养盐回收生物生态循环利用技术</h6>
 		     <br/>
 		     <p class="text-indent">

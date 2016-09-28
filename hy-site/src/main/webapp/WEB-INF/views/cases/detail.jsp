@@ -16,7 +16,7 @@
 	</p>
  	<h4 class="sub-title">${cases.title }</h4>
  	<div class="media">
-	   <div class="media-body">
+	   <div class="media-body block-indent">
 	   	${cases.content }
 	   </div>
 	</div>
