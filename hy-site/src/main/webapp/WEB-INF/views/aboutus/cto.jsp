@@ -87,7 +87,7 @@
 				<div class="col-sm-6 col-md-3">
 			        <div class="thumbnail">
 			            <img src="${HY_CONTEXT}/resources/images/cto_honor9.jpg">
-			            <h6 class="team_media_desc">环境保护科学技术将</h6>
+			            <h6 class="team_media_desc">环境保护科学技术奖</h6>
 			        </div>
 			    </div>
 			    <div class="col-sm-6 col-md-6">
