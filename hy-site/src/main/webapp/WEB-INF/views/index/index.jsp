@@ -39,7 +39,7 @@
 			<a class="item col-md-4" href="${HY_CONTEXT }/aboutus/forSummary">
 				<img src="${HY_CONTEXT}/resources/images/banner1.png">
 				<h2 class="title">公司简介</h2>
-				<p class="desc text-indent">${home.content }</p>
+				<p class="desc text-indent">北京环域生态环保技术有限公司，作为中国环境科学研究院水环境科学家研发技术成果的转化平台，致力于用技术集成的力量，变革中国水环境。公司从成立开始到不断发展，得到了中国环保部相关司局、中国环境科学研究院、中国水利水电科学研究院、北极光创投基金等国家部门及社会机构的大力支持。</p>
 			</a>
 			<a class="item col-md-4" href="${HY_CONTEXT }/solutions/forIndex">
 				<img src="${HY_CONTEXT}/resources/images/banner2.png">
