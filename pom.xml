@@ -336,7 +336,7 @@
 				<image_server>/usr/local/nginx/html/</image_server>
 				<!-- admin user -->
 				<user_name>admin</user_name>
-				<user_password>admin</user_password>
+				<user_password>Ecohuanyu2016</user_password>
 			</properties>
 			<activation>
 				<activeByDefault>false</activeByDefault>
