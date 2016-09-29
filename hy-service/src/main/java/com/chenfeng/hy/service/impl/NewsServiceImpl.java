@@ -55,7 +55,7 @@ public class NewsServiceImpl extends
 		String imagePath = ImgUploadUtil.updateIMGFile(systemConfig, news.getImage(), imageFile, ImgTypeEnum.NEWS);
 		news.setImage(imagePath);
 		news.setContent(news.getContent().replaceAll("\"", "\'"));
-		news.setCreateTime(new Date());
+		news.setUpdateTime(new Date());
 		update(news);
 	}
 	
