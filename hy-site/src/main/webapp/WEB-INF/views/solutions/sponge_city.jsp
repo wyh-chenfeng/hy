@@ -25,7 +25,7 @@
 	公司是一家集科研、咨询、设计、产品／设备与运营为一体的高科技水环境治理公司。主要致力于与水环境相关的各种工程设计咨询与产品研发，公司拥有国内水平最高的设计研发团队，近四十余项专利技术，业务覆盖城市污染河流湖泊治理；受损河流湖泊生态修复；海绵城市规划设计；乡镇及农村生活污水系统建设；人工湿地尾水深度处理与安全回用。公司依托著名研究院所、高校，在一批全国知名专家的支持下，在水环境治理、污水处理、生态领域方面具有强大的技术优势，是中国环境领域技术水平最高、综合实力最强的企业之一。
 	</p>
 	<h4 class="sub-title">海绵城市规划设计</h4>
- 	<div class="media block-indent">
+	<div class="media block-indent">
 	   <div class="media-body">
 	     <p class="text-indent">
 	      海绵城市构建的重点是进行水生态安全格局分析，并将水生态安全格局落实在土地利用总体规划和城市总体规划中，建设区域生态基础设施。公司总结国内外经典案例，掌握了最完备的支撑海绵城市实施的关键技术方法，秉承将“有化为无，将大化为小，将排他化为包容，将集中化为分散，将快化为慢，将刚硬化为柔和”的海绵城市建设理念，形成了一套成熟的“源头消纳滞蓄—过程减排消能—末端弹性排用”的雨洪管理模式，建立了“在线无动力分离-渗蓄滞留减排-生态净化回用”的城市面源雨污水三级处理技术体系。环域生态将不断研发新产品与技术，使雨水利用与生态环境、景观完美结合，实现城市宜居、和谐、与水为友的目标。
@@ -33,7 +33,6 @@
 	   </div>
 	   <a class="media-img">
 	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city10.jpg">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city11.jpg">
 	   </a>
 	</div>
  	<div class="media block-indent">
@@ -45,8 +44,7 @@
 	     </p>
 	   </div>
 	   <a class="media-img">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city12.jpg">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city13.jpg">
+	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city11.jpg">
 	   </a>
 	</div>
 	<div class="media block-indent">
@@ -58,8 +56,7 @@
 	     </p>
 	   </div>
 	   <a class="media-img">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city14.jpg">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city15.jpg">
+	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city12.jpg">
 	   </a>
 	</div>
 	<div class="media block-indent">
@@ -83,8 +80,7 @@
 	     </p>
 	   </div>
 	   <a class="media-img">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city17.jpg">
-	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city18.jpg">
+	      <img class="media-object" src="${HY_CONTEXT}/resources/images/sponge_city13.jpg">
 	   </a>
 	</div>
  </div>
