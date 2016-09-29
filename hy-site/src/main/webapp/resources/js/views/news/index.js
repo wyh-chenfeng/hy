@@ -5,6 +5,7 @@
 		PAGINATOR : '#paginator',
 		COMPANY : '#company',
 		INDUSTRY : '#industry',
+		TYPE : '#type',
 	};
 
 	var viewModel = {
@@ -80,6 +81,14 @@
 					viewModel.news(temp());
 				}
 			});
+		},
+		initType : function() {
+			var type = $(constant.TYPE).val();
+			if (type == 1 || type == '1') {
+				$(constant.COMPANY).click();
+			} else if (type == 2 || type == '2') {
+				$(constant.INDUSTRY).click();
+			}
 		}
 	};
 
@@ -88,6 +97,7 @@
 			ko.applyBindings(viewModel);
 			bindEvent.initNewsClick();
 			bindEvent.bindMenuCss();
+			bindEvent.initType();
 			bindEvent.getData(1);
 		}
 	};

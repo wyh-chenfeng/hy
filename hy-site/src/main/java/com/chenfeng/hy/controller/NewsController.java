@@ -28,16 +28,18 @@ public class NewsController {
     
     @RequestMapping(value = "forIndex", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public String forIndex(Model model) {
+    public String forIndex(@RequestParam(value="type", required=false, defaultValue="1") String type, Model model) {
+    	model.addAttribute("type", type);
     	
         return "news/index";
     }
 
     @RequestMapping(value = "forDetail/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public String forDetail(@PathVariable("id") Long id, Model model) {
+    public String forDetail(@PathVariable("id") Long id, @RequestParam("type") String type, Model model) {
     	News news = newsService.findOne(id);
     	model.addAttribute("news", news);
+    	model.addAttribute("type", type);
     	return "news/detail";
     }
 

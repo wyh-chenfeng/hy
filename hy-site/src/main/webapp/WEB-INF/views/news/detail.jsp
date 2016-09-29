@@ -11,7 +11,7 @@
 		</div>
 		<div class="back_btn clearfix">
 			<div class="pull-right">
-				<a href="${HY_CONTEXT}/news/forIndex" class="btn btn-back">返回</a>
+				<a href="${HY_CONTEXT}/news/forIndex?type=${type}" class="btn btn-back">返回</a>
 			</div>
 		</div>
 	</div>

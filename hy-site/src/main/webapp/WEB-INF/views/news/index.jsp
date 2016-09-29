@@ -19,6 +19,7 @@
 					</li>
 					<li id="industry" >
 						<a href="javaScript:void(0);">行业动态</a>
+						<input type="hidden" value="${type }" id="type">
 					</li>
 				</ul>
 			</div>
@@ -34,7 +35,7 @@
 			     <br/>
 			     <p class="text-indent" data-bind="html: n.summary"></p>
 			     <p class="kownmore">
-	                <a data-bind="attr:{href:'${HY_CONTEXT }/news/forDetail/' + n.id()}" href="activitie_detail.html">
+	                <a data-bind="attr:{href:'${HY_CONTEXT }/news/forDetail/' + n.id()+'?type=' + type()}" href="activitie_detail.html">
 	                  	了解详情<i class="glyphicon glyphicon-chevron-right"></i>
 	                </a> 
 	             </p>
