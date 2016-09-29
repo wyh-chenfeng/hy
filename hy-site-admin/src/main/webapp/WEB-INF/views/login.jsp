@@ -1,18 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>环域</title>
 <%@include file="./layout/resource.jsp"%>
 </head>
 <body>
 	<div class="container-fluid">
+	<c:if test="${not empty param.error}">
+	    <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+           <strong>警告！</strong> 用户名或密码错误。
+       </div>
+	</c:if>
 	<div class="row" style="padding-top: 15%;">
 		<div class="col-md-4">
 		</div>
 		<div class="col-md-4">
+			
 			<form class="form-horizontal" role="form" action="${HY_CONTEXT}/login" method="post">
 				<div class="form-group">
 					<label for="username" class="col-sm-3 control-label">用户名</label>
