@@ -162,6 +162,7 @@
   	 select 
     <include refid="Base_Column_List" />
     from t_news
+    order by create_time desc
   </select>
   <select id="queryByType" resultMap="BaseResultMap">
   	 select 
@@ -169,5 +170,6 @@
     from t_news
     where 
     type = #{type,jdbcType=INTEGER}
+    order by create_time desc
   </select>
 </mapper>
