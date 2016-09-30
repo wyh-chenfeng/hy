@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/fonts/iconfont.css" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/style.css" />
 
+<script src="${HY_CONTEXT}/resources/js/lib/baiduzhanzhang/push.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/jquery/jquery.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap-paginator.min.js"></script>
@@ -32,5 +33,4 @@
 		$.HY.imageUrl = "${IMAGE_URL}";
 	})(jQuery);
 </script>
-
 <!-- /Resources -->
