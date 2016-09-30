@@ -16,8 +16,6 @@
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/fonts/iconfont.css" />
 <link rel="stylesheet" href="${HY_CONTEXT}/resources/css/bootstrap/style.css" />
 
-<script src="${HY_CONTEXT}/resources/js/lib/baiduzhanzhang/push.js"></script>
-<script src="${HY_CONTEXT}/resources/js/lib/jquery/jquery.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/bootstrap/bootstrap-paginator.min.js"></script>
 <script src="${HY_CONTEXT}/resources/js/lib/knockout/knockout-3.3.0.js"></script>
@@ -34,3 +32,19 @@
 	})(jQuery);
 </script>
 <!-- /Resources -->
+<!-- 百度站长连接推送 start -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- 百度站长连接推送 end -->
