@@ -29,7 +29,6 @@
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
-				<user name="hydk78!@" password="kjhkh%%#@*kLOPhk" authorities="ROLE_ADMIN" />
 				<user name="${admin.name}" password="${admin.password}" authorities="ROLE_ADMIN" />
 			</user-service>
 		</authentication-provider>
