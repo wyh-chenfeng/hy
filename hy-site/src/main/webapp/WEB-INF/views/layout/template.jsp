@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="Keywords" lang="en" Content="环域,北京环域,ecohuanyu,Ecohuanyu">
 	<meta name="Keywords" lang="zh" Content="环域,北京环域,ecohuanyu,Ecohuanyu">
+	<meta name="author" content="xiaolyuh@163.com">
 	<meta name="description" content="${_title }">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
