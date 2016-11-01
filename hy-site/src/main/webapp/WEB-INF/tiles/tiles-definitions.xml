@@ -5,7 +5,7 @@
 
 <tiles-definitions>
     <definition name="layouts" template="/WEB-INF/views/layout/template.jsp">
-        <put-attribute name="title" value="环域" />
+        <put-attribute name="title" value="环域生态" />
         <put-attribute name="resource" value="/WEB-INF/views/layout/resource.jsp" />
         <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
         <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
