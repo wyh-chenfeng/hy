@@ -345,7 +345,6 @@
 	</profiles>
 
 	<build>
-		<!-- 加载依赖模块的resources start -->
 		<plugins>
 			<!-- 加载依赖模块的resources start -->
 			<plugin>
